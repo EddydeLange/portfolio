@@ -22,4 +22,5 @@ We gaan hier gebruik maken van het framework codeIgniter, omdat het een framewor
 -	Ze maken gebruik van pagination class waarmee je makkelijker kan navigeren tussen links
 
 Onze stappenplan komt in trello en we gaan gebruik maken van github.
+De heer van Cooten kan op http://eddydelange.dvc-icta.nl/portfolio/ kijken hoe ver het project gaande is.
 
