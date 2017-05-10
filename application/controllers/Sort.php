@@ -7,6 +7,6 @@ class Sort extends CI_Controller {
 	{
         $this->load->helper('html');
         $this->load->helper('url');
-		$this->load->view('sort');
+		$this->load->view('index');
 	}
 }
