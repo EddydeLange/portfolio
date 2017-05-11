@@ -1,12 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Sort extends CI_Controller {
+class Sort extends MY_Controller {
+
+	function __construct()
+	{
+		parent::__construct();
+	}
 
 	public function index()
 	{
-        $this->load->helper('html');
-        $this->load->helper('url');
-		$this->load->view('index');
+
 	}
 }
