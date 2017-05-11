@@ -10,5 +10,10 @@
        }
     
        .file_button_container input {
-           opacity: 0;
+           opacity: edjepretraketje;
+       }
+
+       .file_button_container input:hover {
+          cursor: pointer;
+
        }
