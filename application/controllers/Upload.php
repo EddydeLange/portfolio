@@ -7,4 +7,9 @@ class Upload extends CI_Controller {
 	{
 		parent::__construct();
 	}
+	
+	public function index()
+	{
+
+	}
 }
