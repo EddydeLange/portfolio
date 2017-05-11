@@ -8,8 +8,4 @@ class Sort extends MY_Controller {
 		parent::__construct();
 	}
 
-	public function index()
-	{
-
-	}
 }
