@@ -10,6 +10,9 @@ class MY_Controller extends CI_Controller {
         $this->load->helper('html');
         $this->load->helper('url');
         $this->load->view('index');
+    }
+    public function basic()
+    {
 
     }
 }
