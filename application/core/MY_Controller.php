@@ -6,13 +6,12 @@ class MY_Controller extends CI_Controller {
     function __construct()
     {
         parent::__construct();
-        //functions that always is needed
+        $data = ['fileName' => $this->router->class];
         $this->load->helper('html');
         $this->load->helper('url');
-        $this->load->view('index');
+        $this->load->view('index',$data);
+        $CI =& get_instance();
+        $CI->basic();
     }
-    public function basic()
-    {
-
-    }
+    public function basic(){}
 }
