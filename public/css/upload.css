@@ -10,10 +10,9 @@
        }
     
        .file_button_container input {
-           opacity: ;
+           opacity: 1;
        }
 
        .file_button_container input:hover {
           cursor: pointer;
-
        }
