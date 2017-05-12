@@ -2,7 +2,7 @@
 	<h1>Welcome to CodeIgniter!</h1>
 
 	<div id="body">
-		<p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+		<p>test</p>
 	</div>
 
 </div>
