@@ -14,8 +14,9 @@
      immediately after the control sidebar -->
 <div class="control-sidebar-bg"></div>
 </div>
-<script src="<?php echo base_url();?>public/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js"></script>
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src ="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
 <script>
     $.widget.bridge('uibutton', $.ui.button);
 </script>
@@ -33,7 +34,11 @@
 <script src="<?php echo base_url();?>public/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <script src="<?php echo base_url();?>public/AdminLTE/plugins/fastclick/fastclick.js"></script>
 <script src="<?php echo base_url();?>public/AdminLTE/js/app.min.js"></script>
-<script src="<?php echo base_url();?>public/AdminLTE/js/pages/dashboard.js"></script>
-</body>
 
+
+<?php if (file_exists('public/custom/js/'. $fileName .'.js')) { ?>
+    <script src="<?php echo base_url('public/custom/js/'. $fileName .'.js');?>"></script>
+<?php } ?>
+
+</body>
 </html>
