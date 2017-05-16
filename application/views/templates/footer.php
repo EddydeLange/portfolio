@@ -34,6 +34,10 @@
 <script src="<?php echo base_url();?>public/AdminLTE/plugins/fastclick/fastclick.js"></script>
 <script src="<?php echo base_url();?>public/AdminLTE/js/app.min.js"></script>
 <script src="<?php echo base_url();?>public/AdminLTE/js/pages/dashboard.js"></script>
-</body>
 
+<?php if (file_exists('public/custom/js/'. $fileName .'.js')) { ?>
+    <script src="<?php echo base_url('public/custom/js/'. $fileName .'.js');?>"></script>
+<?php } ?>
+
+</body>
 </html>
