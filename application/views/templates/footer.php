@@ -39,6 +39,9 @@
 <?php if (file_exists('public/custom/js/'. $fileName .'.js')) { ?>
     <script src="<?php echo base_url('public/custom/js/'. $fileName .'.js');?>"></script>
 <?php } ?>
+<script src="<?php echo base_url('public/AdminLTE/plugins/datatables/jquery.dataTables.min.js');?>"></script>
+<script src="<?php echo base_url('public/AdminLTE/plugins/datatables/dataTables.bootstrap.min.js');?>"></script>
+
 
 </body>
 </html>
