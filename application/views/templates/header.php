@@ -16,13 +16,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <?php
+    $fileName = getFileName();
+
     echo link_tag('public/adminLTE/css/bootstrap.min.css');
     echo link_tag('public/adminLTE/css/AdminLTE.min.css');
     echo link_tag('public/adminLTE/css/skins/skin-blue.min.css');
 
-    if (file_exists($fileName)) {
+    if (file_exists('public/custom/css/'. $fileName .'.css')) {
         //Your CSS example register.css
         echo link_tag('public/custom/css/'. $fileName .'.css');
+    }
+
+    if ($fileName == 'Overview') {
+        echo link_tag('public/adminLTE/css/datatables/dataTables.bootstrap.css');
     }
 
     ?>
@@ -144,7 +150,7 @@ desired effect
       <ul class="sidebar-menu">
         <li class="header">Menu</li>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="<?php echo site_url('Sort/index') ?>"><i class="fa fa-link"></i> <span>Overview</span></a></li>
+        <li><a href="<?php echo site_url('Overview/index') ?>"><i class="fa fa-link"></i> <span>Overview</span></a></li>
         <li><a href="<?php echo site_url('Upload/index') ?>"><i class="fa fa-link"></i> <span>Upload</span></a></li>
         <li><a href="<?php echo site_url('Matrix/index') ?>"><i class="fa fa-link"></i> <span>Files</span></a></li>
       </ul>

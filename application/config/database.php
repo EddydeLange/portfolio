@@ -101,10 +101,10 @@ $db['develop'] = array(
     'save_queries' => TRUE
 );
 $db['accept'] = array(
-    'dsn'  => 'mysql:host=localhost; dbname=******; charset=utf8;',
+    'dsn'  => 'mysql:host=localhost; dbname=portfolio; charset=utf8;',
     'hostname' => 'localhost',
-    'username' => '******',
-    'password' => '******',
+    'username' => 'root',
+    'password' => '',
     'database' => 'portfolio',
     'dbdriver' => 'pdo',
     'dbprefix' => '',
