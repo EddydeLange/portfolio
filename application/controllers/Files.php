@@ -10,6 +10,6 @@ class Files extends MY_Controller {
 
 	public function index()
 	{
-
+		$this->load->model('file_model');
 	}
 }

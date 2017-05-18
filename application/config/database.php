@@ -80,10 +80,10 @@ function dd($input, $die = false){
     }
 }
 $db['develop'] = array(
-    'dsn'  => 'mysql:host=localhost; dbname=******; charset=utf8;',
+    'dsn'  => 'mysql:host=localhost; dbname=portfolio; charset=utf8;',
     'hostname' => 'localhost',
-    'username' => '******',
-    'password' => '******',
+    'username' => 'root',
+    'password' => '',
     'database' => 'portfolio',
     'dbdriver' => 'pdo',
     'dbprefix' => '',
@@ -122,10 +122,10 @@ $db['accept'] = array(
     'save_queries' => TRUE
 );
 $db['default'] = array(
-    'dsn'  => 'mysql:host=localhost; dbname=******; charset=utf8;',
+    'dsn'  => 'mysql:host=localhost; dbname=portfolio; charset=utf8;',
     'hostname' => 'localhost',
-    'username' => '******',
-    'password' => '******',
+    'username' => 'root',
+    'password' => '',
     'database' => 'portfolio',
     'dbdriver' => 'pdo',
     'dbprefix' => '',
