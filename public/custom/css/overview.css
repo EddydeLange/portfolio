@@ -1,0 +1,22 @@
+.assignmentOptions{
+    width: 100%;
+}
+
+.no-sort::after {
+    display: none!important;
+}
+
+.no-sort {
+    pointer-events: none!important; cursor: default!important;
+}
+
+select {
+    color: #8d9093;
+}
+option {
+    color: #000;
+}
+option:first-child
+{
+    color: #ccc;
+}

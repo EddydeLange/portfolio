@@ -11,8 +11,8 @@ class Overview extends MY_Controller {
 	{
 		$this->load->library('session');
 		$this->load->model('OverviewModel');
-	 	$data['students'] = $this->OverviewModel->getData();
-
+	 	$data['students'] = $this->OverviewModel->GetStudents();
+		$data['assignments'] = $this->OverviewModel->getAssignments();
 		$this->load->view('index',$data);
 	}
 
