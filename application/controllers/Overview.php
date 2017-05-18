@@ -9,6 +9,11 @@ class Overview extends MY_Controller {
 	}
 	public function index()
 	{
+		$this->load->library('session');
+		$this->load->model('OverviewModel');
+	 	$data['students'] = $this->OverviewModel->getData();
 
+		$this->load->view('index',$data);
 	}
+
 }
