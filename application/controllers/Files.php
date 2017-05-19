@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Matrix extends MY_Controller {
+class Files extends MY_Controller {
 
 	function __construct()
 	{
