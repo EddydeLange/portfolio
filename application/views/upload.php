@@ -1,3 +1,4 @@
+<?php include 'application/views/templates/header.php'; ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -9,7 +10,7 @@
 	<section class="content">
 		<div class="file_button_container">
 			
-			<form action="csv.php" method="post" enctype="multipart/form-data">
+			<form action="csv" method="post" enctype="multipart/form-data">
 		    Select image to upload:
 			    <input type="file" name="fileToUpload" id="fileToUpload">
 			    <input type="submit" value="Upload Image" name="submit">
@@ -20,4 +21,4 @@
 	<!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-
+<?php include 'application/views/templates/footer.php'; ?>
