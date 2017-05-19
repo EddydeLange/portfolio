@@ -152,7 +152,7 @@ desired effect
         <!-- Optionally, you can add icons to the links -->
         <li><a href="<?php echo site_url('Overview/index') ?>"><i class="fa fa-link"></i> <span>Overview</span></a></li>
         <li><a href="<?php echo site_url('Upload/index') ?>"><i class="fa fa-link"></i> <span>Upload</span></a></li>
-        <li><a href="<?php echo site_url('Matrix/index') ?>"><i class="fa fa-link"></i> <span>Files</span></a></li>
+        <li><a href="<?php echo site_url('Files/index') ?>"><i class="fa fa-link"></i> <span>Files</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

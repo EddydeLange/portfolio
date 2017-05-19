@@ -2,12 +2,13 @@
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
 	<section class="content-header">
-		<h1>Tekst</h1>
+		<h1>Hello gais</h1>
 	</section>
-
+	
 	<!-- Main content -->
 	<section class="content">
-		<p>test</p>
+		<p>Fenno's Page</p>
+
 	</section>
 	<!-- /.content -->
 </div>
