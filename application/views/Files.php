@@ -8,7 +8,11 @@
 	<!-- Main content -->
 	<section class="content">
 		<p>Fenno's Page</p>
-
+<?php foreach($fileNames as $fileName) { ?>
+    		<div class="row">
+				<?= $fileName ?>
+    		</div>
+<?php } ?>
 	</section>
 	<!-- /.content -->
 </div>
