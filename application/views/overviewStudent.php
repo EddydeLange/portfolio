@@ -28,21 +28,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($students as $student) {  ?>
-                                <tr class="test" data-studentId="<?= $student->id ?>">
-                                    <td><?= $student->ov_number ?></td>
-                                    <td><?= $student->name ?></td>
-                                    <td>
-                                        <select class="assignmentOptions">
-                                            <option class="firstOption" selected="true" disabled="disabled">--Choose your assignment--</option>
-                                            <?php foreach ($assignments as $assignment) { ?>
-                                                <option data-assignment="<?=$assignment->id?>" class="assignmentOption"> <?= $assignment->subject.' -- '.$assignment->subtopic?></option>
-                                            <?php } ?>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <?php } ?>
+                                <p>niks</p>
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>OV Number</th>
+                                    <th>Student</th>
+                                    <th>Assignments</th>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 <!-- /.box-body -->

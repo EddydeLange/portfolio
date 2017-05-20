@@ -49,9 +49,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+
+//the : means that it is a parameter
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['csv'] = 'upload/csv';
 $route['files'] = 'files/index';
 $route['upload'] = 'upload';
+$rout['overviewStudent/(:num)/(:num)'] = 'overview/overviewStudent/$1/$2';

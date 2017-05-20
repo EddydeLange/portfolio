@@ -1,12 +1,26 @@
+$(function() {
+    $('#overviewPeople').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false
+    });
+});
 
-$(function () {
-  $("#example1").DataTable();
-  $('#example2').DataTable({
-    "paging": true,
-    "lengthChange": false,
-    "searching": false,
-    "ordering": true,
-    "info": true,
-    "autoWidth": false
-  });
+$('.assignmentOption').on('click', function() {
+    var assignmentId = $(this).data('assignment');
+    var studentId = $(this).closest("*[data-studentId]").attr("data-studentId")
+
+    $.ajax({
+        url: "overviewStudent/" + studentId + "/" + assignmentId,
+        success: function() {
+            document.location.href = '/portfolio/overview/overviewStudent/' + studentId + "/" + assignmentId;
+            console.log(document.location);
+        },
+        error: function() {
+            console.log('error');
+        }
+    });
 });

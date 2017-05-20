@@ -4,7 +4,7 @@
 	<section class="content-header">
 		<h1>Hello gais</h1>
 	</section>
-	
+
 	<!-- Main content -->
 	<section class="content">
 		<p>Fenno's Page</p>

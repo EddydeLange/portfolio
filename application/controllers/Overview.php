@@ -16,4 +16,12 @@ class Overview extends MY_Controller {
 		$this->load->view('index',$data);
 	}
 
+	public function overviewStudent($studentId, $assignmentId)
+	{
+		die();
+		$data['fileName'] = 'overviewStudent';
+		$this->load->view('index',$data);
+		var_dump($studentId);
+		var_dump($assignmentId);
+	}
 }
