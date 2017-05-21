@@ -7,6 +7,7 @@ class OverviewModel extends CI_model {
         }
         $GetStudents = $this->db->get('students');
         $students   = $GetStudents->result();
+
         return $students;
     }
 
@@ -17,6 +18,7 @@ class OverviewModel extends CI_model {
         }
         $getAssignments = $this->db->get('subjects');
         $assignments = $getAssignments->result();
+
         return $assignments;
     }
 
@@ -27,7 +29,7 @@ class OverviewModel extends CI_model {
         $this->db->where('answers.student_id', $studentId);
         $this->db->where('questions.subject_id', $assignmentId);
         $getQuestionsAndAnswers = $this->db->get('questions');
-        $questionsAndAnswers   = $getQuestionsAndAnswers->result();
+        $questionsAndAnswers = $getQuestionsAndAnswers->result();
 
         return $questionsAndAnswers;
 

@@ -7,6 +7,7 @@ class Overview extends MY_Controller {
 	{
 		parent::__construct();
 	}
+	
 	public function index()
 	{
 		$this->load->library('session');
@@ -19,9 +20,9 @@ class Overview extends MY_Controller {
 	public function overviewStudent($studentId, $assignmentId)
 	{
 		$this->load->model('OverviewModel');
-		$data['$questionsAndAnswers'] = $this->OverviewModel->getAssignmentsQuestionsAnswers($studentId, $assignmentId);
-		$data['students'] = $this->OverviewModel->getStudents($studentId);
-		$data['subjects'] = $this->OverviewModel->getAssignments($assignmentId);
+		$data['questionsAndAnswers'] = $this->OverviewModel->getAssignmentsQuestionsAnswers($studentId, $assignmentId);
+		$data['student'] = $this->OverviewModel->getStudents($studentId);
+		$data['subject'] = $this->OverviewModel->getAssignments($assignmentId);
 		$data['fileName'] = 'overviewStudent';
 		$this->load->view('index',$data);
 	}
