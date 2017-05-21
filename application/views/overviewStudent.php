@@ -28,15 +28,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <p>niks</p>
+                                
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>OV Number</th>
-                                    <th>Student</th>
-                                    <th>Assignments</th>
-                                </tr>
-                            </tfoot>
                         </table>
                     </div>
                 <!-- /.box-body -->

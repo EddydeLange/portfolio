@@ -11,17 +11,18 @@ class Overview extends MY_Controller {
 	{
 		$this->load->library('session');
 		$this->load->model('OverviewModel');
-	 	$data['students'] = $this->OverviewModel->GetStudents();
+	 	$data['students'] = $this->OverviewModel->getStudents();
 		$data['assignments'] = $this->OverviewModel->getAssignments();
 		$this->load->view('index',$data);
 	}
 
 	public function overviewStudent($studentId, $assignmentId)
 	{
-		die();
+		$this->load->model('OverviewModel');
+		$data['$questionsAndAnswers'] = $this->OverviewModel->getAssignmentsQuestionsAnswers($studentId, $assignmentId);
+		$data['students'] = $this->OverviewModel->getStudents($studentId);
+		$data['subjects'] = $this->OverviewModel->getAssignments($assignmentId);
 		$data['fileName'] = 'overviewStudent';
 		$this->load->view('index',$data);
-		var_dump($studentId);
-		var_dump($assignmentId);
 	}
 }

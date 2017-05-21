@@ -16,7 +16,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <?php
-    $fileName = getFileName();
+    if (!isset($fileName)) {
+        $fileName = getFileName();
+    }
 
     echo link_tag('public/adminLTE/css/bootstrap.min.css');
     echo link_tag('public/adminLTE/css/AdminLTE.min.css');
