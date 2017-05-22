@@ -11,7 +11,6 @@ class Upload extends MY_Controller {
 	public function index()
 	{
 		$this->load->view('index');
-		$this->load->view('upload');
 	}
 
 	public function csv()
@@ -19,4 +18,3 @@ class Upload extends MY_Controller {
 		redirect('files/index');
 	}
 }
-

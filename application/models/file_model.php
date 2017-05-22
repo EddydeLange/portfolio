@@ -1,4 +1,4 @@
-<?php	
+<?php
 	class file_model extends CI_Model {
 
         public function getFiles() {
