@@ -1,12 +1,19 @@
 $(function() {
     $('#overviewPeople').DataTable({
         "paging": true,
-        "lengthChange": false,
+        "lengthChange": true,
         "searching": true,
         "ordering": true,
         "info": true,
-        "autoWidth": false
+        "autoWidth": false,
+        // "columnDefs": [
+        //     {
+        //         "orderable": false,
+        //         "targets": 2
+        //     }
+        // ]
     });
+
 });
 
 $('.assignmentOption').on('click', function() {
