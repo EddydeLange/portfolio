@@ -24,10 +24,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     echo link_tag('public/adminLTE/css/bootstrap.min.css');
     echo link_tag('public/adminLTE/css/AdminLTE.min.css');
     echo link_tag('public/adminLTE/css/skins/skin-blue.min.css');
-
+    //Your CSS example register.css
     if (file_exists('public/custom/css/'. $fileName .'.css')) {
-        //Your CSS example register.css
         echo link_tag('public/custom/css/'. $fileName .'.css');
+    } elseif (file_exists('public/custom/css/'. $PHPfileName .'.css')) {
+        echo link_tag('public/custom/css/'. $PHPfileName .'.css');
     }
 
     if ($fileName == 'Overview' || $fileName == 'overview' ) {

@@ -30,22 +30,21 @@
                                     foreach ($questionsAndAnswers as $questionAndAnswer) {
                                         $countQuestions++ ?>
                                         <tr>
-                                            <td><?= $countQuestions?> </td>
+                                            <td class="smallWidth"><?= $countQuestions?> </td>
                                             <td><?= $questionAndAnswer->question ?></td>
                                             <td>
                                             <?php if ($questionAndAnswer->answer !== '') {
                                                     echo $questionAndAnswer->answer;
                                                 } else { ?>
-                                                    <b>The user did not answered this answer correctly!</b>
+                                                    <b>The user did not answer correctly!</b>
                                                 <?php } ?>
                                             </td>
-                                            <td class="wrong">
+                                            <td class="smallWidth">
                                                 <?= ($questionAndAnswer->answer == '' ? 'X' : '') ; ?>
                                             </td>
                                         </tr>
                                <?php }
                                 } ?>
-
                             </tbody>
                         </table>
                     </div>

@@ -1,5 +1,11 @@
-.assignmentOptions{
-    width: 100%;
+#overviewPeople tr:hover, #overviewAssignments tr:hover{
+    background-color: #3c8dbc;
+    cursor: pointer;
+    cursor: hand;
+}
+
+th{
+    background-color: white;
 }
 
 .no-sort::after {
@@ -19,4 +25,12 @@ option {
 option:first-child
 {
     color: #ccc;
+}
+
+.smallWidth{
+    width: 1%;
+}
+
+.No {
+    color: red;
 }

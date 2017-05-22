@@ -27,7 +27,7 @@
                                 <tr class="assignmentOption" data-studentId="<?= $student[0]->id ?>" data-assignment="<?=$assignment->id?>">
                                     <td><?= $assignment->subject?></td>
                                     <td><?= $assignment->subtopic ?></td>
-                                    <td>Yes</td>
+                                    <td class="smallWidth <?= $assignment->done ?>"><?= $assignment->done ?></td>
                                 </tr>
                                 <?php } ?>
                             </tbody>

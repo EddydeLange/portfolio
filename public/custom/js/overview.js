@@ -13,7 +13,7 @@ $(function() {
         "searching": true,
         "ordering": false,
         "info": true,
-        "autoWidth": false
+        "autoWidth": true
     });
 });
 

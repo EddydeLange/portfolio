@@ -11,10 +11,14 @@ class OverviewModel extends CI_model {
         return $students;
     }
 
-    public function getAssignments($assignmentId = null) {
+    public function getAssignments($studentId = null, $assignmentId = null) {
         $this->load->database();
         if (!is_null($assignmentId)) {
             $this->db->where('id', $assignmentId);
+        }
+        if (!is_null($studentId)) {
+            $this->db->join('subject_done', 'subject_done.subject_id = subjects.id', 'left outer');
+            $this->db->where('subject_done.student_id', $studentId);
         }
         $getAssignments = $this->db->get('subjects');
         $assignments = $getAssignments->result();
@@ -32,7 +36,6 @@ class OverviewModel extends CI_model {
         $questionsAndAnswers = $getQuestionsAndAnswers->result();
 
         return $questionsAndAnswers;
-
     }
 }
 ?>
