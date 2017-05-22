@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+define('ARRAY_FIRST_INDEX', 0);
+
 /*
 |--------------------------------------------------------------------------
 | Display Debug backtrace

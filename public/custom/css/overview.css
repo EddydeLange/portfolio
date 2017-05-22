@@ -1,0 +1,40 @@
+#overviewPeople tr:hover, #overviewAssignments tr:hover{
+    background-color: #3c8dbc;
+    cursor: pointer;
+    cursor: hand;
+}
+
+th{
+    background-color: white;
+}
+
+.no-sort::after {
+    display: none;
+}
+
+.no-sort {
+    pointer-events: none; cursor: default;
+}
+
+select {
+    color: #8d9093;
+}
+option {
+    color: #000;
+}
+option:first-child
+{
+    color: #ccc;
+}
+
+.smallWidth{
+    width: 1%;
+}
+
+.No, .wrongAnswer {
+    color: red;
+}
+
+.Yes {
+    color: green;
+}

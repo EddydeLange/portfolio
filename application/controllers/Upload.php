@@ -12,4 +12,9 @@ class Upload extends MY_Controller {
 	{
 		$this->load->view('index');
 	}
+
+	public function csv()
+	{
+		redirect('files/index');
+	}
 }
