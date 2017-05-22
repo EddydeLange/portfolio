@@ -14,7 +14,7 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="overviewPeople" class="table table-bordered table-striped">
+                        <table id="overviewStudent" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th></th>
@@ -44,11 +44,8 @@
                                             </td>
                                         </tr>
                                <?php }
-                                } else { ?>
-                                    <tr>
-                                        <td colspan="4">There are no results of this subject... One of the reasons why you received this message is that the user did not submit his assignment yet.</td>
-                                    </tr>
-                            <?php } ?>
+                                } ?>
+
                             </tbody>
                         </table>
                     </div>

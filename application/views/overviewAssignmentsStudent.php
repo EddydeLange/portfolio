@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Overview Student</h1>
+        <h1>Overview of <?=$student[0]->name?></h1>
     </section>
 
     <!-- Main content -->
@@ -10,22 +10,24 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Data Table With Full Features</h3>
+                        <h3 class="box-title"><?=$student[0]->name?></h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="overviewPeople" class="table table-bordered table-striped">
+                        <table id="overviewAssignments" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>OV Number</th>
-                                    <th>Student</th>
+                                    <th>Assignment</th>
+                                    <th>Subtopic</th>
+                                    <th>Done</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($students as $student) {  ?>
-                                <tr class="studentRow" data-studentId="<?= $student->id ?>">
-                                    <td><?= $student->ov_number ?></td>
-                                    <td><?= $student->name ?></td>
+                                <?php foreach ($assignments as $assignment) {  ?>
+                                <tr class="assignmentOption" data-studentId="<?= $student[0]->id ?>" data-assignment="<?=$assignment->id?>">
+                                    <td><?= $assignment->subject?></td>
+                                    <td><?= $assignment->subtopic ?></td>
+                                    <td>Yes</td>
                                 </tr>
                                 <?php } ?>
                             </tbody>

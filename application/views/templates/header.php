@@ -16,9 +16,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <?php
-    if (!isset($fileName)) {
-        $fileName = getFileName();
+    if (!isset($PHPfileName)) {
+        $PHPfileName = getFileName();
     }
+    $fileName = getFileName();
 
     echo link_tag('public/adminLTE/css/bootstrap.min.css');
     echo link_tag('public/adminLTE/css/AdminLTE.min.css');
@@ -29,10 +30,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
         echo link_tag('public/custom/css/'. $fileName .'.css');
     }
 
-    if ($fileName == 'Overview') {
+    if ($fileName == 'Overview' || $fileName == 'overview' ) {
         echo link_tag('public/adminLTE/css/datatables/dataTables.bootstrap.css');
     }
-
     ?>
 </head>
 <!--

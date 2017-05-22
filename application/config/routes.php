@@ -57,4 +57,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['csv'] = 'upload/csv';
 $route['files'] = 'files/index';
 $route['upload'] = 'upload';
-$rout['overviewStudent/(:num)/(:num)'] = 'overview/overviewStudent/$1/$2';
+$rout['overviewAssignmentsStudent/(:num)'] = 'Overview/overviewAssignmentsStudent/$1';
+$rout['overviewStudent/(:num)/(:num)'] = 'Overview/overviewStudent/$1/$2';
