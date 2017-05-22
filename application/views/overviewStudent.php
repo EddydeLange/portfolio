@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Overview of <?=$student[0]->name?></h1>
+        <h1>Overview of <?=$student[ARRAY_FIRST_INDEX]->name?></h1>
     </section>
 
     <!-- Main content -->
@@ -10,7 +10,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Assignment <?=$subject[0]->subject . ' of the subject ' . $subject[0]->subtopic ?> </h3>
+                        <h3 class="box-title">Assignment <?=$subject[ARRAY_FIRST_INDEX]->subject . ' of the subject ' . $subject[ARRAY_FIRST_INDEX]->subtopic ?> </h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -30,18 +30,10 @@
                                     foreach ($questionsAndAnswers as $questionAndAnswer) {
                                         $countQuestions++ ?>
                                         <tr>
-                                            <td class="smallWidth"><?= $countQuestions?> </td>
+                                            <td class="smallWidth"><?= $countQuestions ?> </td>
                                             <td><?= $questionAndAnswer->question ?></td>
-                                            <td>
-                                            <?php if ($questionAndAnswer->answer !== '') {
-                                                    echo $questionAndAnswer->answer;
-                                                } else { ?>
-                                                    <b>The user did not answer correctly!</b>
-                                                <?php } ?>
-                                            </td>
-                                            <td class="smallWidth">
-                                                <?= ($questionAndAnswer->answer == '' ? 'X' : '') ; ?>
-                                            </td>
+                                            <td><?= $questionAndAnswer->answer ?></td>
+                                            <td class="smallWidth wrongAnswer"><?= $questionAndAnswer->wrong ?></td>
                                         </tr>
                                <?php }
                                 } ?>

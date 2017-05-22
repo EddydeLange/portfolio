@@ -35,6 +35,15 @@ class OverviewModel extends CI_model {
         $getQuestionsAndAnswers = $this->db->get('questions');
         $questionsAndAnswers = $getQuestionsAndAnswers->result();
 
+        foreach ($questionsAndAnswers as $questionAndAnswer) {
+            if ($questionAndAnswer->answer == '') {
+                $questionAndAnswer->answer = 'The user did not answer correctly!';
+                $questionAndAnswer->wrong = 'X';
+            } else {
+                $questionAndAnswer->wrong = '';
+            }
+        }
+
         return $questionsAndAnswers;
     }
 }

@@ -31,6 +31,10 @@ option:first-child
     width: 1%;
 }
 
-.No {
+.No, .wrongAnswer {
     color: red;
+}
+
+.Yes {
+    color: green;
 }
