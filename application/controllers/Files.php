@@ -10,7 +10,7 @@ class Files extends MY_Controller {
 
 	public function index()
 	{
-		$data = [];
+		
 		$this->load->model('file_model');
 		$data['fileNames'] = $this->file_model->getFiles();
 		$this->load->view('index', $data);
