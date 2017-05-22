@@ -15,8 +15,7 @@ class Overview extends MY_Controller {
 		$this->load->library('session');
 		$this->load->model('OverviewModel');
 	 	$data['students'] = $this->OverviewModel->getStudents();
-		$data['assignments'] = $this->OverviewModel->getAssignments();
-		$this->load->view('index',$data);
+		$this->load->view('index', $data);
 	}
 
 	public function overviewStudent($studentId, $assignmentId)
@@ -27,7 +26,7 @@ class Overview extends MY_Controller {
 		$studentId = null;
 		$data['subject'] = $this->OverviewModel->getAssignments($studentId, $assignmentId);
 		$data['PHPfileName'] = 'overviewStudent';
-		$this->load->view('index',$data);
+		$this->load->view('index', $data);
 	}
 
 	public function overviewAssignmentsStudent($studentId)
@@ -36,6 +35,6 @@ class Overview extends MY_Controller {
 		$data['student'] = $this->OverviewModel->getStudents($studentId);
 		$data['assignments'] = $this->OverviewModel->getAssignments($studentId);
 		$data['PHPfileName'] = 'overviewAssignmentsStudent';
-		$this->load->view('index',$data);
+		$this->load->view('index', $data);
 	}
 }

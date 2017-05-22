@@ -9,11 +9,11 @@ th{
 }
 
 .no-sort::after {
-    display: none!important;
+    display: none;
 }
 
 .no-sort {
-    pointer-events: none!important; cursor: default!important;
+    pointer-events: none; cursor: default;
 }
 
 select {

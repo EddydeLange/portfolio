@@ -24,11 +24,8 @@ $('.assignmentOption').on('click', function() {
         url: "overviewStudent/" + studentId + "/" + assignmentId,
         success: function() {
             document.location.href = '/portfolio/overview/overviewStudent/' + studentId + "/" + assignmentId;
-            console.log(document.location);
         },
-        error: function() {
-            console.log('error');
-        }
+        error: function() {}
     });
 });
 
@@ -39,10 +36,7 @@ $('.studentRow').on('click', function() {
         url: "overviewAssignmentsStudent/" + studentId,
         success: function() {
             document.location.href = '/portfolio/overview/overviewAssignmentsStudent/' + studentId;
-            console.log(document.location);
         },
-        error: function() {
-            console.log('error');
-        }
+        error: function() {}
     });
 });
