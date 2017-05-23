@@ -23,7 +23,10 @@
                             <tbody>
                               	<?php foreach($fileNames as $fileName) { ?>
 						    		<div class="row">
-										<td><?= $fileName ?></td>
+										<td>
+											<?= $fileName ?>
+											<a class="fa fa-times delete"></a>
+										</td>
 						    		</div>
 								<?php } ?>
                             </tbody>
