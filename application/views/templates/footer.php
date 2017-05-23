@@ -35,12 +35,8 @@
 <script src="<?php echo base_url();?>public/AdminLTE/plugins/fastclick/fastclick.js"></script>
 <script src="<?php echo base_url();?>public/AdminLTE/js/app.min.js"></script>
 
-<?php
-if (file_exists('public/custom/js/'. $fileName .'.js')) { ?>
-    <script src="<?php echo base_url('public/custom/js/'. $fileName .'.js');?>"></script>
-<?php } elseif(file_exists('public/custom/js/'. $PHPfileName .'.js')) { ?>
-    <script src="<?php echo base_url('public/custom/js/'. $PHPfileName .'.js');?>"></script>
-<?php } ?>
+<script src="<?php echo base_url(''. $jsFile .'');?>"></script>
+
 <script src="<?php echo base_url('public/AdminLTE/plugins/datatables/jquery.dataTables.min.js');?>"></script>
 <script src="<?php echo base_url('public/AdminLTE/plugins/datatables/dataTables.bootstrap.min.js');?>"></script>
 

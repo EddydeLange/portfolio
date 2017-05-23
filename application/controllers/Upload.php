@@ -10,7 +10,7 @@ class Upload extends MY_Controller {
 
 	public function index()
 	{
-		$this->load->view('index');
+		crender('index');
 	}
 
 	public function csv()

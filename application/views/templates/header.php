@@ -16,46 +16,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <?php
-    if (!isset($PHPfileName)) {
-        $PHPfileName = getFileName();
-    }
-    $fileName = getFileName();
 
     echo link_tag('public/adminLTE/css/bootstrap.min.css');
     echo link_tag('public/adminLTE/css/AdminLTE.min.css');
     echo link_tag('public/adminLTE/css/skins/skin-blue.min.css');
+    echo link_tag($cssFile);
+    echo link_tag('public/adminLTE/css/datatables/dataTables.bootstrap.css');
 
-    if (file_exists('public/custom/css/'. $fileName .'.css')) {
-        echo link_tag('public/custom/css/'. $fileName .'.css');
-    } elseif (file_exists('public/custom/css/'. $PHPfileName .'.css')) {
-        echo link_tag('public/custom/css/'. $PHPfileName .'.css');
-    }
 
-    if ($fileName == 'Overview' || $fileName == 'overview' ) {
-        echo link_tag('public/adminLTE/css/datatables/dataTables.bootstrap.css');
-    }
     ?>
 </head>
-<!--
-BODY TAG OPTIONS:
-=================
-Apply one or more of the following classes to get the
-desired effect
-|---------------------------------------------------------|
-| SKINS         | skin-blue                               |
-|               | skin-black                              |
-|               | skin-purple                             |
-|               | skin-yellow                             |
-|               | skin-red                                |
-|               | skin-green                              |
-|---------------------------------------------------------|
-|LAYOUT OPTIONS | fixed                                   |
-|               | layout-boxed                            |
-|               | layout-top-nav                          |
-|               | sidebar-collapse                        |
-|               | sidebar-mini                            |
-|---------------------------------------------------------|
--->
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
