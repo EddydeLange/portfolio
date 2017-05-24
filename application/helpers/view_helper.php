@@ -16,12 +16,15 @@ if( ! function_exists('crender'))
         if (!isset($data['PHPfileName'])) {
             $data['PHPfileName'] = getFileName();
         }
+        
         $data['fileName'] = getFileName();
         //For your css files
         if (file_exists('public/custom/css/'. $data['fileName'] .'.css')) {
             $data['cssFile'] = 'public/custom/css/'. $data['fileName'] .'.css';
         } elseif (file_exists('public/custom/css/'. $data['PHPfileName'] .'.css')) {
             $data['cssFile'] = 'public/custom/css/'. $data['PHPfileName'] .'.css';
+        } else {
+            $data['cssFile'] = '';
         }
         //For your js files
         if (file_exists('public/custom/js/'. $data['fileName'] .'.js')) {

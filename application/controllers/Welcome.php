@@ -25,6 +25,6 @@ class Welcome extends MY_Controller {
 
 	public function index()
 	{
-		crender('index', $data);
+		crender('index');
 	}
 }
