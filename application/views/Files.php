@@ -14,7 +14,7 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="overviewPeople" class="table table-bordered table-striped">
+                        <table id="Fenno" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>Bestand</th>
@@ -22,12 +22,12 @@
                             </thead>
                             <tbody>
                               	<?php foreach($fileNames as $fileName) { ?>
-						    		<div class="row">
+						    		<tr>
 										<td>
 											<?= $fileName ?>
 											<a class="fa fa-times delete"></a>
 										</td>
-						    		</div>
+						    		</tr>
 								<?php } ?>
                             </tbody>
                         </table>

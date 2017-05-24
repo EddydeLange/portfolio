@@ -1,10 +1,10 @@
 $(function() {
-    $('#overviewPeople, #overviewAssignments').DataTable({
+    $('#Fenno').DataTable({
         "paging": true,
         "lengthChange": true,
         "searching": true,
         "ordering": true,
         "info": true,
-        "autoWidth": false
+        "autoWidth": false 
     });
 });
