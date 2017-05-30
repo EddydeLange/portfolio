@@ -18,17 +18,18 @@
                             <thead>
                                 <tr>
                                     <th>Bestand</th>
+                                    <th>Groote KB</th>
+                                    <th>Upload Date</th>
                                 </tr>
                             </thead>
                             <tbody>
-                              	<?php foreach($fileNames as $fileName) { ?>
-						    		<tr>
-										<td>
-											<?= $fileName ?>
-											<a class="fa fa-times delete"></a>
-										</td>
-						    		</tr>
-								<?php } ?>
+                                <?php foreach($imports as $import) { ?>
+                                    <tr>
+                                            <td><?= $import->filename ?></td>
+                                            <td><?= $import->file_size ?></td>
+                                            <td><?= $import->file_date ?></td>       
+                                    </tr>
+                                <?php } ?>  
                             </tbody>
                         </table>
                     </div>

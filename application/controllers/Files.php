@@ -11,7 +11,7 @@ class Files extends MY_Controller {
 	public function index()
 	{
 		$this->load->model('file_model');
-		$data['fileNames'] = $this->file_model->getFiles();
+		$data['imports'] = $this->file_model->getFiles();
 		crender('index', $data);
 	}
 }
