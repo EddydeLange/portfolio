@@ -14,4 +14,11 @@ class Files extends MY_Controller {
 		$data['imports'] = $this->file_model->getFiles();
 		crender('index', $data);
 	}
+
+	public function deleteFiles()
+	{
+		$this->load->model('file_model');
+		$data['response'] = $this->file_model->deleteFile();
+		//return json zelf opzoeken
+	}
 }

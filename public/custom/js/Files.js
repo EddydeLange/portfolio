@@ -8,3 +8,11 @@ $(function() {
         "autoWidth": false 
     });
 });
+
+
+ function getDeleteButton(){
+
+ 	$.post("http://[::1]/portfolio/files/index", function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
+ }
