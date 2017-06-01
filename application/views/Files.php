@@ -20,14 +20,16 @@
                                     <th>Bestand</th>
                                     <th>Groote KB</th>
                                     <th>Upload Date</th>
+                                    <th>active</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach($imports as $import) { ?>
                                     <tr>
-                                            <td><?= $import->filename ?></td>
-                                            <td><?= $import->file_size ?></td>
-                                            <td><?= $import->file_date ?></td>       
+                                        <td><?= $import->filename ?></td>
+                                        <td><?= $import->file_size ?></td>
+                                        <td><?= $import->file_date ?></td>       
+                                        <td><?= $import->file_active ?></td>       
                                     </tr>
                                 <?php } ?>  
                             </tbody>

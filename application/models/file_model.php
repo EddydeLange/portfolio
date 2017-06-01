@@ -4,7 +4,7 @@
         public function getFiles() {
         	
         	$this->load->database();
-    		$imports = $this->db->get('imports')->result();
+        	$imports = $this->db->get('imports')->result();
     		
     		return $imports;
         }
