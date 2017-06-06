@@ -16,9 +16,9 @@ function changeInput(students) {
     });
 }
 
-function getStudents() {
+$(function() {
     $.ajax({
-        url: 'searchChange',
+        url: 'http://localhost/portfolio/searchChange',
         dataType: 'json',
         type: "get",
         success: function(data){
@@ -28,7 +28,7 @@ function getStudents() {
             console.log('error');
         }
     });
-}
+});
 
 function goToPageStudent() {
     $('.studentSuspect').on('click', function() {
@@ -42,7 +42,3 @@ function goToPageStudent() {
         });
     });
 }
-
-$(document).ready(function() {
-    getStudents();
-});
