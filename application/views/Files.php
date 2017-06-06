@@ -25,12 +25,16 @@
                             <tbody>
                                 <?php foreach($imports as $import) { ?>
                                     <tr>
-                                      
-                                       <td><a onclick="getDeleteButton();" class="fa fa-times" aria-hidden="true"></a><?= $import->filename ?></td>
+                                        <td><?= $import->filename ?></td>
                                        
                                         <td><?= $import->file_size ?></td>
                                        
-                                        <td><?= $import->file_date ?></td>                          
+                                        <td><?= $import->file_date ?></td>   
+                                        
+                                        <td><button onclick="getDeleteButton();" class="btn btn-danger">
+                                       
+                                        <i class="fa fa-trash"></i> </button> </td>  
+
                                     </tr>
                                 <?php } ?>  
                             </tbody>
