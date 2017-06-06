@@ -19,6 +19,7 @@ class Files extends MY_Controller {
 	{
 		$this->load->model('file_model');
 		$data['response'] = $this->file_model->deleteFile();
-		//return json zelf opzoeken
+		echo json_encode($data["data"]);
+		
 	}
 }
