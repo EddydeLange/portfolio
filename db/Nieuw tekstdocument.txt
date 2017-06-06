@@ -1,0 +1,1 @@
+verwijder de tabel die onlangs is toegevoegd en importeer huidige sql bestand
