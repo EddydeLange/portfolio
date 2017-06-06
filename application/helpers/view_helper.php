@@ -12,7 +12,7 @@ if ( ! function_exists('getFileName'))
 if( ! function_exists('crender'))
 {
     function crender($f_template, $data = null)
-    {
+    {   
         if (!isset($data['PHPfileName'])) {
             $data['PHPfileName'] = getFileName();
         }
