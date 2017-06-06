@@ -22,6 +22,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     echo link_tag('public/adminLTE/css/skins/skin-blue.min.css');
     echo link_tag($cssFile);
     echo link_tag('public/adminLTE/css/datatables/dataTables.bootstrap.css');
+    echo link_tag('public/custom/css/standard.css');
 
 
     ?>
@@ -109,15 +110,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div>
 
       <!-- search form (Optional) -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input autocomplete="off" type="text" name="searchPerson" class="form-control" placeholder="Search student...">
+                <span class="input-group-btn">
+                    <button type="submit" id="search-btn" class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+            <div id="dropdown-content">
+
+            </div>
+        </form>
       <!-- /.search form -->
 
       <!-- Sidebar Menu -->

@@ -17,4 +17,19 @@ class MY_Controller extends CI_Controller {
     }
     public function basic(){}
 
+    public function searchChange() {
+		$studentId = null;
+		$this->load->model('OverviewModel');
+		$data['searchStudents'] = $this->OverviewModel->getStudents();
+		echo json_encode($data["searchStudents"]);
+	}
+
+    public function getStudentsForSearching($studentId)
+    {
+        $this->load->model('OverviewModel');
+        $data['student'] = $this->OverviewModel->getStudents($studentId);
+        $data['PHPfileName'] = 'overviewAssignmentsStudent';
+        crender('index', $data);
+    }
+
 }

@@ -3,7 +3,7 @@ class OverviewModel extends CI_model {
     public function getStudents($studentId = null) {
         $this->load->database();
         if ($studentId) {
-            $this->db->where('id', $studentId);
+            $this->db->where('ov_number', $studentId);
         }
         $getStudents = $this->db->get('students');
         $students = $getStudents->result();
