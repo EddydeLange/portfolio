@@ -16,15 +16,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <?php
-
     echo link_tag('public/adminLTE/css/bootstrap.min.css');
     echo link_tag('public/adminLTE/css/AdminLTE.min.css');
     echo link_tag('public/adminLTE/css/skins/skin-blue.min.css');
-    echo link_tag($cssFile);
     echo link_tag('public/adminLTE/css/datatables/dataTables.bootstrap.css');
     echo link_tag('public/custom/css/standard.css');
-
-
+    echo link_tag($cssFile);
     ?>
 </head>
 
@@ -35,7 +32,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="<?php echo site_url('Welcome/index') ?>" class="logo">
+    <a href="<?php echo site_url('Overview/index') ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>P</b>OF</span>
       <!-- logo for regular state and mobile devices -->

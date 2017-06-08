@@ -12,7 +12,7 @@ if ( ! function_exists('getFileName'))
 if( ! function_exists('crender'))
 {
     function crender($f_template, $data = null)
-    {   
+    {
         if (!isset($data['PHPfileName'])) {
             $data['PHPfileName'] = getFileName();
         }
@@ -32,7 +32,7 @@ if( ! function_exists('crender'))
         } elseif (file_exists('public/custom/js/'. $data['PHPfileName'] .'.js')) {
             $data['jsFile'] = 'public/custom/js/'. $data['PHPfileName'] .'.js';
         }
-        
+
         $ci =& get_instance();
         $ci->load->view('templates/header', $data);
         $ci->load->view($data['PHPfileName']);
