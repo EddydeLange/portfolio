@@ -14,12 +14,13 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="Fenno" class="table table-bordered table-striped">
+                        <table id="filesTable" class=" wtable table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>Bestand</th>
                                     <th>Groote KB</th>
                                     <th>Upload Date</th>
+                                    <th>Verwijderen</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -33,7 +34,7 @@
                                         
                                         <td><button onclick="getDeleteButton();" class="btn btn-danger">
                                        
-                                        <i class="fa fa-trash"></i> </button> </td>  
+                                        <i class="fa fa-trash"></i></button></td>  
 
                                     </tr>
                                 <?php } ?>  

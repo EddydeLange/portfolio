@@ -1,14 +1,15 @@
 $(function() {
-    $('#Fenno').DataTable({
+    $('#filesTable').DataTable({
         "paging": true,
         "lengthChange": true,
         "searching": true,
         "ordering": true,
         "info": true,
         "autoWidth": false 
-    });
-});
+    });    
 
+
+});
 
  function getDeleteButton(){
 
@@ -16,7 +17,7 @@ $(function() {
     //succes function en dan klaar!
         success: function() {
             
-        alert("Data: " + data + "\nStatus: " + status); 
+        // alert("Data: " + data + "\nStatus: " + status); 
   
         }
      });
