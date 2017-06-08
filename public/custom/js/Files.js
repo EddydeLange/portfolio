@@ -16,7 +16,7 @@ $(function() {
     //succes function en dan klaar!
         success: function() {
             
-        // alert("Data: " + data + "\nStatus: " + status); 
+        alert("Data: " + data + "\nStatus: " + status); 
   
         }
      });
