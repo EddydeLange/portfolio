@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Files</h1>
+        <h1>Bestanden</h1>
     </section>
 
     <!-- Main content -->
@@ -10,16 +10,16 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">All files uploaded to the database.</h3>
+                        <h3 class="box-title">Alle bestanden die geüpload zijn.</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="filesTable" class=" wtable table-bordered table-striped">
+                        <table id="filesTable" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>Bestand</th>
-                                    <th>Groote KB</th>
-                                    <th>Upload Date</th>
+                                    <th>Groote (KB)</th>
+                                    <th>Datum geüpload</th>
                                     <th>Verwijderen</th>
                                 </tr>
                             </thead>
