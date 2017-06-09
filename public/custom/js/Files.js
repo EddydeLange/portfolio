@@ -11,14 +11,31 @@ $(function() {
 
 });
 
- function getDeleteButton(){
 
- 	$.post({
-    //succes function en dan klaar!
-        success: function() {
-            
-        // alert("Data: " + data + "\nStatus: " + status); 
-  
-        }
-     });
-}
+$(document).ready(function(){
+    $(".deleteBTN").click(function(){
+        $.ajax({
+            url: 'deleteFiles',
+            dataType: 'json',
+            type: "post",
+            success: function(data){    
+               console.log("gay");
+            },
+            error: function(){
+                console.log('error');
+            }
+        });
+    });
+});
+
+// document.getElementById("deleteBTN").addEventListener("click", function(){
+//     console.log("hallo"); 
+//  
+//     //succes function en dan klaar!
+//           
+             //  
+
+//           
+//         }
+//   
+// });

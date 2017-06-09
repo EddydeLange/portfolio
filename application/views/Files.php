@@ -14,7 +14,7 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="filesTable" class=" wtable table-bordered table-striped">
+                        <table id="filesTable" class=" table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>Bestand</th>
@@ -32,7 +32,7 @@
                                        
                                         <td><?= $import->file_date ?></td>   
                                         
-                                        <td><button onclick="getDeleteButton();" class="btn btn-danger">
+                                        <td><button class="btn btn-danger deleteBTN">
                                        
                                         <i class="fa fa-trash"></i></button></td>  
 
