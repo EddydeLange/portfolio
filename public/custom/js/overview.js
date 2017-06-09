@@ -5,7 +5,7 @@ $(function() {
         "searching": true,
         "ordering": true,
         "info": true,
-        "autoWidth": false
+        "autoWidth": true
     });
     $('#overviewStudent').DataTable({
         "paging": true,
@@ -33,7 +33,7 @@ $('.studentRow').on('click', function() {
     var studentId = $(this).closest("*[data-studentId]").attr("data-studentId")
 
     $.ajax({
-        url: "overviewAssignmentsStudent/" + studentId,
+        url: "overviewAssignmentsStudent",
         success: function() {
             document.location.href = '/portfolio/overview/overviewAssignmentsStudent/' + studentId;
         },

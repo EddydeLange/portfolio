@@ -14,7 +14,22 @@ class Assignments extends MY_Controller {
 	{
 		$this->load->library('session');
 		$this->load->model('AssignmentsModel');
+		$data['subjects'] = $this->AssignmentsModel->getSubjects();
         $data['PHPfileName'] = 'assignments/overviewAssignments';
+		crender('index', $data);
+	}
+
+	public function formPage($btnElement, $id)
+	{
+		$this->load->model('AssignmentsModel');
+		$id  = $_POST['id'];
+		if ($id !== '') {
+			$data['editData'] = $this->AssignmentsModel->getEditData($id);
+		} else {
+			$data['editData'] = '';
+		}
+		$data['PHPfileName'] = 'assignments/formPage';
+
 		crender('index', $data);
 	}
 }

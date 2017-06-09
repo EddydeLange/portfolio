@@ -14,16 +14,33 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="overviewPeople" class="table table-bordered table-striped">
+                        <table id="assignmentsOverview" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>Assignments</th>
+                                    <th>Assignment</th>
+                                    <th>Subtopic</th>
+                                    <th class="no-sort">
+                                        <button type="button" class="addButton">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
-								<tr>
-									<td>Assignment</td>
-								</tr>
+                                <?php foreach ($subjects as $subject) { ?>
+                                    <tr>
+                                        <td><?= $subject->subject ?></td>
+                                        <td><?= $subject->subtopic ?></td>
+                                        <td data-dataId="<?= $subject->id ?>" class="tdWidth">
+                                            <button class="editButton">
+                                                <span class="glyphicon glyphicon-pencil"></span>
+                                            </button>
+                                            <button type="button" class="deleteButton">
+                                                <span class="glyphicon glyphicon-eye-open"></span>
+                                            </button>
+                                        </td>
+    								</tr>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>

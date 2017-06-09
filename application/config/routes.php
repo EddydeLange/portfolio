@@ -58,3 +58,5 @@ $route['files'] = 'files/index';
 $route['upload'] = 'upload';
 $route['overviewAssignmentsStudent/(:num)'] = 'Overview/overviewAssignmentsStudent/$1';
 $route['overviewStudent/(:num)/(:num)'] = 'Overview/overviewStudent/$1/$2';
+
+$route['formPage/(:num)/(:num)'] = 'Assignments/formPage/$1/$2';
