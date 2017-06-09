@@ -19,7 +19,7 @@ $(document).ready(function(){
             dataType: 'json',
             type: "post",
             success: function(data){    
-               console.log("gay");
+               console.log("Test");
             },
             error: function(){
                 console.log('error');
@@ -27,15 +27,3 @@ $(document).ready(function(){
         });
     });
 });
-
-// document.getElementById("deleteBTN").addEventListener("click", function(){
-//     console.log("hallo"); 
-//  
-//     //succes function en dan klaar!
-//           
-             //  
-
-//           
-//         }
-//   
-// });

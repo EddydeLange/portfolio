@@ -10,7 +10,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">All files uploaded to the database.</h3>
+                        <h3 class="box-title">alle besteander die geupload zijn aan de database.</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -18,8 +18,8 @@
                             <thead>
                                 <tr>
                                     <th>Bestand</th>
-                                    <th>Groote KB</th>
-                                    <th>Upload Date</th>
+                                    <th>Groote (KB)</th>
+                                    <th>Upload datum</th>
                                     <th>Verwijderen</th>
                                 </tr>
                             </thead>
