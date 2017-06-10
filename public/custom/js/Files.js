@@ -12,18 +12,26 @@ $(function() {
 });
 
 
-$(document).ready(function(){
-    $(".deleteBTN").click(function(){
-        $.ajax({
-            url: 'deleteFiles',
-            dataType: 'json',
-            type: "post",
-            success: function(data){    
-               console.log("Test");
-            },
-            error: function(){
-                console.log('error');
-            }
-        });
+$(document).ready(function(){ 
+    $(".deleteBTN").click(function deleteFiles(){
+  
+      getFiles();    
+
+        function postFile() {
+            $.ajax({
+                url: 'deleteFiles',
+                dataType: 'json',
+                type: "post",
+                success: function(data){    
+                    console.log("kan wel posten!");
+                },
+                error: function(){
+                    console.log('kan niet posten');
+                }
+            });  
+        }
+
+      
+
     });
 });
