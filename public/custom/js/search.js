@@ -35,12 +35,6 @@ $(function() {
 function goToPageStudent() {
     $('.studentSuspect').on('click', function() {
         var studentId = $(this).attr("data-ov_number")
-        $.ajax({
-            url: base_url+"Search/getStudentsForSearching/"+studentId,
-            success: function() {
-                document.location.href = '/portfolio/overview/overviewAssignmentsStudent/' + studentId;
-            },
-            error: function() {}
-        });
+        document.location.href = '/portfolio/overview/overviewAssignmentsStudent/' + studentId;
     });
 }

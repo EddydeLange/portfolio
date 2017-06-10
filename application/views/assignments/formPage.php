@@ -8,24 +8,39 @@
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
-                <div class="box">
-                    <div class="box-header">
-                        <h3 class="box-title">test</h3>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <table class="table table-bordered table-striped">
-                            <thead>
+                <!-- TO DO List -->
+                <div class="box box-primary">
+                  <div class="box-header">
+                    <i class="ion ion-clipboard"></i>
 
-                            </thead>
-                            <tbody>
-                                <p>dit is eent test</p>
-                            </tbody>
-                        </table>
-                    </div>
-                <!-- /.box-body -->
+                    <h3 class="box-title">Create Assignment</h3>
+                  </div>
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                    <form>
+                        <ul class="todo-list">
+                            <li class="inputQuest">
+                                <!-- drag handle -->
+                                <span class="handle">
+                                    <i class="fa fa-ellipsis-v"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                </span>
+                                <!-- checkbox -->
+                                <input class="text" type="text" placeholder="Vraag">
+                                <!-- General tools such as edit or delete-->
+                                <div class="tools deleteInput">
+                                    <i class="fa fa-trash-o deleteInput"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </form>
+                  </div>
+                  <!-- /.box-body -->
+                  <div class="box-footer clearfix no-border">
+                    <button id="addItem" type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
+                  </div>
                 </div>
-            <!-- /.box -->
+                <!-- /.box -->
             </div>
         <!-- /.col -->
         </div>

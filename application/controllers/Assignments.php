@@ -19,17 +19,17 @@ class Assignments extends MY_Controller {
 		crender('index', $data);
 	}
 
-	public function formPage($btnElement, $id)
+	public function formPage($btnElement, $id = null)
 	{
 		$this->load->model('AssignmentsModel');
-		$id  = $_POST['id'];
-		if ($id !== '') {
-			$data['editData'] = $this->AssignmentsModel->getEditData($id);
+		if ($id !== null) {
+			$data['editData'] = $this->AssignmentsModel->getSubjects($id);
 		} else {
 			$data['editData'] = '';
 		}
 		$data['PHPfileName'] = 'assignments/formPage';
-
+		$data['JSFileName'] = 'formPage';
+		
 		crender('index', $data);
 	}
 }

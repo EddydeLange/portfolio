@@ -20,23 +20,10 @@ $(function() {
 $('.assignmentOption').on('click', function() {
     var assignmentId = $(this).data('assignment');
     var studentId = $(this).closest("*[data-studentId]").attr("data-studentId")
-    $.ajax({
-        url: "overviewStudent/" + studentId + "/" + assignmentId,
-        success: function() {
-            document.location.href = '/portfolio/overview/overviewStudent/' + studentId + "/" + assignmentId;
-        },
-        error: function() {}
-    });
+    document.location.href = '/portfolio/overview/overviewStudent/' + studentId + "/" + assignmentId;
 });
 
 $('.studentRow').on('click', function() {
     var studentId = $(this).closest("*[data-studentId]").attr("data-studentId")
-
-    $.ajax({
-        url: "overviewAssignmentsStudent",
-        success: function() {
-            document.location.href = '/portfolio/overview/overviewAssignmentsStudent/' + studentId;
-        },
-        error: function() {}
-    });
+    document.location.href = '/portfolio/overview/overviewAssignmentsStudent/' + studentId;
 });

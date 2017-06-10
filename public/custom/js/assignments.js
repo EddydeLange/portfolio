@@ -20,11 +20,5 @@ $('.editButton, .addButton').on('click', function() {
     } else {
         var rowId = '';
     }
-    $.ajax({
-        url : "formPage",
-        success: function() {
-            document.location.href = '/portfolio/assignments/formPage/' + btnElement + "/" + rowId;
-        },
-        error: function() {}
-    });
+    document.location.href = '/portfolio/assignments/formPage/' + btnElement + '/' + rowId;
 });
