@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Files</h1>
+        <h1>Geuploade files </h1>
     </section>
 
     <!-- Main content -->
@@ -32,7 +32,7 @@
                                        
                                         <td><?= $import->file_date ?></td>   
                                         
-                                        <td><button class="btn btn-danger deleteBTN">
+                                        <td style="width: 10px"><button class="btn btn-danger deleteBTN">
                                        
                                         <i class="fa fa-trash"></i></button></td>  
 
