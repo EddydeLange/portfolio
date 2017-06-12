@@ -17,7 +17,7 @@
                   </div>
                   <!-- /.box-header -->
                   <div class="box-body">
-                    <form>
+                    <form id="formInput">
                         <ul class="todo-list">
                             <li class="inputQuest">
                                 <!-- drag handle -->
@@ -26,7 +26,7 @@
                                     <i class="fa fa-ellipsis-v"></i>
                                 </span>
                                 <!-- checkbox -->
-                                <input class="text" type="text" placeholder="Vraag">
+                                <input name="question" class="text" type="text" placeholder="Vraag">
                                 <!-- General tools such as edit or delete-->
                                 <div class="tools deleteInput">
                                     <i class="fa fa-trash-o deleteInput"></i>
@@ -37,6 +37,7 @@
                   </div>
                   <!-- /.box-body -->
                   <div class="box-footer clearfix no-border">
+                      <button id="sendData" type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Send</button>
                     <button id="addItem" type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
                   </div>
                 </div>

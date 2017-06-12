@@ -11,7 +11,22 @@ function addDeleteInput() {
     });
 }
 
-
+$('#sendData').on('click', function() {
+    var base_url = $('#searchTag').attr('data-baseurl');
+    var formData = $('#formInput').serialize();
+    $.ajax({
+        url: base_url+'assignments/sendDataForm',
+        dataType: 'json',
+        data: formData,
+        type: 'post',
+        success: function(test) {
+            alert(test+'succes');
+        },
+        error: function(test) {
+            alert(test+'error');
+        }
+    });
+});
 
 $(document).ready(function(){
     addDeleteInput()

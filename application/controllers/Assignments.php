@@ -29,7 +29,11 @@ class Assignments extends MY_Controller {
 		}
 		$data['PHPfileName'] = 'assignments/formPage';
 		$data['JSFileName'] = 'formPage';
-		
+
 		crender('index', $data);
+	}
+
+	public function sendDataForm() {
+		echo json_encode($_POST);
 	}
 }
