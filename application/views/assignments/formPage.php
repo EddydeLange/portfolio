@@ -18,6 +18,8 @@
                   <!-- /.box-header -->
                   <div class="box-body">
                     <form id="formInput">
+                        <input name="title" class="headText" type="text" placeholder="Titel vragenlijst">
+                        <input name="subtopic" class="headText" type="text" placeholder="Onderwerp vragenlijst bijvoorbeeld: Economie">
                         <ul class="todo-list">
                             <li class="inputQuest">
                                 <!-- drag handle -->
@@ -26,7 +28,7 @@
                                     <i class="fa fa-ellipsis-v"></i>
                                 </span>
                                 <!-- checkbox -->
-                                <input name="question" class="text" type="text" placeholder="Vraag">
+                                <input name="question[]" class="text" type="text" placeholder="Vraag">
                                 <!-- General tools such as edit or delete-->
                                 <div class="tools deleteInput">
                                     <i class="fa fa-trash-o deleteInput"></i>

@@ -28,7 +28,7 @@
                             </thead>
                             <tbody>
                                 <?php foreach ($subjects as $subject) { ?>
-                                    <tr>
+                                    <tr class="subjectRow">
                                         <td><?= $subject->subject ?></td>
                                         <td><?= $subject->subtopic ?></td>
                                         <td data-dataId="<?= $subject->id ?>" class="tdWidth">

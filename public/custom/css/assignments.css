@@ -2,6 +2,16 @@ table.dataTable thead > tr > th {
     padding-right: 8px;
 }
 
+#assignmentsOverview tr:hover{
+    background-color: #3c8dbc;
+    cursor: pointer;
+    cursor: hand;
+}
+
+th{
+    background-color: white;
+}
+
 .tdWidth{
     width: 10%;
     white-space: nowrap;
@@ -25,4 +35,13 @@ table.dataTable thead > tr > th {
 .addButton {
     background-color: #008d4c;
     width: 100%;
+}
+
+.headText {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.text {
+    width: 96%;
 }

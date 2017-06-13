@@ -22,3 +22,8 @@ $('.editButton, .addButton').on('click', function() {
     }
     document.location.href = '/portfolio/assignments/formPage/' + btnElement + '/' + rowId;
 });
+
+$('.subjectRow').on('click', function() {
+    var assignmentId = $(this).closest("*[data-dataId]").attr("data-dataId")
+    document.location.href = '/portfolio/assignments/overviewAssignmentsSubject/' + assignmentId;
+});

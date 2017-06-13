@@ -19,12 +19,10 @@ $('#sendData').on('click', function() {
         dataType: 'json',
         data: formData,
         type: 'post',
-        success: function(test) {
-            alert(test+'succes');
+        success: function() {
+            document.location.href = '/portfolio/Assignments/index';
         },
-        error: function(test) {
-            alert(test+'error');
-        }
+        error: function() {}
     });
 });
 
