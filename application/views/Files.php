@@ -14,7 +14,7 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="filesTable" class=" table table-bordered table-striped">
+                        <table class="table filesTable table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>Bestand</th>
@@ -25,7 +25,7 @@
                             </thead>
                             <tbody>
                                 <?php foreach($imports as $import) { ?>
-                                    <tr>
+                                    <tr data-fileId="<?= $import->id ?>">
                                         <td><?= $import->filename ?></td>
                                        
                                         <td><?= $import->file_size ?></td>

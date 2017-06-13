@@ -1,5 +1,5 @@
 $(function() {
-    $('#filesTable').DataTable({
+    $('.filesTable').DataTable({
         "paging": true,
         "lengthChange": true,
         "searching": true,
@@ -7,31 +7,21 @@ $(function() {
         "info": true,
         "autoWidth": false 
     });    
-
-
 });
 
 
 $(document).ready(function(){ 
     $(".deleteBTN").click(function deleteFiles(){
-  
-      getFiles();    
-
-        function postFile() {
-            $.ajax({
-                url: 'deleteFiles',
-                dataType: 'json',
-                type: "post",
-                success: function(data){    
-                    console.log("kan wel posten!");
-                },
-                error: function(){
-                    console.log('kan niet posten');
-                }
-            });  
-        }
-
-      
-
+        $.ajax({
+            url: 'deleteFiles',
+            dataType: 'json',
+            type: "post",
+            success: function(data){    
+                console.log("kan posten!");
+            },
+            error: function(){
+                console.log('error');
+            }
+        });  
     });
 });
