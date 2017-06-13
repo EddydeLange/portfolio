@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Files</h1>
+        <h1>Geuploade files </h1>
     </section>
 
     <!-- Main content -->
@@ -10,27 +10,32 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">All files uploaded to the database.</h3>
+                        <h3 class="box-title">alle besteander die geupload zijn aan de database.</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="Fenno" class="table table-bordered table-striped">
+                        <table id="filesTable" class=" table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>Bestand</th>
-                                    <th>Groote KB</th>
-                                    <th>Upload Date</th>
+                                    <th>Groote (KB)</th>
+                                    <th>Upload datum</th>
+                                    <th>Verwijderen</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach($imports as $import) { ?>
                                     <tr>
-                                      
-                                       <td><a onclick="getDeleteButton();" class="fa fa-times" aria-hidden="true"></a><?= $import->filename ?></td>
+                                        <td><?= $import->filename ?></td>
                                        
                                         <td><?= $import->file_size ?></td>
                                        
-                                        <td><?= $import->file_date ?></td>                          
+                                        <td><?= $import->file_date ?></td>   
+                                        
+                                        <td style="width: 10px"><button class="btn btn-danger deleteBTN">
+                                       
+                                        <i class="fa fa-trash"></i></button></td>  
+
                                     </tr>
                                 <?php } ?>  
                             </tbody>

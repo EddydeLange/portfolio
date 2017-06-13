@@ -19,7 +19,6 @@ class Files extends MY_Controller {
 	{
 		$this->load->model('file_model');
 		$data['response'] = $this->file_model->deleteFile();
-		echo json_encode($data["data"]);
-		
+		echo json_encode($data["data"]);		
 	}
 }
