@@ -5,23 +5,26 @@ $(function() {
         "searching": true,
         "ordering": true,
         "info": true,
-        "autoWidth": false 
-    });    
+        "autoWidth": false,
+        "columnDefs": [{
+            "targets": 'noSort',
+            "orderable": false
+        }]
+    });
 });
 
-
-$(document).ready(function(){ 
-    $(".deleteBTN").click(function deleteFiles(){
+$(document).ready(function() {
+    $(".deleteBtn").on("click", function() {
+        var fileId = $(this).closest('tr').data('file-id');
         $.ajax({
-            url: 'deleteFiles',
-            dataType: 'json',
-            type: "post",
-            success: function(data){    
-                console.log("kan posten!");
+            method: "POST",
+            url: 'setInactive/' + fileId,
+            success: function() {
+                location.reload();
             },
-            error: function(){
-                console.log('error');
+            error: function() {
+                location.reload();
             }
-        });  
+        });
     });
 });

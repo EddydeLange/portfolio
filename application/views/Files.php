@@ -20,19 +20,19 @@
                                     <th>Bestand</th>
                                     <th>Groote (KB)</th>
                                     <th>Upload datum</th>
-                                    <th>Verwijderen</th>
+                                    <th class="noSort">Verwijderen</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach($imports as $import) { ?>
-                                    <tr data-fileId="<?= $import->id ?>">
+                                    <tr data-file-id="<?= $import->id ?>">
                                         <td><?= $import->filename ?></td>
                                        
                                         <td><?= $import->file_size ?></td>
                                        
                                         <td><?= $import->file_date ?></td>   
                                         
-                                        <td style="width: 10px"><button class="btn btn-danger deleteBTN">
+                                        <td style="width: 10px"><button class="btn btn-danger deleteBtn">
                                        
                                         <i class="fa fa-trash"></i></button></td>  
 
