@@ -1,0 +1,23 @@
+#dropdown-content {
+    border-top: 1px grey solid;
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.sidebar-form:hover #dropdown-content {
+    display: block;
+    border-radius: 2px 0 0 2px;
+}
+
+#dropdown-content p {
+    padding:2px;
+    margin-bottom: 0px;
+}
+
+#dropdown-content p:hover {
+    background-color: #3c8dbc;
+    cursor: pointer;
+    cursor: hand;
+}

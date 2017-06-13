@@ -23,7 +23,7 @@
                             </thead>
                             <tbody>
                                 <?php foreach ($students as $student) {  ?>
-                                <tr class="studentRow" data-studentId="<?= $student->id ?>">
+                                <tr class="studentRow" data-studentId="<?= $student->ov_number ?>">
                                     <td><?= $student->ov_number ?></td>
                                     <td><?= $student->name ?></td>
                                 </tr>

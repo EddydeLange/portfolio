@@ -2,13 +2,23 @@
 	class file_model extends CI_Model {
 
         public function getFiles() {
-        	$fileNames = [];
+        	
         	$this->load->database();
+        	$this->db->where('file_active', 1);
     		$imports = $this->db->get('imports')->result();
-    		foreach ($imports as $import) {
-    			$fileNames[] = $import->filename;
-    		}
-    		return $fileNames;
+    		
+    		return $imports;
         }
+
+        public function deleteFile(){
+
+        	$this->load->database();
+        	$this->db->set('file_active', 0);
+			$this->db->where('id', $id);
+			$this->db->update('file_active');
+
+			return 'gelukt';
+        }
+
 	}
 ?>
