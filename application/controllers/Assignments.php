@@ -33,12 +33,12 @@ class Assignments extends MY_Controller {
 		crender('index', $data);
 	}
 
-	public function overviewAssignmentsSubject($id = null)
+	public function overviewSubjectAssignments($id = null)
 	{
 		$this->load->library('session');
 		$this->load->model('AssignmentsModel');
 		//$data['subjects'] = $this->AssignmentsModel->getSubjects();
-        $data['PHPfileName'] = 'assignments/overviewAssignmentsSubject';
+        $data['PHPfileName'] = 'assignments/overviewSubjectAssignments';
 		crender('index', $data);
 	}
 
@@ -47,10 +47,10 @@ class Assignments extends MY_Controller {
 		$dataFormTitle = $_POST['title'];
 		$dataFormSubtopic = $_POST['subtopic'];
 		$dataFormInput = $_POST['question'];
-		$dataSubjects = array(
+		$dataSubjects = [
 			'subject' => $dataFormTitle,
 			'subtopic' => $dataFormSubtopic
-		);
+		];
 
 		$data['done'] = $this->AssignmentsModel->insertData($dataSubjects, $dataFormInput);
 		echo json_encode($data['done']);

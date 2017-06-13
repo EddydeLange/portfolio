@@ -28,10 +28,10 @@
                             </thead>
                             <tbody>
                                 <?php foreach ($subjects as $subject) { ?>
-                                    <tr class="subjectRow">
+                                    <tr data-row-id="<?= $subject->id ?>" class="subjectRow">
                                         <td><?= $subject->subject ?></td>
                                         <td><?= $subject->subtopic ?></td>
-                                        <td data-dataId="<?= $subject->id ?>" class="tdWidth">
+                                        <td class="tdWidth">
                                             <button class="editButton">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </button>

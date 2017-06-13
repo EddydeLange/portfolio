@@ -16,7 +16,6 @@ $('#sendData').on('click', function() {
     var formData = $('#formInput').serialize();
     $.ajax({
         url: base_url+'assignments/sendDataForm',
-        dataType: 'json',
         data: formData,
         type: 'post',
         success: function() {

@@ -26,12 +26,8 @@ class Overview extends MY_Controller {
 		$saveStudentId = $studentId;
 		$studentId = null;
 		$data['subject'] = $this->OverviewModel->getAssignments($studentId, $assignmentId);
-		if ($data['subject'] == null) {
-			return $this->overviewAssignmentsStudent($saveStudentId);
-		} else {
-			$data['PHPfileName'] = 'overviewStudent';
-			crender('index', $data);
-		}
+		$data['PHPfileName'] = 'overviewStudent';
+		crender('index', $data);
 	}
 
 	public function overviewAssignmentsStudent($studentId)
@@ -39,11 +35,7 @@ class Overview extends MY_Controller {
 		$this->load->model('OverviewModel');
 		$data['student'] = $this->OverviewModel->getStudents($studentId);
 		$data['assignments'] = $this->OverviewModel->getAssignments($studentId);
-		if ($data['assignments'] == null) {
-			return $this->index();
-		} else {
-			$data['PHPfileName'] = 'overviewAssignmentsStudent';
-			crender('index', $data);
-		}
+		$data['PHPfileName'] = 'overviewAssignmentsStudent';
+		crender('index', $data);
 	}
 }

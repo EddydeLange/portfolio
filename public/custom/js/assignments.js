@@ -1,5 +1,5 @@
 $(function() {
-    $('#assignmentsOverview').DataTable({
+    $('#assignmentsOverview, #overviewSubjectAssignments').DataTable({
         "paging": true,
         "lengthChange": true,
         "searching": true,
@@ -16,7 +16,7 @@ $(function() {
 $('.editButton, .addButton').on('click', function() {
     var btnElement = $(this).attr('class');
     if (btnElement == 'editButton') {
-        var rowId = $(this).closest("*[data-dataId]").attr("data-dataId")
+        var rowId = $(this).data("row-id");
     } else {
         var rowId = '';
     }
@@ -24,6 +24,6 @@ $('.editButton, .addButton').on('click', function() {
 });
 
 $('.subjectRow').on('click', function() {
-    var assignmentId = $(this).closest("*[data-dataId]").attr("data-dataId")
-    document.location.href = '/portfolio/assignments/overviewAssignmentsSubject/' + assignmentId;
+    var assignmentId = $(this).data("row-id");
+    document.location.href = '/portfolio/assignments/overviewSubjectAssignments/' + assignmentId;
 });
