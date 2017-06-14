@@ -51,11 +51,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 //the : means that it is a parameter
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'Overview';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$route['files'] = 'files/index';
-$route['fileHistory'] = 'fileHistory/index';
-$route['upload'] = 'upload';
-$route['overviewAssignmentsStudent/(:num)'] = 'Overview/overviewAssignmentsStudent/$1';
-$route['overviewStudent/(:num)/(:num)'] = 'Overview/overviewStudent/$1/$2';

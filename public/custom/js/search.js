@@ -1,3 +1,5 @@
+var base_url = $('#searchTag').attr('data-baseurl');
+
 function changeInput(students) {
     $("input[name*='searchPerson']").on('keyup paste',function() {
         var checkCharacter = $(this).val().toLowerCase();
@@ -16,33 +18,23 @@ function changeInput(students) {
     });
 }
 
-function getStudents() {
+$(function() {
     $.ajax({
-        url: 'searchChange',
+        url: base_url+'Search/searchChange',
         dataType: 'json',
         type: "get",
         success: function(data){
              changeInput(data);
         },
-        error: function(){
-            console.log('error');
+        error: function(data){
+            console.log(data);
         }
     });
-}
+});
 
 function goToPageStudent() {
     $('.studentSuspect').on('click', function() {
         var studentId = $(this).attr("data-ov_number")
-        $.ajax({
-            url: "getStudentsForSearching/" + studentId,
-            success: function() {
-                document.location.href = '/portfolio/overview/overviewAssignmentsStudent/' + studentId;
-            },
-            error: function() {}
-        });
+        document.location.href = '/portfolio/overview/overviewAssignmentsStudent/' + studentId;
     });
 }
-
-$(document).ready(function() {
-    getStudents();
-});
