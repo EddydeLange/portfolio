@@ -29,4 +29,20 @@ class AssignmentsModel extends CI_model
         }
         return 'succes';
     }
+
+    public function getAssignments($id)
+    {
+        $this->load->database();
+        $this->db->where('questions.subject_id', $id);
+        $getAssignments = $this->db->get('questions');
+        $assignments = $getAssignments->result();
+
+        return $assignments;
+    }
+
+    public function updateData($newQuestionVal, $questionId)
+    {
+        
+    }
+
 }
