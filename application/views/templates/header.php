@@ -131,15 +131,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Optionally, you can add icons to the links -->
         <li><a href="<?php echo site_url('Overview/index') ?>"><i class="fa fa-link"></i> <span>Overview</span></a></li>
         <li><a href="<?php echo site_url('Upload/index') ?>"><i class="fa fa-link"></i> <span>Upload</span></a></li>
-        
-
-        <li class="treeview">
-          <a href="#">Files</a>
-              <ul class="treeview-menu">  
-                <li><a href="<?php echo site_url('Files/index') ?>"><i class="fa fa-link"></i> <span>Files</span></a></li>  
-                <li><a href="<?php echo site_url('Files/index') ?>"><i class="fa fa-link"></i> <span>Files</span></a></li>  
-              </ul>
-          
+        <li class="treeview"> 
+          <a href="#">
+            <i class="fa fa-share"></i>
+              <span>Files</span>
+              <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+            <ul class="treeview-menu">  
+              <li><a href="<?php echo site_url('Files/index') ?>"><i class="fa fa-circle-o"></i><span>Overview-Files</span></a></li>  
+              <li><a href="<?php echo site_url('FileHistory/index') ?>"><i class="fa fa-circle-o"></i><span>FileHistory</span></a></li>  
+            </ul>
         </li>
 
 
