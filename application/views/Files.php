@@ -14,25 +14,25 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="filesTable" class=" table table-bordered table-striped">
+                        <table class="table filesTable table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>Bestand</th>
                                     <th>Groote (KB)</th>
                                     <th>Upload datum</th>
-                                    <th>Verwijderen</th>
+                                    <th class="noSort">Verwijderen</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach($imports as $import) { ?>
-                                    <tr>
+                                    <tr data-file-id="<?= $import->id ?>">
                                         <td><?= $import->filename ?></td>
                                        
                                         <td><?= $import->file_size ?></td>
                                        
                                         <td><?= $import->file_date ?></td>   
                                         
-                                        <td style="width: 10px"><button class="btn btn-danger deleteBTN">
+                                        <td style="width: 10px"><button class="btn btn-danger deleteBtn">
                                        
                                         <i class="fa fa-trash"></i></button></td>  
 
