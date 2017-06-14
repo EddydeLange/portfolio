@@ -11,14 +11,14 @@ class Files extends MY_Controller
     
     public function index()
     {
-        $this->load->model('file_model');
-        $data['imports'] = $this->file_model->getFiles();
+        $this->load->model('fileModel');
+        $data['imports'] = $this->fileModel->getFiles();
         crender('index', $data);
     }
     
     public function setInactive($id)
     {
-        $this->load->model('file_model');
-        $data['response'] = $this->file_model->setInactive($id);
+        $this->load->model('fileModel');
+        $data['response'] = $this->fileModel->setInactive($id);
     }
 }
