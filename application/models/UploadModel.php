@@ -7,10 +7,15 @@ class UploadModel extends CI_Model {
             // Your own constructor code
     }
 
-    public function insertFileName($fileName)
+    public function insertFileName($fileData)
     {        	
     	$this->load->database();
-		$data = array('filename' => $fileName);
+		$data = [
+			'filename' => $fileData['file_name'],
+			'file_size' => $fileData['file_size'],
+			'file_date' => date("d-m-Y"),
+			'file_active' => 1
+		];
 		$this->db->insert('imports', $data);
     }
 
