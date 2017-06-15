@@ -8,7 +8,7 @@ class UploadModel extends CI_Model {
     }
 
     public function insertFileName($fileData)
-    {        	
+    {        
     	$this->load->database();
 		$data = [
 			'filename' => $fileData['file_name'],
