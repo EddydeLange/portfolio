@@ -20,7 +20,6 @@ if( ! function_exists('crender'))
             $data['JSFileName'] = getFileName();
         }
 
-
         $data['fileName'] = getFileName();
         //For your css files
         if (file_exists('public/custom/css/'. $data['fileName'] .'.css')) {

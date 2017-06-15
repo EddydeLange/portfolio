@@ -46,5 +46,5 @@ class OverviewModel extends CI_model {
 
         return $questionsAndAnswers;
     }
+
 }
-?>
