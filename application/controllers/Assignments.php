@@ -37,7 +37,8 @@ class Assignments extends MY_Controller {
 	{
 		$this->load->model('AssignmentsModel');
 		$data['questions'] = $this->AssignmentsModel->getAssignments($id);
-    $data['PHPfileName'] = 'assignments/overviewSubjectAssignments';
+		$data['topicId'] = $id;
+    	$data['PHPfileName'] = 'assignments/overviewSubjectAssignments';
 		crender('index', $data);
 	}
 
@@ -51,9 +52,7 @@ class Assignments extends MY_Controller {
 			'subject' => $dataFormTitle,
 			'subtopic' => $dataFormSubtopic
 		];
-
-		$data['done'] = $this->AssignmentsModel->insertData($dataSubjects, $dataFormInput);
-		echo json_encode($data['done']);
+		$this->AssignmentsModel->insertData($dataSubjects, $dataFormInput);
 	}
 
 	public function updateData()
@@ -72,4 +71,15 @@ class Assignments extends MY_Controller {
 		$this->load->model('AssignmentsModel');
 		$this->AssignmentsModel->deleteQuestion($questionId);
 	}
+
+	public function addNewQuestion()
+	{
+		$topicId = $_POST['topicId'];
+		$newQuestionText = $_POST['newQuestionText'];
+		if ($newQuestionText !== '') {
+			$this->load->model('AssignmentsModel');
+			$this->AssignmentsModel->addNewQuestion($topicId, $newQuestionText);
+		}
+	}
+
 }

@@ -54,4 +54,14 @@ class AssignmentsModel extends CI_model
         $this->db->delete('questions');
     }
 
+    public function addNewQuestion($topicId, $newQuestionText)
+    {
+        $data = [
+            'subject_id' => $topicId,
+            'question'  => $newQuestionText
+        ];
+        $this->load->database();
+        $this->db->insert('questions', $data);
+    }
+
 }
