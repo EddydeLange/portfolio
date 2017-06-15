@@ -23,10 +23,10 @@ class Overview extends MY_Controller {
 		$this->load->model('OverviewModel');
 		$data['questionsAndAnswers'] = $this->OverviewModel->getAssignmentsQuestionsAnswers($studentId, $assignmentId);
 		$data['student'] = $this->OverviewModel->getStudents($studentId);
+		$saveStudentId = $studentId;
 		$studentId = null;
 		$data['subject'] = $this->OverviewModel->getAssignments($studentId, $assignmentId);
 		$data['PHPfileName'] = 'overviewStudent';
-
 		crender('index', $data);
 	}
 

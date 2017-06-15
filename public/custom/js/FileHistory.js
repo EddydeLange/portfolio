@@ -5,7 +5,7 @@ $(function() {
         "searching": true,
         "ordering": true,
         "info": true,
-        "autoWidth": true,
+        "autoWidth": false,
         "columnDefs": [{
             "targets": 'noSort',
             "orderable": false
@@ -18,7 +18,7 @@ $(document).ready(function() {
         var fileId = $(this).closest('tr').data('file-id');
         $.ajax({
             method: "POST",
-            url: 'setInactive/' + fileId,
+            url: 'deleteFile/' + fileId,
             success: function() {
                 location.reload();
             },
