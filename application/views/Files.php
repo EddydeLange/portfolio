@@ -27,15 +27,13 @@
                                 <?php foreach($imports as $import) { ?>
                                     <tr data-file-id="<?= $import->id ?>">
                                         <td><?= $import->filename ?></td>
-                                       
                                         <td><?= $import->file_size ?></td>
-                                       
                                         <td><?= $import->file_date ?></td>   
-                                        
-                                        <td style="width: 10px"><button class="btn btn-danger deleteBtn">
-                                       
-                                        <i class="fa fa-trash"></i></button></td>  
-
+                                        <td style="width: 10px">
+                                            <button class="btn btn-danger deleteBtn deleteButton">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>  
                                     </tr>
                                 <?php } ?>  
                             </tbody>
