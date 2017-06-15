@@ -10,8 +10,6 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Subject hier...</h3>
-                        <h3 class="box-title">Subtopic hier...</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -26,7 +24,7 @@
                             <tbody>
                                 <?php foreach ($questions as $question) { ?>
                                     <tr data-row-id="<?= $question->id ?>">
-                                        <td class="tdWidth">Komt nog order</td>
+                                        <td class="tdWidth">0</td>
                                         <td class="changeQuestion">
                                             <p><?= $question->question ?></p>
                                         </td>
@@ -38,7 +36,7 @@
                                                 <span class="glyphicon glyphicon-remove"></span>
                                             </button>
                                             <button type="button" class="deleteQuestion" name="button">
-                                                <span class="glyphicon glyphicon-trash"></span>                
+                                                <span class="glyphicon glyphicon-trash"></span>
                                             </button>
                                         </td>
     								</tr>
@@ -47,6 +45,16 @@
                             <tfoot>
                                 <tr>
                                     <th class="no-sort" colspan="3">Klik op een vraag die u wilt wijzigen.</th>
+                                </tr>
+                                <tr>
+                                    <th class="no-sort" colspan="2">
+                                        <input class="addQuestion" type="text" name="" value="">
+                                    </th>
+                                    <th>
+                                        <button data-topic-id="<?= $topicId ?>" disabled type="button" class="saveNewQuestion" name="button">
+                                            <span class="glyphicon glyphicon-ok"></span>
+                                        </button>
+                                    </th>
                                 </tr>
                             </tfoot>
                         </table>

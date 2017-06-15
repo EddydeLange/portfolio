@@ -12,17 +12,29 @@ function addDeleteInput() {
 }
 
 $('#sendData').on('click', function() {
+    $("input[name='title'], input[name='subtopic']").removeClass('error');
     var base_url = $('#searchTag').attr('data-baseurl');
+    var inputTitle = $("input[name='title']").val();
+    var inputSubtopic = $("input[name='subtopic']").val();
     var formData = $('#formInput').serialize();
-    $.ajax({
-        url: base_url+'assignments/sendDataForm',
-        data: formData,
-        type: 'post',
-        success: function() {
-            document.location.href = '/portfolio/Assignments/index';
-        },
-        error: function() {}
-    });
+    if (inputTitle == ''|| inputSubtopic == '') {
+        if (inputTitle == '') {
+            $("input[name='title']").addClass('error')
+        }
+        if (inputSubtopic == '') {
+            $("input[name='subtopic']").addClass('error')
+        }
+    } else {
+        $.ajax({
+            url: base_url+'assignments/sendDataForm',
+            data: formData,
+            type: 'post',
+            success: function() {
+                document.location.href = '/portfolio/Assignments/index';
+            },
+            error: function() {}
+        });
+    }
 });
 
 $(document).ready(function(){

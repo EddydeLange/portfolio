@@ -99,6 +99,33 @@ function updateQuestion(newQuestionVal, questionId, saveButton) {
     });
 }
 
+$(".addQuestion").on('keyup paste', function() {
+    var newQuestionText = $(this).val();
+    if (newQuestionText == '') {
+        $('.saveNewQuestion').prop('disabled', true);
+    } else {
+        $('.saveNewQuestion').prop('disabled', false);
+    }
+});
+
+$('.saveNewQuestion').on('click', function() {
+    var base_url = $('#searchTag').attr('data-baseurl');
+    var newQuestionText = $('.addQuestion').val();
+    var topicId = $(this).attr('data-topic-id');
+    $.ajax({
+        url: base_url+'assignments/addNewQuestion',
+        data:  {newQuestionText: newQuestionText, topicId: topicId},
+        method: 'post',
+        success: function() {
+            location.reload();
+        },
+        error: function() {}
+    });
+});
+
+
+
+
 $(document).ready(function() {
     $('.deleteQuestion').prop('disabled', false);
     $('button.saveInput, button.cancelChange').prop('disabled', true);
