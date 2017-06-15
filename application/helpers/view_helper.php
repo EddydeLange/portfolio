@@ -12,9 +12,12 @@ if ( ! function_exists('getFileName'))
 if( ! function_exists('crender'))
 {
     function crender($f_template, $data = null)
-    {   
+    {
         if (!isset($data['PHPfileName'])) {
             $data['PHPfileName'] = getFileName();
+        }
+        if (!isset($data['JSFileName'])) {
+            $data['JSFileName'] = getFileName();
         }
 
         $data['fileName'] = getFileName();
@@ -27,12 +30,14 @@ if( ! function_exists('crender'))
             $data['cssFile'] = '';
         }
         //For your js files
-        if (file_exists('public/custom/js/'. $data['fileName'] .'.js')) {
+        if (file_exists('public/custom/js/'. $data['JSFileName'] .'.js')) {
+            $data['jsFile'] = 'public/custom/js/'. $data['JSFileName'] .'.js';
+        } elseif (file_exists('public/custom/js/'. $data['fileName'] .'.js')) {
             $data['jsFile'] = 'public/custom/js/'. $data['fileName'] .'.js';
         } elseif (file_exists('public/custom/js/'. $data['PHPfileName'] .'.js')) {
             $data['jsFile'] = 'public/custom/js/'. $data['PHPfileName'] .'.js';
         }
-        
+
         $ci =& get_instance();
         $ci->load->view('templates/header', $data);
         $ci->load->view($data['PHPfileName']);
