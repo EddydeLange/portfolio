@@ -42,7 +42,10 @@ class AssignmentsModel extends CI_model
 
     public function updateData($newQuestionVal, $questionId)
     {
-        
+        $this->load->database();
+        $this->db->set('question', $newQuestionVal);
+        $this->db->where('id', $questionId);
+        $this->db->update('questions');
     }
 
 }

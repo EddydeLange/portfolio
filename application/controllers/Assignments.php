@@ -60,7 +60,6 @@ class Assignments extends MY_Controller {
 	{
 		$newQuestionVal = $_POST['newQuestionVal'];
 		$questionId = $_POST['questionId'];
-		print_r($newQuestionVal);
 		if ($newQuestionVal !== '') {
 			$this->load->model('AssignmentsModel');
 			$this->AssignmentsModel->updateData($newQuestionVal, $questionId);

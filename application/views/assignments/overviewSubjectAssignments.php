@@ -31,12 +31,24 @@
                                             <p><?= $question->question ?></p>
                                         </td>
                                         <td class="tdWidth">
-                                            <button type="button" class="saveInput" name="button">Opslaan</button>
-                                            <button type="button" class="cancelChange" name="button">Annuleer</button>
+                                            <button type="button" class="saveInput" name="button">
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </button>
+                                            <button type="button" class="cancelChange" name="button">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </button>
+                                            <button type="button" class="deleteQuestion" name="button">
+                                                <span class="glyphicon glyphicon-trash"></span>                
+                                            </button>
                                         </td>
     								</tr>
                                 <?php } ?>
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th class="no-sort" colspan="3">Klik op een vraag die u wilt wijzigen.</th>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 <!-- /.box-body -->
