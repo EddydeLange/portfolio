@@ -30,11 +30,10 @@
                                         <td><?= $import->file_size ?></td>    
                                         <td><?= $import->file_date ?></td>   
                                         <td class="tdWidth">
-                                            <button class="deleteButton">
+                                            <button class="deleteBtn">
                                                 <i class="glyphicon glyphicon-remove"></i>
                                             </button>
-                                        </td>  
-
+                                        </td>
                                     </tr>
                                 <?php } ?>  
                             </tbody>

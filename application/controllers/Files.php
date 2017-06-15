@@ -20,6 +20,7 @@ class Files extends MY_Controller
     public function FileHistory()
     {
         $data['imports'] = $this->fileModel->getInactiveFiles();
+        $data['PHPfileName'] = 'FileHistory';
         crender('index', $data);
     }
     //END INDEXES
@@ -27,12 +28,12 @@ class Files extends MY_Controller
     //CRUD FUNCTIONS START
     public function setInactive($id)
     {
-        $data['response'] = $this->fileModel->setInactive($id);
+        $this->fileModel->setInactive($id);
     }
 
     public function deleteFile($id)
     {
-        $data['response'] = $this->fileHistoryModel->deleteFile($id);
+        $this->fileModel->deleteFile($id);
     }
     //CRUD FUNCTIONS END
 
