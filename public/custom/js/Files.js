@@ -1,23 +1,47 @@
 $(function() {
-    $('#Fenno').DataTable({
+    $('.filesTable').DataTable({
         "paging": true,
         "lengthChange": true,
         "searching": true,
         "ordering": true,
         "info": true,
-        "autoWidth": false 
+        "autoWidth": true,
+        "columnDefs": [{
+            "targets": 'noSort',
+            "orderable": false
+        }]
     });
 });
 
 
- function getDeleteButton(){
+$(document).ready(function() {
 
- 	$.post({
-    //succes function en dan klaar!
-        success: function() {
-            
-        // alert("Data: " + data + "\nStatus: " + status); 
-  
+    $(".deleteButton").on("click", function() {
+        var fileId = $(this).closest('tr').data('file-id');
+        $.ajax({
+            method: "POST",
+            url: 'setInactive/' + fileId,
+            success: function() {
+                location.reload();
+            },
+            error: function() {
+                location.reload();
+            }
+        });
+    });
+
+    $(".deleteBtn").on("click", function() {
+        var fileId = $(this).closest('tr').data('file-id');
+        var result = confirm("Weet je het zeker");
+        if (result) {
+            $.ajax({
+                method: "POST",
+                url: 'deleteFile/' + fileId,
+                success: function() {
+                   location.reload();
+                },
+                error: function() {}
+            });
         }
-     });
-}
+    });
+});

@@ -15,7 +15,7 @@ class Assignments extends MY_Controller {
 		$this->load->library('session');
 		$this->load->model('AssignmentsModel');
 		$data['subjects'] = $this->AssignmentsModel->getSubjects();
-        $data['PHPfileName'] = 'assignments/overviewAssignments';
+         	$data['PHPfileName'] = 'assignments/overviewAssignments';
 		crender('index', $data);
 	}
 
@@ -37,7 +37,7 @@ class Assignments extends MY_Controller {
 	{
 		$this->load->model('AssignmentsModel');
 		$data['questions'] = $this->AssignmentsModel->getAssignments($id);
-        $data['PHPfileName'] = 'assignments/overviewSubjectAssignments';
+    $data['PHPfileName'] = 'assignments/overviewSubjectAssignments';
 		crender('index', $data);
 	}
 

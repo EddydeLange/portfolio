@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Geuploade files</h1>
+        <h1>Verwijderde files</h1>
     </section>
 
     <!-- Main content -->
@@ -10,7 +10,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">alle bestanden die geupload zijn aan de database.</h3>
+                        <h3 class="box-title">alle besteander die verwijderd zijn.</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -20,20 +20,20 @@
                                     <th>Bestand</th>
                                     <th>Groote (KB)</th>
                                     <th>Upload datum</th>
-                                    <th class="noSort">Verwijderen</th>
+                                    <th class="noSort">Definitief Verwijderen</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach($imports as $import) { ?>
                                     <tr data-file-id="<?= $import->id ?>">
-                                        <td><?= $import->filename ?></td>
-                                        <td><?= $import->file_size ?></td>
+                                        <td><?= $import->filename ?></td>        
+                                        <td><?= $import->file_size ?></td>    
                                         <td><?= $import->file_date ?></td>   
                                         <td class="tdWidth">
-                                            <button class="deleteButton">
+                                            <button class="deleteBtn">
                                                 <i class="glyphicon glyphicon-remove"></i>
                                             </button>
-                                        </td>  
+                                        </td>
                                     </tr>
                                 <?php } ?>  
                             </tbody>
