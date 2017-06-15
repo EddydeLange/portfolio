@@ -126,7 +126,7 @@
                   </a>
                   <ul class="treeview-menu">
                      <li><a href="<?php echo site_url('Files/index') ?>"><i class="fa fa-circle-o"></i><span>Overview-Files</span></a></li>
-                     <li><a href="<?php echo site_url('FileHistory/index') ?>"><i class="fa fa-circle-o"></i><span>FileHistory</span></a></li>
+                     <li><a href="<?php echo site_url('Files/FileHistory') ?>"><i class="fa fa-circle-o"></i><span>FileHistory</span></a></li>
                   </ul>
                </li>
                <li><a href="<?php echo site_url('Assignments/index') ?>"><i class="fa fa-link"></i> <span>Assignments</span></a></li>

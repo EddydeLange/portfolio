@@ -14,7 +14,7 @@ $(function() {
 });
 
 $(document).ready(function() {
-    $(".deleteBtn").on("click", function() {
+    $(".deleteButton").on("click", function() {
         var fileId = $(this).closest('tr').data('file-id');
         $.ajax({
             method: "POST",

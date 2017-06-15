@@ -10,7 +10,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">alle besteander die geupload zijn aan de database.</h3>
+                        <h3 class="box-title">alle bestanden die geupload zijn aan de database.</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -29,9 +29,9 @@
                                         <td><?= $import->filename ?></td>
                                         <td><?= $import->file_size ?></td>
                                         <td><?= $import->file_date ?></td>   
-                                        <td style="width: 10px">
-                                            <button class="btn btn-danger deleteBtn deleteButton">
-                                                <i class="fa fa-trash"></i>
+                                        <td class="tdWidth">
+                                            <button class="deleteButton">
+                                                <i class="glyphicon glyphicon-remove"></i>
                                             </button>
                                         </td>  
                                     </tr>
