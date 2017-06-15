@@ -27,6 +27,22 @@ $('.subjectRow').on('click', function() {
     var assignmentId = $(this).data("row-id");
     document.location.href = '/portfolio/assignments/overviewSubjectAssignments/' + assignmentId;
 });
+$('.deleteQuestion').bind('click', deleteQuestion);
+
+function deleteQuestion() {
+    if (window.confirm("Weet je het zeker dat je dit wilt verwijderen?")) {
+        var questionId = $(this).closest('tr').attr("data-row-id");
+        $.ajax({
+            url: base_url+'assignments/deleteQuestion',
+            data:  {questionId: questionId},
+            method: 'post',
+            success: function() {
+                location.reload();
+            },
+            error: function() {}
+        });
+    }
+}
 
 $('.changeQuestion').bind('click', changeQuestion);
 
@@ -40,7 +56,6 @@ function changeQuestion() {
         $('.deleteQuestion').prop('disabled', false);
         $('.changeQuestion').bind('click', changeQuestion);
     }
-
     //Creating input
     var questionVal = $(this).children("p").text();
     var input = document.createElement("input");

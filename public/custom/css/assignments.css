@@ -21,6 +21,7 @@ th{
     padding: 4px 4px 0px 4px;
     border: none;
     border-radius: 3px;
+    width: 49%;
 }
 
 .cancelChange, .deleteQuestion, .saveInput {

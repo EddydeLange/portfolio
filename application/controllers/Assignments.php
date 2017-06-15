@@ -65,4 +65,11 @@ class Assignments extends MY_Controller {
 			$this->AssignmentsModel->updateData($newQuestionVal, $questionId);
 		}
 	}
+
+	public function deleteQuestion()
+	{
+		$questionId = $_POST['questionId'];
+		$this->load->model('AssignmentsModel');
+		$this->AssignmentsModel->deleteQuestion($questionId);
+	}
 }

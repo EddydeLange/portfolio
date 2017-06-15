@@ -27,7 +27,6 @@ class AssignmentsModel extends CI_model
                 $this->db->insert('questions', $dataArray);
             }
         }
-        return 'succes';
     }
 
     public function getAssignments($id)
@@ -46,6 +45,13 @@ class AssignmentsModel extends CI_model
         $this->db->set('question', $newQuestionVal);
         $this->db->where('id', $questionId);
         $this->db->update('questions');
+    }
+
+    public function deleteQuestion($questionId)
+    {
+        $this->load->database();
+        $this->db->where('id', $questionId);
+        $this->db->delete('questions');
     }
 
 }
