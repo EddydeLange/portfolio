@@ -17,19 +17,38 @@ th{
     white-space: nowrap;
 }
 
-.editButton, .deleteButton, .addButton {
+.editButton, .deleteButton, .addButton, .cancelChange, .deleteQuestion, .saveInput, .saveNewQuestion {
     padding: 4px 4px 0px 4px;
     border: none;
     border-radius: 3px;
+    width: 49%;
 }
 
-.editButton {
-    background-color: #00a7d0;
-    width: 50%;
+.saveNewQuestion {
+    width: 100%;
 }
-.deleteButton {
+
+.cancelChange, .deleteQuestion, .saveInput {
+    width: 33%;
+}
+.saveInput:disabled, .cancelChange:disabled, .deleteQuestion:disabled, .saveNewQuestion:disabled{
+    background: #dddddd;
+}
+
+.editButton{
+    background-color: #00a7d0;
+
+}
+.deleteButton, .deleteQuestion{
     background-color: #d33724;
-    width: 50%;
+}
+
+.cancelChange {
+    background-color: #e26363;
+}
+
+.saveInput, .saveNewQuestion {
+    background-color: #008d4c;
 }
 
 .addButton {
@@ -42,6 +61,10 @@ th{
     margin-bottom: 10px;
 }
 
-.text {
+.text, .addQuestion {
     width: 96%;
+}
+
+.error {
+    border: 1px red solid;
 }

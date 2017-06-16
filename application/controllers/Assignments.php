@@ -15,7 +15,7 @@ class Assignments extends MY_Controller {
 		$this->load->library('session');
 		$this->load->model('AssignmentsModel');
 		$data['subjects'] = $this->AssignmentsModel->getSubjects();
-        $data['PHPfileName'] = 'assignments/overviewAssignments';
+         	$data['PHPfileName'] = 'assignments/overviewAssignments';
 		crender('index', $data);
 	}
 
@@ -35,14 +35,15 @@ class Assignments extends MY_Controller {
 
 	public function overviewSubjectAssignments($id = null)
 	{
-		$this->load->library('session');
 		$this->load->model('AssignmentsModel');
-		//$data['subjects'] = $this->AssignmentsModel->getSubjects();
-        $data['PHPfileName'] = 'assignments/overviewSubjectAssignments';
+		$data['questions'] = $this->AssignmentsModel->getAssignments($id);
+		$data['topicId'] = $id;
+    	$data['PHPfileName'] = 'assignments/overviewSubjectAssignments';
 		crender('index', $data);
 	}
 
-	public function sendDataForm() {
+	public function sendDataForm()
+	{
 		$this->load->model('AssignmentsModel');
 		$dataFormTitle = $_POST['title'];
 		$dataFormSubtopic = $_POST['subtopic'];
@@ -51,8 +52,34 @@ class Assignments extends MY_Controller {
 			'subject' => $dataFormTitle,
 			'subtopic' => $dataFormSubtopic
 		];
-
-		$data['done'] = $this->AssignmentsModel->insertData($dataSubjects, $dataFormInput);
-		echo json_encode($data['done']);
+		$this->AssignmentsModel->insertData($dataSubjects, $dataFormInput);
 	}
+
+	public function updateData()
+	{
+		$newQuestionVal = $_POST['newQuestionVal'];
+		$questionId = $_POST['questionId'];
+		if ($newQuestionVal !== '') {
+			$this->load->model('AssignmentsModel');
+			$this->AssignmentsModel->updateData($newQuestionVal, $questionId);
+		}
+	}
+
+	public function deleteQuestion()
+	{
+		$questionId = $_POST['questionId'];
+		$this->load->model('AssignmentsModel');
+		$this->AssignmentsModel->deleteQuestion($questionId);
+	}
+
+	public function addNewQuestion()
+	{
+		$topicId = $_POST['topicId'];
+		$newQuestionText = $_POST['newQuestionText'];
+		if ($newQuestionText !== '') {
+			$this->load->model('AssignmentsModel');
+			$this->AssignmentsModel->addNewQuestion($topicId, $newQuestionText);
+		}
+	}
+
 }

@@ -10,23 +10,53 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Assignments</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
                         <table id="overviewSubjectAssignments" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
+                                    <th></th>
                                     <th class="no-sort">Assignment</th>
-                                    <th class="no-sort">Subtopic</th>
+                                    <th class="no-sort"></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>eeed</td>
-                                    <td>test</td>
-								</tr>
+                                <?php foreach ($questions as $question) { ?>
+                                    <tr data-row-id="<?= $question->id ?>">
+                                        <td class="tdWidth">0</td>
+                                        <td class="changeQuestion">
+                                            <p><?= $question->question ?></p>
+                                        </td>
+                                        <td class="tdWidth">
+                                            <button type="button" class="saveInput" name="button">
+                                                <span class="glyphicon glyphicon-ok"></span>
+                                            </button>
+                                            <button type="button" class="cancelChange" name="button">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </button>
+                                            <button type="button" class="deleteQuestion" name="button">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </button>
+                                        </td>
+    								</tr>
+                                <?php } ?>
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th class="no-sort" colspan="3">Klik op een vraag die u wilt wijzigen.</th>
+                                </tr>
+                                <tr>
+                                    <th class="no-sort" colspan="2">
+                                        <input class="addQuestion" type="text" name="" value="" placeholder="Voeg hier een nieuwe vraag toe">
+                                    </th>
+                                    <th>
+                                        <button data-topic-id="<?= $topicId ?>" disabled type="button" class="saveNewQuestion" name="button">
+                                            <span class="glyphicon glyphicon-ok"></span>
+                                        </button>
+                                    </th>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 <!-- /.box-body -->

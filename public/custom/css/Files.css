@@ -17,7 +17,7 @@ th{
     white-space: nowrap;
 }
 
-.editButton, .deleteButton, .addButton {
+.editButton, .deleteButton, .addButton, .deleteBtn {
     padding: 4px 4px 0px 4px;
     border: none;
     border-radius: 3px;
@@ -27,7 +27,7 @@ th{
     background-color: #00a7d0;
     width: 50%;
 }
-.deleteButton {
+.deleteButton, .deleteBtn {
     background-color: #d33724;
     width: 50%;
 }
