@@ -48,7 +48,7 @@
                                 </tr>
                                 <tr>
                                     <th class="no-sort" colspan="2">
-                                        <input class="addQuestion" type="text" name="" value="">
+                                        <input class="addQuestion" type="text" name="" value="" placeholder="Voeg hier een nieuwe vraag toe">
                                     </th>
                                     <th>
                                         <button data-topic-id="<?= $topicId ?>" disabled type="button" class="saveNewQuestion" name="button">
