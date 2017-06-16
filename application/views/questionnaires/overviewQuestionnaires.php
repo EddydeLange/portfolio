@@ -17,7 +17,7 @@
                         <table id="overviewSubjects" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>Subtopic</th>
+                                    <th>Maintopic</th>
                                     <th>Subtopic</th>
                                 </tr>
                             </thead>
@@ -26,7 +26,7 @@
                                     <tr data-row-id="<?= $subject->id ?>" class="subjectRow">
                                         <td><?= $subject->subject ?></td>
                                         <td><?= $subject->subtopic ?></td>
-    								</tr>
+    								</tr>   
                                 <?php } ?>
                             </tbody>
                         </table>
