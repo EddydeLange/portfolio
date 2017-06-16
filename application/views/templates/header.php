@@ -101,9 +101,9 @@
                <div class="input-group">
                   <input autocomplete="off" type="text" name="searchPerson" class="form-control" placeholder="Search student...">
                   <span class="input-group-btn">
-                  <button type="submit" id="search-btn" class="btn btn-flat">
-                  <i class="fa fa-search"></i>
-                  </button>
+                      <button type="submit" id="search-btn" class="btn btn-flat">
+                          <i class="fa fa-search"></i>
+                      </button>
                   </span>
                </div>
                <div id="dropdown-content">
@@ -130,6 +130,7 @@
                   </ul>
                </li>
                <li><a href="<?php echo site_url('Assignments/index') ?>"><i class="fa fa-link"></i> <span>Assignments</span></a></li>
+                <li><a href="<?php echo site_url('questionnaires/index') ?>"><i class="fa fa-link"></i> <span>Subjects questionnaires</span></a></li>
             </ul>
             <!-- /.sidebar-menu -->
          </section>
