@@ -12,3 +12,10 @@ $(function() {
         }]
     });
 });
+
+
+
+$('.subjectRow').on('click', function() {
+    var assignmentId = $(this).data("row-id");
+    document.location.href = '/portfolio/overviewQuestionnaires/Quiz/' + assignmentId;
+});

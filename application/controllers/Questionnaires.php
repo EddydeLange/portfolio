@@ -5,17 +5,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 class questionnaires extends MY_Controller {
 
-	function __construct()
-	{
-		parent::__construct();
-	}
+    function __construct() 
+    {
+        parent::__construct();
+        $this->load->model('AssignmentsModel');
+    }
 
+
+ 	//START INDEXES
 	public function index()
 	{
 		$this->load->library('session');
-		$this->load->model('AssignmentsModel');
 		$data['subjects'] = $this->AssignmentsModel->getSubjects();
         $data['PHPfileName'] = 'questionnaires/overviewQuestionnaires';
 		crender('index', $data);
 	}
+
+	public function overviewQuiz($id = null)
+	{
+		$data['questions'] = $this->AssignmentsModel->getAssignments($id);
+		$data['topicId'] = $id;
+    	$data['PHPfileName'] = 'Questionnaires/Quiz';
+		
+		crender('index', $data);
+	}
+	//END INDEXES
 }
