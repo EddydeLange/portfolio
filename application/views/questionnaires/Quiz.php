@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Quiz</h1>
+        <h1>Vragenlijst over <?= $subjects[ARRAY_FIRST_INDEX]->subject ?></h1>
     </section>
 
     <!-- Main content -->
@@ -15,37 +15,23 @@
                     <div class="box-body">
                         <table id="overviewSubjectAssignments" class="table table-bordered table-striped">
                             <thead>
-                                <tr>
-                                    <th></th>
-                                    <th class="no-sort">Assignment</th>
-                                    <th class="no-sort"></th>
+                                <tr>             
+                                    <th class="no-sort">Vraag</th>
+                                    <th class="no-sort">Jouw andwoord</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($questions as $question) { ?>
                                     <tr data-row-id="<?= $question->id ?>">
-                                        <td class="tdWidth">0</td>
-                                        <td class="changeQuestion">
-                                            <p><?= $question->question ?></p>
+                                        <td>
+                                            <?= $question->question ?>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Answer">
                                         </td>
                                     </tr>
                                 <?php } ?>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th class="no-sort" colspan="3">Klik op een vraag die u wilt wijzigen.</th>
-                                </tr>
-                                <tr>
-                                    <th class="no-sort" colspan="2">
-                                        <input class="addQuestion" type="text" name="" value="" placeholder="Voeg hier een nieuwe vraag toe">
-                                    </th>
-                                    <th>
-                                        <button data-topic-id="<?= $topicId ?>" disabled type="button" class="saveNewQuestion" name="button">
-                                            <span class="glyphicon glyphicon-ok"></span>
-                                        </button>
-                                    </th>
-                                </tr>
-                            </tfoot>
                         </table>
                     </div>
                 <!-- /.box-body -->

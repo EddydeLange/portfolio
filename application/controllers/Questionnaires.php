@@ -24,9 +24,8 @@ class questionnaires extends MY_Controller {
 	public function overviewQuiz($id = null)
 	{
 		$data['questions'] = $this->AssignmentsModel->getAssignments($id);
-		$data['topicId'] = $id;
-    	$data['PHPfileName'] = 'Questionnaires/Quiz';
-		
+		$data['subjects'] = $this->AssignmentsModel->getSubjects($id);
+    	$data['PHPfileName'] = 'Questionnaires/quiz';
 		crender('index', $data);
 	}
 	//END INDEXES

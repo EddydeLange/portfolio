@@ -2,9 +2,12 @@
 class AssignmentsModel extends CI_model
 {
 
-    public function getSubjects()
+    public function getSubjects($id = null)
     {
         $this->load->database();
+        if ($id) {
+            $this->db->where('id', $id);
+        }
         $getSubjects = $this->db->get('subjects');
         $subjects = $getSubjects->result();
 
