@@ -14,12 +14,12 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="assignmentsOverview" class="table table-bordered table-striped">
+                        <table class="table table-bordered table-striped overviews">
                             <thead>
                                 <tr>
                                     <th>Assignment</th>
                                     <th>Subtopic</th>
-                                    <th class="no-sort">
+                                    <th class="no-sort oneIcon icons">
                                         <button type="button" class="addButton">
                                             <span class="glyphicon glyphicon-plus"></span>
                                         </button>
@@ -31,7 +31,7 @@
                                     <tr data-row-id="<?= $subject->id ?>" class="subjectRow">
                                         <td><?= $subject->subject ?></td>
                                         <td><?= $subject->subtopic ?></td>
-                                        <td class="tdWidth">
+                                        <td class="smallWidth twoIcons icons">
                                             <button class="editButton">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </button>
