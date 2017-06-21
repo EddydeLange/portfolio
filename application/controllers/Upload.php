@@ -30,16 +30,23 @@ class Upload extends MY_Controller {
             redirect('upload/index', $error); 
         }
       
-        //$this->UploadModel->insertFileName($this->upload->data());
+        $this->UploadModel->insertFileName($this->upload->data());
 
 
         $data = $this->upload->data();
-        var_dump($data['full_path']);
+        
+        $file = fopen('./uploads/' . $this->upload->data('file_name'),"r");
+		print_r($file);
+		
+ 		
 
- 		$file = fopen($data['full_path'], 'r');
+ 		
 
-		$row = fgetcsv($file);
-		var_dump($row);
+
+ 		//$file = fopen($data['full_path'], 'r');
+
+		//$row = fgetcsv($file);
+		//var_dump($row);
 		//dd($row);
 
 
