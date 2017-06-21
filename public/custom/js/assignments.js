@@ -108,7 +108,7 @@ $('.saveNewQuestion').on('click', function() {
     });
 });
 
-$(document).ready(function() {
+$(function() {
     $('.deleteQuestion').prop('disabled', false);
     $('button.saveInput, button.cancelChange').prop('disabled', true);
 });

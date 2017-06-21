@@ -31,7 +31,7 @@
                                     <tr data-row-id="<?= $subject->id ?>" class="subjectRow">
                                         <td><?= $subject->subject ?></td>
                                         <td><?= $subject->subtopic ?></td>
-                                        <td class="smallWidth twoIcons icons">
+                                        <td class="smallWidth twoIcons">
                                             <button class="editButton">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </button>

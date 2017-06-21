@@ -15,7 +15,7 @@ if ( ! function_exists('GetJSFiles'))
     {
         $standardJSFile = 'public/custom/js/standard.js';
         if (isset($data['JSFileNames'])) {
-            array_push($data['JSFileNames'], $standardJSFile);
+            array_unshift($data['JSFileNames'], $standardJSFile);
         } else {
             $data['JSFileNames'] = [$standardJSFile];
         }
@@ -36,7 +36,7 @@ if ( ! function_exists('GetCSSFiles'))
     {
         $standardCSSFile = ['public/custom/css/standard.css'];
         if (isset($data['CSSFileNames'])) {
-            array_push($data['CSSFileNames'], $standardCSSFile);
+            array_unshift($data['CSSFileNames'], $standardCSSFile);
         } else {
             $data['CSSFileNames'] = $standardCSSFile;
         }

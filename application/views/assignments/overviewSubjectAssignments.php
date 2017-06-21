@@ -28,7 +28,7 @@
                                         <td class="changeQuestion">
                                             <p><?= $question->question ?></p>
                                         </td>
-                                        <td class="smallWidth threeIcons icons">
+                                        <td class="smallWidth threeIcons">
                                             <button type="button" class="saveInput" name="button">
                                                 <span class="glyphicon glyphicon-ok"></span>
                                             </button>

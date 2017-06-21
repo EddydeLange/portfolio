@@ -27,22 +27,26 @@
 }
 
 .no-sort {
-    pointer-events: none; cursor: default;
+    cursor: default;
 }
 /*---------------------------------------------------------------*/
 /*-tablerows/Table-Heads--------------------------------------------------*/
-.overviews tr:hover{
-    background-color: #3c8dbc;
-    cursor: pointer;
-    cursor: hand;
+table.dataTable thead > tr > th {
+    padding-right: 8px;
 }
 
-th{
+.overviews tr:hover {
+    cursor: pointer;
+    cursor: hand;
+    background-color: #b8c7ce !important;
+}
+
+th {
     background-color: white;
 }
 
-.smallWidth{
-    width: 1%;
+.smallWidth {
+    width: 8%;
     white-space: nowrap;
 }
 /*----------------------------------------------------------------*/
@@ -59,7 +63,7 @@ th{
 }
 /*-----------------------------------------------------------------*/
 /*-Icons-in-td-----------------------------------------------------*/
-.icons button {
+button {
     padding: 4px 4px 0px 4px;
     border: none;
     border-radius: 3px;

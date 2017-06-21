@@ -29,7 +29,7 @@
                                         <td><?= $import->filename ?></td>
                                         <td><?= $import->file_size ?></td>
                                         <td><?= $import->file_date ?></td>
-                                        <td class="smallWidth">
+                                        <td class="smallWidth oneIcon">
                                             <button class="deleteButton">
                                                 <i class="glyphicon glyphicon-remove"></i>
                                             </button>
