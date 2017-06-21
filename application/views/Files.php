@@ -31,7 +31,7 @@
                                         <td><?= $import->file_date ?></td>   
                                         <td class="tdWidth">
                                             <button class="deleteButton">
-                                                <i class="glyphicon glyphicon-remove"></i>
+                                                <i class="glyphicon glyphicon-remove-o"></i>
                                             </button>
                                         </td>  
                                     </tr>
