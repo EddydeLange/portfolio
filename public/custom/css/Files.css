@@ -1,40 +1,12 @@
-table.dataTable thead > tr > th {
-    padding-right: 8px;
-}
-
-#assignmentsOverview tr:hover{
-    background-color: #3c8dbc;
-    cursor: pointer;
-    cursor: hand;
-}
-
-th{
-    background-color: white;
-}
-
-.tdWidth{
-    width: 10%;
-    white-space: nowrap;
-}
-
-.editButton, .deleteButton, .addButton, .deleteBtn {
-    padding: 4px 4px 0px 4px;
-    border: none;
-    border-radius: 3px;
-}
-
 .editButton {
     background-color: #00a7d0;
-    width: 50%;
 }
 .deleteButton, .deleteBtn {
     background-color: #d33724;
-    width: 50%;
 }
 
 .addButton {
     background-color: #008d4c;
-    width: 100%;
 }
 
 .headText {

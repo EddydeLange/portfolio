@@ -1,50 +1,46 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 /*
-	*$PHPfileName is needed when you link to other file of your project but you want to keep the css and js files.
+	*$fileNameView is needed when you link to other file of your project but you want to keep the css and js files.
 */
 class Assignments extends MY_Controller {
 
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->model('AssignmentsModel');
 	}
 
 	public function index()
 	{
 		$this->load->library('session');
-		$this->load->model('AssignmentsModel');
 		$data['subjects'] = $this->AssignmentsModel->getSubjects();
-        $data['PHPfileName'] = 'assignments/overviewAssignments';
+        $data['fileNameView'] = 'assignments/overviewAssignments';
 		crender('index', $data);
 	}
 
 	public function formPage($btnElement, $id = null)
 	{
-		$this->load->model('AssignmentsModel');
 		if ($id !== null) {
 			$data['editData'] = $this->AssignmentsModel->getSubjects($id);
 		} else {
 			$data['editData'] = '';
 		}
-		$data['PHPfileName'] = 'assignments/formPage';
-		$data['JSFileName'] = 'formPage';
-
+		$data['fileNameView'] = 'assignments/formPage';
+		$data['JSFileNames'] = ['public/custom/js/formPage.js'];
 		crender('index', $data);
 	}
 
 	public function overviewSubjectAssignments($id = null)
 	{
-		$this->load->model('AssignmentsModel');
 		$data['questions'] = $this->AssignmentsModel->getAssignments($id);
 		$data['topicId'] = $id;
-    	$data['PHPfileName'] = 'assignments/overviewSubjectAssignments';
+    	$data['fileNameView'] = 'assignments/overviewSubjectAssignments';
 		crender('index', $data);
 	}
 
 	public function sendDataForm()
 	{
-		$this->load->model('AssignmentsModel');
 		$dataFormTitle = $_POST['title'];
 		$dataFormSubtopic = $_POST['subtopic'];
 		$dataFormInput = $_POST['question'];
@@ -60,7 +56,6 @@ class Assignments extends MY_Controller {
 		$newQuestionVal = $_POST['newQuestionVal'];
 		$questionId = $_POST['questionId'];
 		if ($newQuestionVal !== '') {
-			$this->load->model('AssignmentsModel');
 			$this->AssignmentsModel->updateData($newQuestionVal, $questionId);
 		}
 	}
@@ -68,7 +63,6 @@ class Assignments extends MY_Controller {
 	public function deleteQuestion()
 	{
 		$questionId = $_POST['questionId'];
-		$this->load->model('AssignmentsModel');
 		$this->AssignmentsModel->deleteQuestion($questionId);
 	}
 
@@ -77,7 +71,6 @@ class Assignments extends MY_Controller {
 		$topicId = $_POST['topicId'];
 		$newQuestionText = $_POST['newQuestionText'];
 		if ($newQuestionText !== '') {
-			$this->load->model('AssignmentsModel');
 			$this->AssignmentsModel->addNewQuestion($topicId, $newQuestionText);
 		}
 	}

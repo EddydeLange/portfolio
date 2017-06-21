@@ -1,18 +1,3 @@
-$(function() {
-    $('#assignmentsOverview, #overviewSubjectAssignments').DataTable({
-        "paging": true,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "info": true,
-        "autoWidth": true,
-        "columnDefs": [ {
-            "targets"  : 'no-sort',
-            "orderable": false
-        }]
-    });
-});
-
 $('.editButton, .addButton').on('click', function() {
     var btnElement = $(this).attr('class');
     if (btnElement == 'editButton') {
@@ -123,10 +108,7 @@ $('.saveNewQuestion').on('click', function() {
     });
 });
 
-
-
-
-$(document).ready(function() {
+$(function() {
     $('.deleteQuestion').prop('disabled', false);
     $('button.saveInput, button.cancelChange').prop('disabled', true);
 });

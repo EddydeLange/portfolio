@@ -36,8 +36,10 @@
 <script src="<?php echo base_url();?>public/AdminLTE/js/app.min.js"></script>
 <script src="<?php echo base_url();?>public/AdminLTE/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url();?>public/AdminLTE/plugins/datatables/dataTables.bootstrap.min.js"></script>
-<script src="<?php echo base_url($jsFile);?>"></script>
 <script src="<?php echo base_url();?>public/custom/js/search.js" data-baseurl="<?=base_url();?>" id="searchTag"></script>
+<?php foreach ($JSFileNames as $JSFileName) { ?>
+    <script src="<?php echo base_url($JSFileName);?>"></script>
+<?php } ?>
 
 </body>
 </html>

@@ -1,61 +1,3 @@
-table.dataTable thead > tr > th {
-    padding-right: 8px;
-}
-
-#assignmentsOverview tr:hover{
-    background-color: #3c8dbc;
-    cursor: pointer;
-    cursor: hand;
-}
-
-th{
-    background-color: white;
-}
-
-.tdWidth{
-    width: 10%;
-    white-space: nowrap;
-}
-
-.editButton, .deleteButton, .addButton, .cancelChange, .deleteQuestion, .saveInput, .saveNewQuestion {
-    padding: 4px 4px 0px 4px;
-    border: none;
-    border-radius: 3px;
-    width: 49%;
-}
-
-.saveNewQuestion {
-    width: 100%;
-}
-
-.cancelChange, .deleteQuestion, .saveInput {
-    width: 33%;
-}
-.saveInput:disabled, .cancelChange:disabled, .deleteQuestion:disabled, .saveNewQuestion:disabled{
-    background: #dddddd;
-}
-
-.editButton{
-    background-color: #00a7d0;
-
-}
-.deleteButton, .deleteQuestion{
-    background-color: #d33724;
-}
-
-.cancelChange {
-    background-color: #e26363;
-}
-
-.saveInput, .saveNewQuestion {
-    background-color: #008d4c;
-}
-
-.addButton {
-    background-color: #008d4c;
-    width: 100%;
-}
-
 .headText {
     width: 100%;
     margin-bottom: 10px;
@@ -63,8 +5,4 @@ th{
 
 .text, .addQuestion {
     width: 96%;
-}
-
-.error {
-    border: 1px red solid;
 }

@@ -1,3 +1,4 @@
+/*-Search-bar--------------------------------------------------*/
 #dropdown-content {
     display: block;
     position: relative;
@@ -18,4 +19,88 @@
     background-color: #3c8dbc;
     cursor: pointer;
     cursor: hand;
+}
+/*---------------------------------------------------------------*/
+/*-No-Sorting----------------------------------------------------*/
+.no-sort::after {
+    display: none;
+}
+
+.no-sort {
+    cursor: default;
+}
+/*---------------------------------------------------------------*/
+/*-tablerows/Table-Heads--------------------------------------------------*/
+table.dataTable thead > tr > th {
+    padding-right: 8px;
+}
+
+.overviews tr:hover {
+    cursor: pointer;
+    cursor: hand;
+    background-color: #b8c7ce !important;
+}
+
+th {
+    background-color: white;
+}
+
+.smallWidth {
+    width: 8%;
+    white-space: nowrap;
+}
+/*----------------------------------------------------------------*/
+/*-alerts-to-user-------------------------------------------------*/
+.error {
+    border: 1px red solid;
+}
+.No, .wrongAnswer {
+    color: red;
+}
+
+.Yes, .goodAnswer {
+    color: green;
+}
+/*-----------------------------------------------------------------*/
+/*-Icons-in-td-----------------------------------------------------*/
+button {
+    padding: 4px 4px 0px 4px;
+    border: none;
+    border-radius: 3px;
+}
+.oneIcon button {
+    width: 100%;
+}
+
+.twoIcons button {
+    width: 49%;
+}
+
+.threeIcons button {
+    width: 33%;
+}
+/*--------------------------------------------------------------------*/
+/*-colors-td----------------------------------------------------------*/
+button:disabled{
+    background: #dddddd;
+}
+
+.editButton{
+    background-color: #00a7d0;
+
+}
+.deleteButton, .deleteQuestion{
+    background-color: #d33724;
+}
+
+.cancelChange {
+    background-color: #e26363;
+}
+
+.saveInput, .saveNewQuestion {
+    background-color: #008d4c;
+}
+
+.addButton {
+    background-color: #008d4c;
 }

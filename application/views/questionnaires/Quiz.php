@@ -13,9 +13,9 @@
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
-                            <table id="overviewSubjectAssignments" class="table table-bordered table-striped">
+                            <table class="table table-bordered table-striped overviews">
                                 <thead>
-                                    <tr>             
+                                    <tr>
                                         <th class="no-sort">Vraag</th>
                                         <th class="no-sort">Jouw andwoord</th>
                                     </tr>
@@ -29,21 +29,21 @@
                                             <td>
                                                 <input type="text" name="Answer">
                                             </td>
-                                        </tr>   
+                                        </tr>
 
                                     <?php } ?>
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th class="no-sort" colspan="3">Klik om de vragenlijst in te leveren.
-                                        <button class="deleteBtn">
-                                            <i class="fa fa-send-o"></i>
-                                        </button>
+                                        <th class="no-sort oneIcon" colspan="3">Klik om de vragenlijst in te leveren.
+                                            <button class="deleteBtn">
+                                                <i class="fa fa-send-o"></i>
+                                            </button>
                                         </th>
                                     </tr>
                                 </tfoot>
                             </table>
-                        </div> 
+                        </div>
                     <!-- /.box-body -->
                     </div>
                 <!-- /.box -->

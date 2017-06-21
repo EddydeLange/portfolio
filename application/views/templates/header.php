@@ -19,8 +19,9 @@
          echo link_tag('public/adminLTE/css/AdminLTE.min.css');
          echo link_tag('public/adminLTE/css/skins/skin-blue.min.css');
          echo link_tag('public/adminLTE/css/datatables/dataTables.bootstrap.css');
-         echo link_tag('public/custom/css/standard.css');
-         echo link_tag($cssFile);
+         foreach ($CSSFileNames as $CSSFileName) {
+              echo link_tag($CSSFileName);
+         }
          ?>
    </head>
    <body class="hold-transition skin-blue sidebar-mini">
