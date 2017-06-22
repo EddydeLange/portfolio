@@ -35,8 +35,8 @@
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th class="no-sort oneIcon" colspan="3">Klik om de vragenlijst in te leveren.
-                                            <button class="deleteBtn">
+                                        <th class="no-sort" colspan="3">Klik om de vragenlijst in te leveren.
+                                            <button class="sendBtn">
                                                 <i class="fa fa-send-o"></i>
                                             </button>
                                         </th>

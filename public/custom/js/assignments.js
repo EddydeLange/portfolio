@@ -12,6 +12,7 @@ $('.subjectRow').on('click', function() {
     var assignmentId = $(this).data("row-id");
     document.location.href = '/portfolio/assignments/overviewSubjectAssignments/' + assignmentId;
 });
+
 $('.deleteQuestion').bind('click', deleteQuestion);
 
 function deleteQuestion() {

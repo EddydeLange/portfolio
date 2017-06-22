@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	*$fileNameView is needed when you link to other file of your project but you want to keep the css and js files.
 */
 class questionnaires extends MY_Controller {
+    
     function __construct()
     {
         parent::__construct();
@@ -24,6 +25,11 @@ class questionnaires extends MY_Controller {
 		$data['subjects'] = $this->AssignmentsModel->getSubjects($id);
     	$data['fileNameView'] = 'Questionnaires/quiz';
 		crender('index', $data);
+	}
+
+	public function sendQuizAnswers()
+	{
+		die();
 	}
 
 }
