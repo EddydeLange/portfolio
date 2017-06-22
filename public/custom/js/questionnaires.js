@@ -10,11 +10,11 @@ $(document).ready(function() {
         // var fileId = $(this).closest('tr').data('file-id');
         $.ajax({
             method: "POST",
-            url: 'sendQuizAnswers/',
+            url: base_url+'Questionnaires/sendQuizAnswers',
             success: function() {
             	console.log('goed');
                 // location.reload();
-                //document.location.href = '/portfolio/questionnaires/index';
+                // document.location.href = '/portfolio/questionnaires/index';
                 // later aanpasen!!
             },
             error: function() {

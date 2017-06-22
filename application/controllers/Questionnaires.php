@@ -29,7 +29,8 @@ class questionnaires extends MY_Controller {
 
 	public function sendQuizAnswers()
 	{
-		die();
+		$data['sendQuizAnswers'] = $this->AssignmentsModel->insertQuizAnswers();
+		alert('hallo');
 	}
 
 }
