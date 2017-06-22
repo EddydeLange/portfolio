@@ -104,3 +104,7 @@ button:disabled{
 .addButton {
     background-color: #008d4c;
 }
+
+.glyphicon {
+    color: white;
+}

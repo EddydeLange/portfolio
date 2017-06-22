@@ -6,3 +6,11 @@
 .text, .addQuestion {
     width: 96%;
 }
+
+.openBtn {
+    background-color: #51a35d;
+}
+
+.closeBtn {
+    background-color: #a33c3c;
+}

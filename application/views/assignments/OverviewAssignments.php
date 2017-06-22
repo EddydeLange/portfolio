@@ -35,8 +35,8 @@
                                             <button class="editButton">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </button>
-                                            <button type="button" class="deleteButton">
-                                                <span class="glyphicon glyphicon-eye-open"></span>
+                                            <button type="button" class="<?=$subject->display?>Btn displayButton">
+                                                <span class="glyphicon glyphicon-eye-<?= $subject->display ?>"></span>
                                             </button>
                                         </td>
     								</tr>

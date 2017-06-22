@@ -108,6 +108,21 @@ $('.saveNewQuestion').on('click', function() {
     });
 });
 
+$('.displayButton').on('click', function() {
+    var base_url = $('#searchTag').attr('data-baseurl');
+    var newQuestionText = $('.addQuestion').val();
+    var topicId = $(this).attr('data-topic-id');
+    $.ajax({
+        url: base_url+'assignments/addNewQuestion',
+        data:  {newQuestionText: newQuestionText, topicId: topicId},
+        method: 'post',
+        success: function() {
+            location.reload();
+        },
+        error: function() {}
+    });displayButton
+});
+
 $(function() {
     $('.deleteQuestion').prop('disabled', false);
     $('button.saveInput, button.cancelChange').prop('disabled', true);

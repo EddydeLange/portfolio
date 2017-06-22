@@ -11,6 +11,10 @@ class AssignmentsModel extends CI_model
         $getSubjects = $this->db->get('subjects');
         $subjects = $getSubjects->result();
 
+        foreach ($subjects as $subject) {
+            $subject->display = ($subject->display == 1 ? 'open' : 'close');
+        }
+
         return $subjects;
     }
 
