@@ -13,7 +13,7 @@ class questionnaires extends MY_Controller {
 	public function index()
 	{
 		$this->load->library('session');
-		$data['subjects'] = $this->AssignmentsModel->getSubjects();
+		$data['subjects'] = $this->AssignmentsModel->getSubjectsQuestionnaires();
         $data['fileNameView'] = 'questionnaires/overviewQuestionnaires';
 		crender('index', $data);
 	}
@@ -21,7 +21,7 @@ class questionnaires extends MY_Controller {
 	public function overviewQuiz($id = null)
 	{
 		$data['questions'] = $this->AssignmentsModel->getAssignments($id);
-		$data['subjects'] = $this->AssignmentsModel->getSubjects($id);
+		$data['subjects'] = $this->AssignmentsModel->getSubjectsQuestionnaires($id);
     	$data['fileNameView'] = 'Questionnaires/quiz';
 		crender('index', $data);
 	}

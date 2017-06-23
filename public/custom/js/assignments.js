@@ -8,10 +8,11 @@ $('.editButton, .addButton').on('click', function() {
     document.location.href = '/portfolio/assignments/formPage/' + btnElement + '/' + rowId;
 });
 
-$('.subjectRow').on('click', function() {
+$('.editButton').on('click', function() {
     var assignmentId = $(this).data("row-id");
     document.location.href = '/portfolio/assignments/overviewSubjectAssignments/' + assignmentId;
 });
+
 $('.deleteQuestion').bind('click', deleteQuestion);
 
 function deleteQuestion() {
@@ -110,18 +111,19 @@ $('.saveNewQuestion').on('click', function() {
 
 $('.displayButton').on('click', function() {
     var base_url = $('#searchTag').attr('data-baseurl');
-    var newQuestionText = $('.addQuestion').val();
-    var topicId = $(this).attr('data-topic-id');
+    var topicId = $(this).closest('tr').attr('data-row-id');
+    var displayBtn = $(this).attr('class').split(' ')[0];
     $.ajax({
-        url: base_url+'assignments/addNewQuestion',
-        data:  {newQuestionText: newQuestionText, topicId: topicId},
+        url: base_url+'assignments/changeDisplay',
+        data:  {topicId: topicId, displayBtn: displayBtn},
         method: 'post',
         success: function() {
             location.reload();
         },
         error: function() {}
-    });displayButton
+    });
 });
+
 
 $(function() {
     $('.deleteQuestion').prop('disabled', false);

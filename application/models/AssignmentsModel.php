@@ -2,18 +2,28 @@
 class AssignmentsModel extends CI_model
 {
 
-    public function getSubjects($id = null)
+    public function getSubjects()
     {
         $this->load->database();
-        if ($id) {
-            $this->db->where('id', $id);
-        }
         $getSubjects = $this->db->get('subjects');
         $subjects = $getSubjects->result();
 
         foreach ($subjects as $subject) {
             $subject->display = ($subject->display == 1 ? 'open' : 'close');
         }
+
+        return $subjects;
+    }
+
+    public function getSubjectsQuestionnaires($id = null)
+    {
+        $this->load->database();
+        if ($id) {
+            $this->db->where('id', $id);
+        }
+        $this->db->where('display', 1);
+        $getSubjects = $this->db->get('subjects');
+        $subjects = $getSubjects->result();
 
         return $subjects;
     }
@@ -69,6 +79,14 @@ class AssignmentsModel extends CI_model
         ];
         $this->load->database();
         $this->db->insert('questions', $data);
+    }
+
+    public function changeDisplaySubject($topicId, $newDisplayedBtn)
+    {
+        $this->load->database();
+        $this->db->set('display', $newDisplayedBtn);
+        $this->db->where('id', $topicId);
+        $this->db->update('subjects');
     }
 
 }

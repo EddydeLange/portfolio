@@ -74,5 +74,12 @@ class Assignments extends MY_Controller {
 			$this->AssignmentsModel->addNewQuestion($topicId, $newQuestionText);
 		}
 	}
+	public function changeDisplay()
+	{
+		$topicId = $_POST['topicId'];
+		$displayBtn = $_POST['displayBtn'];
+		$newDisplayedBtn = ($displayBtn == 'closeBtn' ? 1 : 0);
+		$this->AssignmentsModel->changeDisplaySubject($topicId, $newDisplayedBtn);
+	}
 
 }
