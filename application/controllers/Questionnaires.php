@@ -27,10 +27,9 @@ class questionnaires extends MY_Controller {
 		crender('index', $data);
 	}
 
-	public function sendQuizAnswers()
+	public function sendQuizAnswers($id)
 	{
-		$data['sendQuizAnswers'] = $this->AssignmentsModel->insertQuizAnswers();
-		alert('hallo');
+		$this->AssignmentsModel->insertQuizAnswers($id);
 	}
 
 }

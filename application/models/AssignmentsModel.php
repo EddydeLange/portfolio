@@ -34,8 +34,12 @@ class AssignmentsModel extends CI_model
 
     public function insertQuizAnswers()
     {
-        $this->load->database();
-        $this->db->insert('answers', $data);
+        // $dataArray = array(
+        //     'subject_id' => $subject_id,
+        //     'question_id' => $question_id
+        // );
+        // $this->load->database();
+        // $this->db->insert('answers', $dataArrays);
     }
 
     public function getAssignments($id)

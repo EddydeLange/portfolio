@@ -7,19 +7,15 @@ $('.subjectRow').on('click', function() {
 
 $(document).ready(function() {
     $(".sendBtn").on("click", function() {
-        // var fileId = $(this).closest('tr').data('file-id');
+        var base_url = $('#searchTag').attr('data-baseurl');
         $.ajax({
-            method: "POST",
             url: base_url+'Questionnaires/sendQuizAnswers',
-            success: function() {
-            	console.log('goed');
-                // location.reload();
-                // document.location.href = '/portfolio/questionnaires/index';
-                // later aanpasen!!
+            method: 'post',
+            success: function(data) {
+                console.log(data);
             },
             error: function() {
                 console.log('fout');
-                // location.reload();
             }
         });
     });
