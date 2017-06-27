@@ -27,9 +27,10 @@ class questionnaires extends MY_Controller {
 		crender('index', $data);
 	}
 
-	public function sendQuizAnswers($id)
+	public function sendQuizAnswers($subjectId)
 	{
-		$this->AssignmentsModel->insertQuizAnswers($id);
+		return($_POST);
+		//$this->AssignmentsModel->insertQuizAnswers($id);
 	}
 
 }

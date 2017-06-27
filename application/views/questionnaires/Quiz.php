@@ -13,7 +13,7 @@
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
-                            <table class="table table-bordered table-striped overviews">
+                            <table id="answers" class="table table-bordered table-striped overviews">
                                 <thead>
                                     <tr>
                                         <th class="no-sort">Vraag</th>
@@ -27,7 +27,7 @@
                                                 <?= $question->question ?>
                                             </td>
                                             <td>
-                                                <input type="text" name="Answer">
+                                                <input type="text" name="answer-<?= $question->id ?>" value="">
                                             </td>
                                         </tr>
 
@@ -36,7 +36,7 @@
                                 <tfoot>
                                     <tr>
                                         <th class="no-sort" colspan="3">Klik om de vragenlijst in te leveren.
-                                            <button class="sendBtn">
+                                            <button data-subject-id=<?= $subjects[ARRAY_FIRST_INDEX]->id ?> class="sendBtn">
                                                 <i class="fa fa-send-o"></i>
                                             </button>
                                         </th>
@@ -55,3 +55,4 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+
