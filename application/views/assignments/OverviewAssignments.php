@@ -19,6 +19,7 @@
                                 <tr>
                                     <th>Assignment</th>
                                     <th>Subtopic</th>
+                                    <th class="no-sort">Deadline</th>
                                     <th class="no-sort oneIcon icons">
                                         <button type="button" class="addButton">
                                             <span class="glyphicon glyphicon-plus"></span>
@@ -31,6 +32,7 @@
                                     <tr data-row-id="<?= $subject->id ?>" class="subjectRow">
                                         <td><?= $subject->subject ?></td>
                                         <td><?= $subject->subtopic ?></td>
+                                        <td class="smallWidth"><?= $subject->display_date ?></td>
                                         <td class="smallWidth twoIcons">
                                             <button class="editButton">
                                                 <span class="glyphicon glyphicon-pencil"></span>

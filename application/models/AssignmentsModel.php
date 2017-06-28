@@ -7,9 +7,14 @@ class AssignmentsModel extends CI_model
         $this->load->database();
         $getSubjects = $this->db->get('subjects');
         $subjects = $getSubjects->result();
-
         foreach ($subjects as $subject) {
             $subject->display = ($subject->display == 1 ? 'open' : 'close');
+            if ($subject->display_date == null) {
+                $subject->display_date = '';
+            } else {
+                $subject->display_date = date("d-m-Y", strtotime($subject->display_date));
+            }
+
         }
 
         return $subjects;
