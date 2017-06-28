@@ -27,7 +27,7 @@
                                                 <?= $question->question ?>
                                             </td>
                                             <td>
-                                                <input type="text" name="answer-<?= $question->id ?>" value="">
+                                                <input type="text" data-id='<?= $question->id ?>' name="answer<?= $question->id ?>" value="">
                                             </td>
                                         </tr>
 

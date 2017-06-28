@@ -29,8 +29,18 @@ class questionnaires extends MY_Controller {
 
 	public function sendQuizAnswers($subjectId)
 	{
-		return($_POST);
+		$test = $_POST['questionList'];
+		return $test;
+
+
+
+		// for loop start
+		// answer = new stdclass,
+		// answer->question_id = // question id from array, 
+		// answer->user_input = // user input from array, (dus wat jij hebt ingevuld bij de vraag)
+		// answer->save;
 		//$this->AssignmentsModel->insertQuizAnswers($id);
+		// for loop end
 	}
 
 }

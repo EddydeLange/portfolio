@@ -6,32 +6,30 @@ $('.subjectRow').on('click', function() {
 
 
 $(document).ready(function() {
+
+
     var formData = $('#answers input');
     $(".sendBtn").on("click", function() {
-        console.log(formData);
+        var base_url = $('#searchTag').attr('data-baseurl');
+        var subjectId = $(this).data('subject-id');
+        var answers = [];
 
-        for(i = 0; i <= formData.length; i++) {
-            console.log(formData[i].value)
-            // check of formData index geen value heeft dan break
-            if (!formData[i].value) {
-                break;
-            }
+        for(i = 0; i < formData.length; i++) {
+            var answer = [formData[i].dataset.id, formData[i].value];
+            // var answer = {question_id:formData[i].name, user_input:formData[i].value};
+            answers.push(answer);
         }
-    });
 
-    // $(".sendBtn").on("click", function() {
-    //     var base_url = $('#searchTag').attr('data-baseurl');
-    //     var subjectId = $(this).data('subject-id');
-    //     $.ajax({
-    //         url: base_url+'Questionnaires/sendQuizAnswers/' + subjectId,
-    //         data: formData,
-    //         method: 'post',
-    //         success: function(data) {
-    //             console.log(data);
-    //         },
-    //         error: function() { 
-               
-    //         }
-    //     });
-    // });
+        $.ajax({
+            url: base_url+'Questionnaires/sendQuizAnswers/' + subjectId,
+            data: answers,
+            method: 'post',
+            success: function(data) {
+                console.log(answers);
+            },
+            error: function() { 
+                console.log('error');
+            }
+        });
+    });
 });
