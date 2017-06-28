@@ -124,6 +124,41 @@ $('.displayButton').on('click', function() {
     });
 });
 
+// $('.dateDisplay').on('click', function () {
+//     $(this).attr('class', 'dateDisplay');
+//     var date = $(this).children("p").text();
+//     var input = document.createElement("input");
+//     input.name = 'date';
+//     input.disabled  = true;
+//     input.className = 'text';
+//     input.value = date;
+//     var paragraph = $(this).children("p");
+//     $(paragraph).replaceWith(input);
+//
+// });
+
+//Date picker
+$('.datePicker').datepicker({
+    autoclose: true,
+    format: "dd/mm/yyyy",
+});
+
+$('.datePicker').on("changeDate", function () {
+     var date = $('.datePicker').datepicker('setDate', new Date());
+     console.log(date);
+});
+//
+// $('.datePicker').on('hide', function () {
+//     var date = $(this).children("input").val();
+//     changeInputIntoParagraph(date)
+// });
+
+// function changeInputIntoParagraph(date) {
+//     var paragraph = document.createElement("p");
+//     paragraph.innerHTML = date;
+//     var input = $(this).children("input");
+//     $(input).replaceWith(paragraph);
+// }
 
 $(function() {
     $('.deleteQuestion').prop('disabled', false);

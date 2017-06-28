@@ -32,7 +32,9 @@
                                     <tr data-row-id="<?= $subject->id ?>" class="subjectRow">
                                         <td><?= $subject->subject ?></td>
                                         <td><?= $subject->subtopic ?></td>
-                                        <td class="smallWidth"><?= $subject->display_date ?></td>
+                                        <td class="smallWidth datePicker">
+                                            <?= $subject->display_date ?>
+                                        </td>
                                         <td class="smallWidth twoIcons">
                                             <button class="editButton">
                                                 <span class="glyphicon glyphicon-pencil"></span>
