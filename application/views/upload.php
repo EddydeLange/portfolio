@@ -8,12 +8,12 @@
             <div class="col-xs-4">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Bestanden uploaden</h3>
+                        <h3 class="box-title">Upload a file</h3>
                     </div>
                     <form role="form" method="POST" action="uploadFile" enctype="multipart/form-data">
                         <div class="box-body">
                             <div class="form-group">
-                                <label for="exampleInputFile">Bestand</label>
+                                <label for="exampleInputFile">File</label>
                                 <input type="file" id="exampleInputFile" name="userfile">
                             </div>
                         </div>
@@ -26,12 +26,12 @@
             <div class="col-xs-4">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Antwoorden</h3>
+                        <h3 class="box-title">Answers</h3>
                     </div>
                     <form role="form" method="POST" action="sendAnswers" enctype="multipart/form-data">
                         <div class="box-body">
                             <div class="form-group">
-                                <label for="answer">Antwoord:</label>
+                                <label for="answer">Answer:</label>
                                 <input id="answer" type="text" name="answer">
                                 <br>
                             </div>
