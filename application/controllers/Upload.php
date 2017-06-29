@@ -16,7 +16,8 @@ class Upload extends MY_Controller {
 		crender('index', array('error' => ''));
     }
 
-    public function uploadFile() { 
+    public function uploadFile() 
+    { 
          $config['upload_path']   = './uploads/'; 
          $config['allowed_types'] = 'csv|xls|xlsx|xml'; 
          $config['max_size']      = 10000; 
@@ -29,38 +30,45 @@ class Upload extends MY_Controller {
             $error = array('error' => $this->upload->display_errors());
             redirect('upload/index', $error); 
         }
-      
+        
         $this->UploadModel->insertFileName($this->upload->data());
 
 
         $data = $this->upload->data();
         
-        $file = fopen('./uploads/' . $this->upload->data('file_name'),"r");
-		print_r($file);
-		
- 		
+        $file = fopen('./uploads/' . $this->upload->data('file_name'),"r");	
 
- 		
+ 		     $file = fopen($data['full_path'], 'r');
 
-
- 		//$file = fopen($data['full_path'], 'r');
-
-		//$row = fgetcsv($file);
-		//var_dump($row);
-		//dd($row);
+		    $row = fgetcsv($file);
 
 
         //$this->load->model('StudentModel');
         //$this->StudentModel->insertEntry('test','test');
 
 
-
-
-       	//redirect('files/index');
+       	redirect('files/fileHistory');
         
       } 
 
-  	public function getAnswers($data) {
+  	public function getAnswers($data) 
+    {
+
   		return $data;
   	}
+
+    public function sendAnswers() 
+    {
+        $realAnswer = null;
+        if ($_POST['answer'] === 'ja' || $_POST['answer'] === 'nee' || $_POST['answer'] === 'misschien') {
+            $realAnswer = 0;
+        } else {
+            $realAnswer = 1;
+        }
+        $this->UploadModel->uploadAnswers();
+
+        $data = $this->upload->data();
+        $this->upload->data('subject_id');
+    }
+
 }

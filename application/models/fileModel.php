@@ -33,5 +33,12 @@ class fileModel extends CI_Model
         $this->load->database(); 
         $this->db->delete('imports', array('id' => $id));        
     }
-    
+
+    public function setActive($id)
+    {
+        $this->load->database();
+        $this->db->set('file_active', 1);
+        $this->db->where('id', $id);
+        $this->db->update('imports');
+    }
 }

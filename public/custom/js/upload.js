@@ -6,10 +6,9 @@ $("#submitQuestions").on("click", function () {
        data: form,
 
        success: function(data){
-            console.log(data);
-            console.log('Successful!');
+       },
+       error: function(){
        }
-
      });
      event.preventDefault();
      return false;

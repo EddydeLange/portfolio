@@ -35,6 +35,11 @@ class Files extends MY_Controller
     {
         $this->fileModel->deleteFile($id);
     }
+
+    public function setActive($id)
+    {
+        $this->fileModel->setActive($id);
+    }
     //CRUD FUNCTIONS END
 
 }
