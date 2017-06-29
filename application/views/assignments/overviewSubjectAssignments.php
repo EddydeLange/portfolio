@@ -44,7 +44,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th class="no-sort" colspan="3">Klik op een vraag die u wilt wijzigen.</th>
+                                    <th class="no-sort" colspan="3">Click on an question for changing.</th>
                                 </tr>
                                 <tr>
                                     <th class="no-sort" colspan="2">
