@@ -1,7 +1,7 @@
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <h1>Vragenlijst over <?= $subjects[ARRAY_FIRST_INDEX]->subject ?></h1>
+            <h1>Questions list about <?= $subjects[ARRAY_FIRST_INDEX]->subject ?></h1>
         </section>
 
         <!-- Main content -->
@@ -13,30 +13,33 @@
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
-                            <table class="table table-bordered table-striped overviews">
+                            <table id="answers" class="table table-bordered table-striped overviews">
                                 <thead>
                                     <tr>
-                                        <th class="no-sort">Vraag</th>
-                                        <th class="no-sort">Jouw andwoord</th>
+                                        <th class="no-sort">Question</th>
+                                        <th class="no-sort">Your answer</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <form id="answersForm" method="post">
                                     <?php foreach ($questions as $question) { ?>
                                         <tr data-row-id="<?= $question->id ?>">
                                             <td>
                                                 <?= $question->question ?>
                                             </td>
                                             <td>
-                                                <input type="text" name="Answer">
+                                                <input type="text" data-id='<?= $question->id ?>' name="answer<?= $question->id ?>" value="">
                                             </td>
                                         </tr>
 
                                     <?php } ?>
+                                    <input type="hidden" name="subjectId" value="<?= $subjects[0]->id ?>">
+                                </form>    
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th class="no-sort oneIcon" colspan="3">Klik om de vragenlijst in te leveren.
-                                            <button class="deleteBtn">
+                                        <th class="no-sort" colspan="3">Click here to submit your answers
+                                            <button class="sendBtn">
                                                 <i class="fa fa-send-o"></i>
                                             </button>
                                         </th>
@@ -55,3 +58,4 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+
