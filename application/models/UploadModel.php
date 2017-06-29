@@ -16,7 +16,7 @@ class UploadModel extends CI_Model {
 			'file_date' => date("d-m-Y"),
 			'file_active' => 1
 		];
-		$this->db->insert('imports', $data);
+	$this->db->insert('imports', $data);
     }
 
     public function uploadAnswers($fileData)

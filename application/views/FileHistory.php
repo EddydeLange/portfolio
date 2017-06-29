@@ -8,7 +8,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Alle bestanden die verwijderd zijn.</h3>
+                        <h3 class="box-title">Removed files.</h3>
                     </div>
                     <div class="box-body">
                         <table class="table table-bordered table-striped overviews">

@@ -36,13 +36,11 @@ class Upload extends MY_Controller {
 
         $data = $this->upload->data();
         
-        $file = fopen('./uploads/' . $this->upload->data('file_name'),"r");
-		print_r($file);	
+        $file = fopen('./uploads/' . $this->upload->data('file_name'),"r");	
 
+ 		     $file = fopen($data['full_path'], 'r');
 
- 		$file = fopen($data['full_path'], 'r');
-
-		$row = fgetcsv($file);
+		    $row = fgetcsv($file);
 
 
         //$this->load->model('StudentModel');
