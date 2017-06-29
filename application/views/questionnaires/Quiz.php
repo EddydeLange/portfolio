@@ -21,6 +21,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <form id="answersForm" method="post">
                                     <?php foreach ($questions as $question) { ?>
                                         <tr data-row-id="<?= $question->id ?>">
                                             <td>
@@ -32,11 +33,13 @@
                                         </tr>
 
                                     <?php } ?>
+                                    <input type="hidden" name="subjectId" value="<?= $subjects[0]->id ?>">
+                                </form>    
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <th class="no-sort" colspan="3">Klik om de vragenlijst in te leveren.
-                                            <button data-subject-id=<?= $subjects[ARRAY_FIRST_INDEX]->id ?> class="sendBtn">
+                                            <button class="sendBtn">
                                                 <i class="fa fa-send-o"></i>
                                             </button>
                                         </th>

@@ -27,20 +27,22 @@ class questionnaires extends MY_Controller {
 		crender('index', $data);
 	}
 
-	public function sendQuizAnswers($subjectId)
+	public function sendQuizAnswers()
 	{
-		$test = $_POST['questionList'];
-		return $test;
+		$answerArray = [];
+        $answers = $this->input->post();
+        foreach ($answers as $key => $answer) {
 
-
-
-		// for loop start
-		// answer = new stdclass,
-		// answer->question_id = // question id from array, 
-		// answer->user_input = // user input from array, (dus wat jij hebt ingevuld bij de vraag)
-		// answer->save;
-		//$this->AssignmentsModel->insertQuizAnswers($id);
-		// for loop end
+        	$answersArray[] = [
+        		'subjectId' => $answers['subjectId'],
+        		'questionId' => str_replace('answer', '', $key),
+        		'answer' => $answer
+        	];
+        }
+		$lastKey = count($answersArray) - 1;
+        unset($answersArray[$lastKey]);
+		foreach($answersArray as $answer) {
+			$this->AssignmentsModel->insertQuizAnswers($answer);	
+		}
 	}
-
 }

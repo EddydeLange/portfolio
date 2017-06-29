@@ -11,7 +11,6 @@ $(document).ready(function() {
     var formData = $('#answers input');
     $(".sendBtn").on("click", function() {
         var base_url = $('#searchTag').attr('data-baseurl');
-        var subjectId = $(this).data('subject-id');
         var answers = [];
 
         for(i = 0; i < formData.length; i++) {
@@ -20,16 +19,17 @@ $(document).ready(function() {
             answers.push(answer);
         }
 
+        var form = $('#answersForm').serialize();
         $.ajax({
-            url: base_url+'Questionnaires/sendQuizAnswers/' + subjectId,
-            data: answers,
-            method: 'post',
-            success: function(data) {
-                console.log(answers);
+            url: base_url + '/questionnaires/sendQuizAnswers',
+            data: form,
+            method: 'POST',
+            success: function(result) {
+                console.log(result);
             },
             error: function() { 
                 console.log('error');
             }
-        });
+       });
     });
 });
