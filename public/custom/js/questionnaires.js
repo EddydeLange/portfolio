@@ -24,11 +24,11 @@ $(document).ready(function() {
             url: base_url + '/questionnaires/sendQuizAnswers',
             data: form,
             method: 'POST',
-            success: function(result) {
-                console.log(result);
+            success: function() {
+                location.reload();
             },
             error: function() { 
-                console.log('error');
+                location.reload();
             }
        });
     });

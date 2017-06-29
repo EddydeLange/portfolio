@@ -1,7 +1,7 @@
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <h1>Vragenlijst over <?= $subjects[ARRAY_FIRST_INDEX]->subject ?></h1>
+            <h1>Questions list about <?= $subjects[ARRAY_FIRST_INDEX]->subject ?></h1>
         </section>
 
         <!-- Main content -->
@@ -16,8 +16,8 @@
                             <table id="answers" class="table table-bordered table-striped overviews">
                                 <thead>
                                     <tr>
-                                        <th class="no-sort">Vraag</th>
-                                        <th class="no-sort">Jouw andwoord</th>
+                                        <th class="no-sort">Question</th>
+                                        <th class="no-sort">Your answer</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -38,7 +38,7 @@
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th class="no-sort" colspan="3">Klik om de vragenlijst in te leveren.
+                                        <th class="no-sort" colspan="3">Click here to submit your answers
                                             <button class="sendBtn">
                                                 <i class="fa fa-send-o"></i>
                                             </button>
