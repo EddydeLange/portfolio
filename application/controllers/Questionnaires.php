@@ -14,7 +14,7 @@ class questionnaires extends MY_Controller {
 	public function index()
 	{
 		$this->load->library('session');
-		$data['subjects'] = $this->AssignmentsModel->getSubjectsQuestionnaires();
+		$data['subjects'] = $this->AssignmentsModel->getSubjects();
         $data['fileNameView'] = 'questionnaires/overviewQuestionnaires';
 		crender('index', $data);
 	}
@@ -22,7 +22,7 @@ class questionnaires extends MY_Controller {
 	public function overviewQuiz($id = null)
 	{
 		$data['questions'] = $this->AssignmentsModel->getAssignments($id);
-		$data['subjects'] = $this->AssignmentsModel->getSubjectsQuestionnaires($id);
+		$data['subjects'] = $this->AssignmentsModel->getSubjects($id);
     	$data['fileNameView'] = 'Questionnaires/quiz';
 		crender('index', $data);
 	}
@@ -31,7 +31,11 @@ class questionnaires extends MY_Controller {
 	{
 		$answerArray = [];
         $answers = $this->input->post();
-        foreach ($answers as $key => $answer) {
+        $realAnswer = null;
+        if ($answer['answer'] === 'ja' || $answer['answer'] === 'nee' || $answer['answer'] === 'misschien') {
+            redirect('questionnaires/overviewQuiz');
+        } else {
+           foreach ($answers as $key => $answer) {
 
         	$answersArray[] = [
         		'subjectId' => $answers['subjectId'],
@@ -44,5 +48,6 @@ class questionnaires extends MY_Controller {
 		foreach($answersArray as $answer) {
 			$this->AssignmentsModel->insertQuizAnswers($answer);	
 		}
+	}
 	}
 }

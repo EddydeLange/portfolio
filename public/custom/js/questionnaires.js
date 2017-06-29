@@ -24,8 +24,8 @@ $(document).ready(function() {
             url: base_url + '/questionnaires/sendQuizAnswers',
             data: form,
             method: 'POST',
-            success: function() {
-                location.reload();
+            success: function(result) {
+                document.location.href = '/portfolio/questionnaires/index';
             },
             error: function() { 
                 location.reload();
