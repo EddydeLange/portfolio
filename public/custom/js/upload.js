@@ -8,8 +8,10 @@ $("#submitQuestions").on("click", function () {
        success: function(data){
             console.log(data);
             console.log('Successful!');
+       },
+       error: function(){
+        alert();
        }
-
      });
      event.preventDefault();
      return false;

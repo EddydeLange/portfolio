@@ -1,10 +1,8 @@
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>Overview Assignments</h1>
     </section>
 
-    <!-- Main content -->
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
@@ -44,14 +42,8 @@
                             </tbody>
                         </table>
                     </div>
-                <!-- /.box-body -->
                 </div>
-            <!-- /.box -->
             </div>
-        <!-- /.col -->
         </div>
-        <!-- /.row -->
     </section>
-    <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->
