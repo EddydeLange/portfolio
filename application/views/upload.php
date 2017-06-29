@@ -1,7 +1,7 @@
 <?php echo $error ?>
 <div class="content-wrapper">
     <section class="content-header">
-        <h1>Bestanden uploaden</h1>
+        <h1>Uploading files</h1>
     </section>
     <section class="content">
         <div class="row">

@@ -1,6 +1,6 @@
 <div class="content-wrapper">
     <section class="content-header">
-        <h1>Verwijderde files</h1>
+        <h1>Deleted files</h1>
     </section>
 
     <section class="content">
@@ -14,10 +14,10 @@
                         <table class="table table-bordered table-striped overviews">
                             <thead>
                                 <tr>
-                                    <th>Bestand</th>
-                                    <th>Groote (KB)</th>
-                                    <th>Upload datum</th>
-                                    <th class="no-sort">Definitief Verwijderen</th>
+                                    <th>File</th>
+                                    <th>Size (KB)</th>
+                                    <th>Upload date</th>
+                                    <th class="no-sort">Permanently delete</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -30,7 +30,7 @@
                                             <button class="deleteBtn">
                                                 <i class="fa fa-trash-o"></i>
                                             </button>
-                                            <button class="successBtn">
+                                            <button class="successBtn colorGreen">
                                                 <span class="glyphicon glyphicon-eye-open"></span>
                                             </button>
                                         </td>

@@ -101,7 +101,7 @@ button:disabled{
     background-color: #008d4c;
 }
 
-.addButton {
+.addButton, .colorGreen {
     background-color: #008d4c;
 }
 
