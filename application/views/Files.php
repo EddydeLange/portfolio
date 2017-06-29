@@ -14,13 +14,13 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table class="table filesTable table-bordered table-striped">
+                        <table class="table table-bordered table-striped overviews">
                             <thead>
                                 <tr>
                                     <th>Bestand</th>
                                     <th>Groote (KB)</th>
                                     <th>Upload datum</th>
-                                    <th class="noSort">Verwijderen</th>
+                                    <th class="no-sort">Verwijderen</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -28,14 +28,14 @@
                                     <tr data-file-id="<?= $import->id ?>">
                                         <td><?= $import->filename ?></td>
                                         <td><?= $import->file_size ?></td>
-                                        <td><?= $import->file_date ?></td>   
-                                        <td class="tdWidth">
+                                        <td><?= $import->file_date ?></td>
+                                        <td class="smallWidth oneIcon">
                                             <button class="deleteButton">
-                                                <i class="glyphicon glyphicon-remove"></i>
+                                                <i class="glyphicon glyphicon-remove-o"></i>
                                             </button>
-                                        </td>  
+                                        </td>
                                     </tr>
-                                <?php } ?>  
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>

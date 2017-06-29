@@ -1,18 +1,3 @@
-$(function() {
-    $('#assignmentsOverview, #overviewSubjectAssignments').DataTable({
-        "paging": true,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "info": true,
-        "autoWidth": true,
-        "columnDefs": [ {
-            "targets"  : 'no-sort',
-            "orderable": false
-        }]
-    });
-});
-
 $('.editButton, .addButton').on('click', function() {
     var btnElement = $(this).attr('class');
     if (btnElement == 'editButton') {
@@ -23,10 +8,11 @@ $('.editButton, .addButton').on('click', function() {
     document.location.href = '/portfolio/assignments/formPage/' + btnElement + '/' + rowId;
 });
 
-$('.subjectRow').on('click', function() {
+$('.editButton').on('click', function() {
     var assignmentId = $(this).data("row-id");
     document.location.href = '/portfolio/assignments/overviewSubjectAssignments/' + assignmentId;
 });
+
 $('.deleteQuestion').bind('click', deleteQuestion);
 
 function deleteQuestion() {
@@ -123,10 +109,22 @@ $('.saveNewQuestion').on('click', function() {
     });
 });
 
+$('.displayButton').on('click', function() {
+    var base_url = $('#searchTag').attr('data-baseurl');
+    var topicId = $(this).closest('tr').attr('data-row-id');
+    var displayBtn = $(this).attr('class').split(' ')[0];
+    $.ajax({
+        url: base_url+'assignments/changeDisplay',
+        data:  {topicId: topicId, displayBtn: displayBtn},
+        method: 'post',
+        success: function() {
+            location.reload();
+        },
+        error: function() {}
+    });
+});
 
-
-
-$(document).ready(function() {
+$(function() {
     $('.deleteQuestion').prop('disabled', false);
     $('button.saveInput, button.cancelChange').prop('disabled', true);
 });

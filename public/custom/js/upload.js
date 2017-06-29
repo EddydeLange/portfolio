@@ -1,14 +1,3 @@
-$(function() {
-    $('#overviewPeople, #overviewAssignments').DataTable({
-        "paging": true,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false
-    });
-});
-
 $("#submitQuestions").on("click", function () {
     var form = $("#questionsForm").serialize();
     $.ajax({
@@ -24,4 +13,4 @@ $("#submitQuestions").on("click", function () {
      });
      event.preventDefault();
      return false;
-}); 
+});

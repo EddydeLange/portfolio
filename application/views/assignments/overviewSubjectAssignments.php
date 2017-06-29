@@ -13,7 +13,7 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="overviewSubjectAssignments" class="table table-bordered table-striped">
+                        <table class="table table-bordered table-striped overviews">
                             <thead>
                                 <tr>
                                     <th></th>
@@ -24,11 +24,11 @@
                             <tbody>
                                 <?php foreach ($questions as $question) { ?>
                                     <tr data-row-id="<?= $question->id ?>">
-                                        <td class="tdWidth">0</td>
+                                        <td class="smallWidth">0</td>
                                         <td class="changeQuestion">
                                             <p><?= $question->question ?></p>
                                         </td>
-                                        <td class="tdWidth">
+                                        <td class="smallWidth threeIcons">
                                             <button type="button" class="saveInput" name="button">
                                                 <span class="glyphicon glyphicon-ok"></span>
                                             </button>

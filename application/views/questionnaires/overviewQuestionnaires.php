@@ -14,10 +14,10 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="overviewSubjects" class="table table-bordered table-striped">
+                        <table class="table table-bordered table-striped overviews">
                             <thead>
                                 <tr>
-                                    <th>Subtopic</th>
+                                    <th>Maintopic</th>
                                     <th>Subtopic</th>
                                 </tr>
                             </thead>
@@ -26,7 +26,7 @@
                                     <tr data-row-id="<?= $subject->id ?>" class="subjectRow">
                                         <td><?= $subject->subject ?></td>
                                         <td><?= $subject->subtopic ?></td>
-    								</tr>
+    								</tr>   
                                 <?php } ?>
                             </tbody>
                         </table>

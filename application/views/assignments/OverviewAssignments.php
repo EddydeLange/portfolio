@@ -14,12 +14,13 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="assignmentsOverview" class="table table-bordered table-striped">
+                        <table class="table table-bordered table-striped overviews">
                             <thead>
                                 <tr>
                                     <th>Assignment</th>
                                     <th>Subtopic</th>
-                                    <th class="no-sort">
+                                    <th class="no-sort">Deadline</th>
+                                    <th class="no-sort oneIcon icons">
                                         <button type="button" class="addButton">
                                             <span class="glyphicon glyphicon-plus"></span>
                                         </button>
@@ -31,12 +32,15 @@
                                     <tr data-row-id="<?= $subject->id ?>" class="subjectRow">
                                         <td><?= $subject->subject ?></td>
                                         <td><?= $subject->subtopic ?></td>
-                                        <td class="tdWidth">
+                                        <td class="smallWidth datePicker">
+                                            <?= $subject->display_date ?>
+                                        </td>
+                                        <td class="smallWidth twoIcons">
                                             <button class="editButton">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </button>
-                                            <button type="button" class="deleteButton">
-                                                <span class="glyphicon glyphicon-eye-open"></span>
+                                            <button type="button" class="<?=$subject->display?>Btn displayButton">
+                                                <span class="glyphicon glyphicon-eye-<?= $subject->display ?>"></span>
                                             </button>
                                         </td>
     								</tr>

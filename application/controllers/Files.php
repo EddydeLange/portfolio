@@ -4,12 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Files extends MY_Controller
 {
 
-    function __construct() 
+    function __construct()
     {
         parent::__construct();
         $this->load->model('fileModel');
     }
-    
+
     //START INDEXES
     public function index()
     {
@@ -20,7 +20,7 @@ class Files extends MY_Controller
     public function FileHistory()
     {
         $data['imports'] = $this->fileModel->getInactiveFiles();
-        $data['PHPfileName'] = 'FileHistory';
+        $data['fileNameView'] = 'FileHistory';
         crender('index', $data);
     }
     //END INDEXES

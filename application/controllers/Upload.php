@@ -8,6 +8,7 @@ class Upload extends MY_Controller {
         parent::__construct();
         $this->load->helper(array('form', 'url'));
         $this->load->model('UploadModel');
+
     }
 
     public function index($error = null)
@@ -19,6 +20,7 @@ class Upload extends MY_Controller {
          $config['upload_path']   = './uploads/'; 
          $config['allowed_types'] = 'csv|xls|xlsx|xml'; 
          $config['max_size']      = 10000; 
+         
 
          $this->load->library('upload', $config);
          $this->upload->initialize($config);
@@ -29,7 +31,32 @@ class Upload extends MY_Controller {
         }
       
         $this->UploadModel->insertFileName($this->upload->data());
-       	redirect('files/index');
+
+
+        $data = $this->upload->data();
+        
+        $file = fopen('./uploads/' . $this->upload->data('file_name'),"r");
+		print_r($file);
+		
+ 		
+
+ 		
+
+
+ 		//$file = fopen($data['full_path'], 'r');
+
+		//$row = fgetcsv($file);
+		//var_dump($row);
+		//dd($row);
+
+
+        //$this->load->model('StudentModel');
+        //$this->StudentModel->insertEntry('test','test');
+
+
+
+
+       	//redirect('files/index');
         
       } 
 
