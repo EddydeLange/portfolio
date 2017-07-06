@@ -37,13 +37,12 @@
                                 </form>    
                                 </tbody>
                                 <tfoot>
-                                    <tr>
-                                        <th class="no-sort" colspan="3">Click here to submit your answers
-                                            <button class="sendBtn">
-                                                <i class="fa fa-send-o"></i>
-                                            </button>
-                                        </th>
-                                    </tr>
+                                    <!-- <th class="no-sort">Click here to submit your answers</th> -->
+                                    <th class="no-sort" colspan="3">
+                                        <button class="sendBtn">
+                                            <i class="fa fa-send-o"></i>
+                                        </button>
+                                    </th>
                                 </tfoot>
                             </table>
                         </div>

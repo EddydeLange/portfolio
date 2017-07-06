@@ -6,3 +6,9 @@
 .text, .addQuestion {
     width: 96%;
 }
+
+.sendBtn{
+	background-color: #00a7d0;
+	color: #ffffff;
+	width: 8%;
+}

@@ -6,8 +6,6 @@ $('.subjectRow').on('click', function() {
 
 
 $(document).ready(function() {
-
-
     var formData = $('#answers input');
     $(".sendBtn").on("click", function() {
         var base_url = $('#searchTag').attr('data-baseurl');
