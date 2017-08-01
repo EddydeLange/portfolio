@@ -49,7 +49,7 @@ class AssignmentsModel extends CI_model
                 $this->db->insert('questions', $dataArray);
             }
         }
-    }    
+    }
 
     public function insertQuizAnswers($answer)
     {

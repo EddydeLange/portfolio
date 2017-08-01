@@ -21,28 +21,29 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <form id="answersForm" method="post">
-                                    <?php foreach ($questions as $question) { ?>
-                                        <tr data-row-id="<?= $question->id ?>">
-                                            <td>
-                                                <?= $question->question ?>
-                                            </td>
-                                            <td>
-                                                <input type="text" data-id='<?= $question->id ?>' name="answer<?= $question->id ?>" value="">
-                                            </td>
-                                        </tr>
-
-                                    <?php } ?>
-                                    <input type="hidden" name="subjectId" value="<?= $subjects[0]->id ?>">
-                                </form>    
+                                    <form name="Questions" id="answersForm" method="post">
+                                        <?php foreach ($questions as $question) { ?>
+                                            <tr data-row-id="<?= $question->id ?>">
+                                                <td>
+                                                    <?= $question->question ?>
+                                                </td>
+                                                <td>
+                                                    <input type="text" data-id='<?= $question->id ?>' name="answer<?= $question->id ?>" value="">
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+                                        <input type="hidden" name="subjectId" value="<?= $subjects[0]->id ?>">
+                                    </form>    
                                 </tbody>
                                 <tfoot>
-                                    <!-- <th class="no-sort">Click here to submit your answers</th> -->
-                                    <th class="no-sort" colspan="3">
-                                        <button class="sendBtn">
-                                            <i class="fa fa-send-o"></i>
-                                        </button>
-                                    </th>
+                                    <tr class="no-sort">
+                                        <td>Click here to submit your answers</td> 
+                                        <td colspan="3">
+                                            <button class="sendBtn">
+                                                <i class="fa fa-send-o"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
                                 </tfoot>
                             </table>
                         </div>
@@ -57,4 +58,3 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-

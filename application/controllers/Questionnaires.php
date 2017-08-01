@@ -32,9 +32,6 @@ class questionnaires extends MY_Controller {
 		$answerArray = [];
         $answers = $this->input->post();
         $realAnswer = null;
-        // if ($answer['answer'] === 'ja' || $answer['answer'] === 'nee' || $answer['answer'] === 'misschien') {
-        //     redirect('questionnaires/overviewQuiz');
-        // } else {
         foreach ($answers as $key => $answer) {
         	$answersArray[] = [
         		'subjectId' => $answers['subjectId'],
@@ -42,11 +39,12 @@ class questionnaires extends MY_Controller {
         		'answer' => $answer
         	];
         }
+		
 		$lastKey = count($answersArray) - 1;
         unset($answersArray[$lastKey]);
 		foreach($answersArray as $answer) {
 			$this->AssignmentsModel->insertQuizAnswers($answer);	
 		}
-	//}
 	}
+
 }
