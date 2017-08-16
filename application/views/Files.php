@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Uploaded files</h1>
+        <h1>Geuploade files</h1>
     </section>
 
     <!-- Main content -->
@@ -10,17 +10,17 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">All the files uploaded to the database</h3>
+                        <h3 class="box-title">alle bestanden die geupload zijn aan de database.</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
                         <table class="table table-bordered table-striped overviews">
                             <thead>
                                 <tr>
-                                    <th>File</th>
-                                    <th>Size (KB)</th>
-                                    <th>Upload date</th>
-                                    <th class="no-sort">Delete</th>
+                                    <th>Bestand</th>
+                                    <th>Groote (KB)</th>
+                                    <th>Upload datum</th>
+                                    <th class="no-sort">Verwijderen</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -31,7 +31,7 @@
                                         <td><?= $import->file_date ?></td>
                                         <td class="smallWidth oneIcon">
                                             <button class="deleteButton">
-                                                <i class="fa fa-eye-slash fa-lg"></i>
+                                                <i class="glyphicon glyphicon-remove-o"></i>
                                             </button>
                                         </td>
                                     </tr>
