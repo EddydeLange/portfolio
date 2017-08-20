@@ -17,10 +17,10 @@
                         <table class="table table-bordered table-striped overviews">
                             <thead>
                                 <tr>
-                                    <th>Bestand</th>
-                                    <th>Groote (KB)</th>
-                                    <th>Upload datum</th>
-                                    <th class="no-sort">Verwijderen</th>
+                                    <th>File</th>
+                                    <th>Size (KB)</th>
+                                    <th>Upload date</th>
+                                    <th class="no-sort">Delete / Add files</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -29,9 +29,12 @@
                                         <td><?= $import->filename ?></td>
                                         <td><?= $import->file_size ?></td>
                                         <td><?= $import->file_date ?></td>
-                                        <td class="smallWidth oneIcon">
+                                        <td class="smallWidth twoIcons">
                                             <button class="deleteButton">
-                                                <i class="glyphicon glyphicon-remove-o"></i>
+                                                <i class="fa fa-trash-o fa-lg"></i>
+                                            </button>
+                                            <button class="addButton">
+                                                <i class="fa fa-plus fa-lg"></i>
                                             </button>
                                         </td>
                                     </tr>
