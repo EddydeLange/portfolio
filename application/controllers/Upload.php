@@ -8,7 +8,6 @@ class Upload extends MY_Controller {
         parent::__construct();
         $this->load->helper(array('form', 'url'));
         $this->load->model('UploadModel');
-
     }
 
     public function index($error = null)
