@@ -18,7 +18,7 @@
                             <thead>
                                 <tr>
                                     <th>File</th>
-                                    <th>Size (KB)</th>
+                                    <th>File-Size (KB)</th>
                                     <th>Upload date</th>
                                     <th class="no-sort">Delete / Add files</th>
                                 </tr>
