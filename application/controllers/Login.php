@@ -11,15 +11,22 @@ class Login extends MY_Controller
 
     public function index()
     {
-    	crender('index'/*/,$data/*/);
+    	crender('index');
     }
 
-    public function Login(){
-    	$answers = $this->input->post();
-    	echo $answers;
-    }
+    public function Login()
+    {
+        $UserNameDB = $data['Students'] = $this->LoginModel->getUserData(); // wat er in de db staat
 
+        $UserName = $_POST['Username']; // wat de gebruiker heeft ingevuld
+        //$PassWord = $_POST['Password'];
 
+            if ($UserName == $UserNameDB) {
+                echo ('gelijk aan elkaar');
+            } else{
+                echo("niet gelijk aan elkaar");
+            }
+               
+        }
+    
 }
-
-?>
