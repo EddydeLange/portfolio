@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class LoginPage extends MY_Controller
+class Login extends MY_Controller
 {
 	function __construct()
     {
@@ -11,7 +11,12 @@ class LoginPage extends MY_Controller
 
     public function index()
     {
-    	crender('index', $data);
+    	crender('index'/*/,$data/*/);
+    }
+
+    public function Login(){
+    	$answers = $this->input->post();
+    	echo $answers;
     }
 
 
