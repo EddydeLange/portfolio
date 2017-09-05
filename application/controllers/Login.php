@@ -16,12 +16,13 @@ class Login extends MY_Controller
 
     public function Login()
     {
-        $data['students'] = $this->LoginModel->getUserData(); // data van de db
+        $UserName = $_POST['Username']; // wat de gebruiker heeft ingevuld   
+        $PassWord = $_POST['Password'];
+        $data = $this->LoginModel->getUserData($UserName); // data van de db
+        
+        
 
-        $UserName = $_POST['Username']; // wat de gebruiker heeft ingevuld
-        //$PassWord = $_POST['Password'];
-
-            if ($UserName == $data) {
+            if ($UserName == $data[0]->name && $PassWord == $data[0]->ov_number) {
                 echo ('gelijk aan elkaar!');
             } else{
                 echo("niet gelijk aan elkaar!");
