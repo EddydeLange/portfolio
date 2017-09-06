@@ -15,9 +15,11 @@ class Login extends MY_Controller
     }
 
     public function Login()
-    {
-        $UserName = $_POST['Username']; // wat de gebruiker heeft ingevuld   
+    { 
+        // wat de gebruiker heeft ingevuld 
+        $UserName = $_POST['Username'];  
         $PassWord = $_POST['Password'];
+
         $data = $this->LoginModel->getUserData($UserName); // data van de db
         
         

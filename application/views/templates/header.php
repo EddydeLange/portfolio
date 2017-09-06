@@ -131,8 +131,8 @@
                      <li><a href="<?php echo site_url('Files/FileHistory') ?>"><i class="fa fa-circle-o"></i><span>FileHistory</span></a></li>
                   </ul>
                </li>
-               <li><a href="<?php echo site_url('Assignments/index') ?>"><i class="fa fa-link"></i> <span>Assignments</span></a></li>
-                <li><a href="<?php echo site_url('questionnaires/index') ?>"><i class="fa fa-link"></i> <span>Subjects questionnaires</span></a></li>
+               <li><a href="<?php echo site_url('Assignments/index') ?>"><i class="fa fa-link"></i> <span>Assignments (docent)</span></a></li>
+                <li><a href="<?php echo site_url('questionnaires/index') ?>"><i class="fa fa-link"></i> <span>Assignments Students</span></a></li>
                 <li><a href="<?php echo site_url('Login/index') ?>"><i class="fa fa-link"></i> <span>Login Page</span></a></li>
             </ul>
             <!-- /.sidebar-menu -->
