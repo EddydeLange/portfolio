@@ -26,8 +26,13 @@ class Login extends MY_Controller
 
             if ($UserName == $data[0]->name && $PassWord == $data[0]->ov_number) {
                 echo ('gelijk aan elkaar!');
+                session_start();
+                $_SESSION["LogedInUserName"] = $UserName;
+                echo $_SESSION["LogedInUserName"];
             } else{
                 echo("niet gelijk aan elkaar!");
+                // session_unset(); 
+                // session_destroy(); 
             }
                
         }
