@@ -21,16 +21,15 @@ class Login extends MY_Controller
         $PassWord = $_POST['Password'];
 
         $data = $this->LoginModel->getUserData($UserName); // data van de db
-        
+        $_SESSION["username"] = $_POST['Username'];
         
 
             if ($UserName == $data[0]->name && $PassWord == $data[0]->ov_number) {
-                echo ('gelijk aan elkaar!');
+                echo ($_SESSION["username"]);
                 session_start();
-                $_SESSION["LogedInUserName"] = $UserName;
-                echo $_SESSION["LogedInUserName"];
-            } else{
-                echo("niet gelijk aan elkaar!");
+                
+            } else {
+                echo("verkeerde login gegevens");
                 // session_unset(); 
                 // session_destroy(); 
             }

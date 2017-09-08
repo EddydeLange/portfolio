@@ -1,5 +1,6 @@
 <?php
    defined('BASEPATH') OR exit('No direct script access allowed');
+   $_SESSION["username"] = $_POST['Username'];
    ?>
 <!DOCTYPE html>
 <!--
@@ -93,7 +94,7 @@
                   <img src="<?php echo base_url();?>public/adminLTE/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                </div>
                <div class="pull-left info">
-                  <p>Jan Willem Huisman</p>
+                  <p><?php $_SESSION["username"]; ?></p>
                   <!-- Status -->
                   <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                </div>
