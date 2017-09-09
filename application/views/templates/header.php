@@ -1,6 +1,6 @@
 <?php
    defined('BASEPATH') OR exit('No direct script access allowed');
-   $_SESSION["username"] = $_POST['Username'];
+   session_start();
    ?>
 <!DOCTYPE html>
 <!--
@@ -54,14 +54,24 @@
                         <!-- The user image in the navbar-->
                         <img src="<?php echo base_url();?>public/adminLTE/img/user2-160x160.jpg" class="user-image" alt="User Image">
                         <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                        <span class="hidden-xs">Jan Willem Huisman</span>
+                        <span class="hidden-xs">
+                        <?php 
+                           if(isset($_SESSION['username'])) {
+                              echo $_SESSION['username'];   
+                           } 
+                        ?>
+                        </span>
                      </a>
                      <ul class="dropdown-menu">
                         <!-- The user image in the menu -->
                         <li class="user-header">
                            <img src="<?php echo base_url();?>public/adminLTE/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                            <p>
-                              Jan Willem Huisman - Web Developer
+                              <?php 
+                                 if(isset($_SESSION['username'])) {
+                                    echo $_SESSION['username'];   
+                                 } 
+                              ?> - Web Developer
                               <small>Member since July. 1908</small>
                            </p>
                         </li>
@@ -71,7 +81,7 @@
                               <a href="#" class="btn btn-default btn-flat">Profile</a>
                            </div>
                            <div class="pull-right">
-                              <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                              <a href="../Login/index" id="UserLogout" class="btn btn-default btn-flat">Sign out</a>
                            </div>
                         </li>
                      </ul>
@@ -94,7 +104,13 @@
                   <img src="<?php echo base_url();?>public/adminLTE/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                </div>
                <div class="pull-left info">
-                  <p><?php $_SESSION["username"]; ?></p>
+                  <p>
+                  <?php 
+                     if(isset($_SESSION['username'])) {
+                        echo $_SESSION['username'];   
+                     } 
+                  ?>
+                  </p>
                   <!-- Status -->
                   <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                </div>

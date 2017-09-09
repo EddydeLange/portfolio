@@ -11,10 +11,11 @@ $(document).ready(function() {
             .done(function(result) {
                 console.log(result);
                 if (result != 'false') {
-                   //document.location.href = '/portfolio/Files/index';
+                    //document.location.href = '/portfolio/Files/index';
                 } else {
                     alert('use the corect credentials');
                 }
             });
        });
+
 });
