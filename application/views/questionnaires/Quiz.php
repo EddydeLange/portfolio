@@ -17,7 +17,6 @@
                                 <thead>
                                     <tr>
                                         <th class="no-sort">Question</th>
-                                        <th class="no-sort">Your answer</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -27,8 +26,10 @@
                                             <td>
                                                 <?= $question->question ?>
                                             </td>
+                                        </tr>
+                                        <tr>
                                             <td>
-                                                <input type="text" data-id='<?= $question->id ?>' name="answer<?= $question->id ?>" value="">
+                                                <input size="100", type="text" data-id='<?= $question->id ?>' name="answer<?= $question->id ?>" value="">
                                             </td>
                                         </tr>
 
