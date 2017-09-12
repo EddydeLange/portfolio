@@ -13,7 +13,6 @@ class Assignments extends MY_Controller {
 
 	public function index()
 	{
-		$this->load->library('session');
 		$data['subjects'] = $this->AssignmentsModel->getSubjects();
         $data['fileNameView'] = 'assignments/overviewAssignments';
 		crender('index', $data);
