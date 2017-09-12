@@ -17,15 +17,18 @@
                         <table class="table table-bordered table-striped overviews">
                             <thead>
                                 <tr>
-                                    <th>OV Number</th>
                                     <th>Student</th>
+                                    <th>OV Number</th>
+                                    <th>Klas</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($students as $student) {  ?>
                                 <tr class="studentRow" data-studentId="<?= $student->ov_number ?>">
-                                    <td><?= $student->ov_number ?></td>
                                     <td><?= $student->name ?></td>
+                                    <td><?= $student->ov_number ?></td>
+                                    <td><?= $student->Klas ?></td>
+
                                 </tr>
                                 <?php } ?>
                             </tbody>

@@ -37,6 +37,16 @@
                         </ul>
                     </form>
                   </div>
+                  <div class="btn-group pull-right">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <input type="radio" href="#">2015
+                    <input type="radio" href="#">2016
+                    <input type="radio" href="#">2017
+                    <input type="radio" href="#">2018 </div>
                   <!-- /.box-body -->
                   <div class="box-footer clearfix no-border">
                       <button id="sendData" type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Send</button>
