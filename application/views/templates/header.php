@@ -1,7 +1,7 @@
 <?php
    defined('BASEPATH') OR exit('No direct script access allowed');
    session_start();
-   ?>
+?>
 <!DOCTYPE html>
 <!--
    This is a starter template page. Use this page to start your new project from
@@ -81,7 +81,7 @@
                               <a href="#" class="btn btn-default btn-flat">Profile</a>
                            </div>
                            <div class="pull-right">
-                              <a href="../Login/index" id="UserLogout" class="btn btn-default btn-flat">Sign out</a>
+                              <a href="<?php echo site_url('Login/userLogout');?>" id="UserLogout" class="btn btn-default btn-flat">Sign out</a>
                            </div>
                         </li>
                      </ul>

@@ -17,12 +17,12 @@ class Login extends MY_Controller
     public function Login()
     { 
         // wat de gebruiker heeft ingevuld 
-        $UserName = $_POST['Username'];  
-        $PassWord = $_POST['Password'];
+        $userName = $_POST['Username'];  
+        $password = $_POST['Password'];
 
-        $data = $this->LoginModel->getUserData($UserName); // data van de db
+        $data = $this->LoginModel->getUserData($userName); // data van de db
 
-        if ($UserName == $data[0]->name && $PassWord == $data[0]->ov_number) {
+        if ($userName == $data[0]->name && $password == $data[0]->ov_number) {
             session_start();
             $_SESSION["username"] = $_POST['Username'];
         } else {
@@ -32,8 +32,9 @@ class Login extends MY_Controller
 
     public function userLogout()
     {
-        session_unset(); 
+        session_start();
         session_destroy();
+        redirect('Login/index');
     }
 
 }
