@@ -1,5 +1,5 @@
 <?php
-class LoginModel extends CI_Model
+class loginModel extends CI_Model
 {
 	public function getUserData($userName){
 		$this->load->database();

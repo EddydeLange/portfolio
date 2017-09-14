@@ -6,12 +6,13 @@ class Login extends MY_Controller
 	function __construct()
     {
         parent::__construct();
-        $this->load->model('LoginModel');
+        $this->load->model('loginModel');
     }
 
     public function index()
     {
     	crender('index');
+        // loginRender('index');
     }
 
     public function Login()
@@ -20,13 +21,13 @@ class Login extends MY_Controller
         $userName = $_POST['Username'];  
         $password = $_POST['Password'];
 
-        $data = $this->LoginModel->getUserData($userName); // data van de db
+        $data = $this->loginModel->getUserData($userName); // data van de db
 
         if ($userName == $data[0]->name && $password == $data[0]->ov_number) {
             session_start();
             $_SESSION["username"] = $_POST['Username'];
         } else {
-            echo("verkeerde login gegevens"); 
+            echo ("false"); 
         }        
     }
 
