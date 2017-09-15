@@ -12,7 +12,7 @@ class Login extends MY_Controller
     public function index()
     {
     	crender('index');
-        // loginRender('index');
+        //0 loginRender('index');
     }
 
     public function Login()
@@ -20,15 +20,28 @@ class Login extends MY_Controller
         // wat de gebruiker heeft ingevuld 
         $userName = $_POST['Username'];  
         $password = $_POST['Password'];
-
         $data = $this->loginModel->getUserData($userName); // data van de db
+        $result = (object)["statusCode" => 500, "message" => ""];
 
-        if ($userName == $data[0]->name && $password == $data[0]->ov_number) {
-            session_start();
-            $_SESSION["username"] = $_POST['Username'];
-        } else {
-            echo ("false"); 
-        }        
+        try {
+            if ($userName == $data[0]->name && $password == $data[0]->ov_number) {
+                // session_start();
+                // $_SESSION["username"] = $_POST['Username'];
+                var_dump($data);
+                $result->statusCode = 200;
+                $result->message = 'success';
+                return json_encode($result);
+            } else {
+                throw new Exception('False login credentials.');
+            }
+        } catch (Exception $e) {
+            $result->statusCode = 403;
+            $result->message = $e;
+            json_encode($result);
+            var_dump($result);
+        }
+
+        return json_encode($result);
     }
 
     public function userLogout()
@@ -36,6 +49,7 @@ class Login extends MY_Controller
         session_start();
         session_destroy();
         redirect('Login/index');
+        exit;
     }
 
 }
