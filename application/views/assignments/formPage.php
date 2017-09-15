@@ -39,20 +39,23 @@
                   </div>
                   <!-- /.box-body -->
                   <div class="box-footer clearfix no-border">
+                  
                     <button id="sendData" type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Send</button>
+                  
                     <button id="addItem" type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
+                    
                     <div class="btn-group pull-right">
                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                          <span class="caret"></span>
-                          <span class="sr-only">Toggle Dropdown</span>
+                          <i class="fa fa-caret-down"></i>Cohorten
                       </button>
                       <ul class="dropdown-menu" role="menu">
                       <li>
-                          <a href="#">2015</a>
-                          <a href="#">2016</a>
-                          <a href="#">2017</a>
-                          <a href="#">2018</a>
-                          <a href="#">2019</a>
+                          <input type="checkbox">2015<br>
+                          <input type="checkbox">2016<br>
+                          <input type="checkbox">2017<br>
+                          <input type="checkbox">2018<br>
+                          <input type="checkbox">2019<br>
+                          <input type="checkbox">2020
                       </li>
                     </div>
                   </div>
