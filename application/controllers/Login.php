@@ -52,4 +52,20 @@ class Login extends MY_Controller
         exit;
     }
 
+    // public function Login()
+    // { 
+    //     // wat de gebruiker heeft ingevuld 
+    //     $userName = $_POST['Username'];  
+    //     $password = $_POST['Password'];
+
+    //     $data = $this->loginModel->getUserData($userName); // data van de db
+
+    //     if ($userName == $data[0]->name && $password == $data[0]->ov_number) {
+    //         session_start();
+    //         $_SESSION["username"] = $_POST['Username'];
+    //     } else {
+    //         echo ("false"); 
+    //     }        
+    // }
+
 }
