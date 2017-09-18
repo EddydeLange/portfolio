@@ -1,6 +1,6 @@
 <?php
    defined('BASEPATH') OR exit('No direct script access allowed');
-   session_start();
+   session_start(); 
 ?>
 <!DOCTYPE html>
 <!--
@@ -132,25 +132,18 @@
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu">
                <li class="header">Menu</li>
-               <!-- Optionally, you can add icons to the links -->
-               <li><a href="<?php echo site_url('Overview/index') ?>"><i class="fa fa-link"></i> <span>Overview</span></a></li>
-               <li><a href="<?php echo site_url('Upload/index') ?>"><i class="fa fa-link"></i> <span>Upload</span></a></li>
-               <li class="treeview">
-                  <a href="#">
-                  <i class="fa fa-share"></i>
-                  <span>Files</span>
-                  <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                  </span>
-                  </a>
-                  <ul class="treeview-menu">
-                     <li><a href="<?php echo site_url('Files/index') ?>"><i class="fa fa-circle-o"></i><span>Overview-Files</span></a></li>
-                     <li><a href="<?php echo site_url('Files/FileHistory') ?>"><i class="fa fa-circle-o"></i><span>FileHistory</span></a></li>
-                  </ul>
-               </li>
-               <li><a href="<?php echo site_url('Assignments/index') ?>"><i class="fa fa-link"></i> <span>Assignments (docent)</span></a></li>
-                <li><a href="<?php echo site_url('questionnaires/index') ?>"><i class="fa fa-link"></i> <span>Assignments Students</span></a></li>
-                <li><a href="<?php echo site_url('Login/index') ?>"><i class="fa fa-link"></i> <span>Login Page</span></a></li>
+                  <li><a href="<?php echo site_url('Overview/index') ?>"><i class="fa fa-link"></i> <span>Overview</span></a></li>
+                  <li><a href="<?php echo site_url('Upload/index') ?>"><i class="fa fa-link"></i> <span>Upload</span></a></li> 
+                  <li class="treeview">
+                     <a href="#"><i class="fa fa-share"></i><span>Files</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                     <ul class="treeview-menu">
+                        <li><a href="<?php echo site_url('Files/index') ?>"><i class="fa fa-circle-o"></i><span>Overview-Files</span></a></li>
+                        <li><a href="<?php echo site_url('Files/FileHistory') ?>"><i class="fa fa-circle-o"></i><span>FileHistory</span></a></li>
+                     </ul>
+                  </li>
+                  <li><a href="<?php echo site_url('Assignments/index') ?>"><i class="fa fa-link"></i> <span>Assignments (docent)</span></a></li>
+                  <li><a href="<?php echo site_url('questionnaires/index') ?>"><i class="fa fa-link"></i> <span>Assignments Students</span></a></li>          
+                  <li><a href="<?php echo site_url('Login/index') ?>"><i class="fa fa-link"></i> <span>Login Page</span></a></li>
             </ul>
             <!-- /.sidebar-menu -->
          </section>

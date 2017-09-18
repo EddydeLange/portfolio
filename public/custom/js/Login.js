@@ -8,6 +8,7 @@ $(document).ready(function() {
             data: form,
             method: 'POST',
             success: function (result) {
+                console.log(result);
                 if (result == ' true') {
                     document.location.href = '/portfolio/Files/index';
                 } else {
