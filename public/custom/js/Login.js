@@ -10,7 +10,7 @@ $(document).ready(function() {
             success: function (result) {
                 console.log(result);
                 if (result == ' true') {
-                    document.location.href = '/portfolio/Files/index';
+                    document.location.href = '/portfolio/Overview/index';
                 } else {
                     alert('use the corect credentials');
                 }

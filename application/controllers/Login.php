@@ -47,7 +47,7 @@ class Login extends MY_Controller
     {
         session_start();
         session_destroy();
-        redirect('Login/index');
+        redirect('');
         exit;
     }
 
