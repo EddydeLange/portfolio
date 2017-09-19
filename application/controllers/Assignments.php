@@ -28,6 +28,7 @@ class Assignments extends MY_Controller {
 		}
 		$data['fileNameView'] = 'assignments/formPage';
 		$data['JSFileNames'] = ['public/custom/js/formPage.js'];
+		$data['students'] = $this->AssignmentsModel->getStudentCohort();
 		crender('index', $data);
 	}
 

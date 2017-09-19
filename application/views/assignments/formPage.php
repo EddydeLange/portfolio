@@ -49,14 +49,15 @@
                           <i class="fa fa-caret-down"></i>Cohorten
                       </button>
                       <ul class="dropdown-menu" role="menu">
-                      <li>
-                          <input type="checkbox">2015<br>
-                          <input type="checkbox">2016<br>
-                          <input type="checkbox">2017<br>
-                          <input type="checkbox">2018<br>
-                          <input type="checkbox">2019<br>
-                          <input type="checkbox">2020
-                      </li>
+                     
+                      <?php foreach ($students as $student) { ?>
+                      <tr data-row-id="<?= $student->cohort ?>" class="subjectRow">
+                        <li>
+                          <input type="checkbox"><?= $student->cohort ?></input>
+                        </li>
+                      </tr>
+                      <?php } ?>
+                    
                     </div>
                   </div>
                 <!-- /.box -->

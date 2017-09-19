@@ -106,4 +106,11 @@ class AssignmentsModel extends CI_model
         $this->db->update('subjects');
     }
 
+    public function getStudentCohort(){
+        $this->load->database();
+        $query = $this->db->get('students');
+        $students = $query->result();
+        return $students;
+    }
+
 }
