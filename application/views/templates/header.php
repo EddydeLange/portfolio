@@ -143,7 +143,7 @@
                   </li>
                   <li><a href="<?php echo site_url('Assignments/index') ?>"><i class="fa fa-link"></i> <span>Assignments (docent)</span></a></li>
                   <li><a href="<?php echo site_url('questionnaires/index') ?>"><i class="fa fa-link"></i> <span>Assignments Students</span></a></li>          
-                  <li><a href="<?php echo site_url('Login/index') ?>"><i class="fa fa-link"></i> <span>Login Page</span></a></li>
+                  <li><a href="<?php echo site_url('') ?>"><i class="fa fa-link"></i> <span>Login Page</span></a></li>
             </ul>
             <!-- /.sidebar-menu -->
          </section>
