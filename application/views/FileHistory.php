@@ -15,7 +15,7 @@
                             <thead>
                                 <tr>
                                     <th>File</th>
-                                    <th>Size (KB)</th>
+                                    <th>File Size (KB)</th>
                                     <th>Upload date</th>
                                     <th class="no-sort">Permanently delete</th>
                                 </tr>
@@ -28,10 +28,10 @@
                                         <td><?= $import->file_date ?></td>
                                         <td class="smallWidth twoIcons">
                                             <button class="deleteBtn">
-                                                <i class="fa fa-trash-o"></i>
+                                                <i class="fa fa-trash-o fa-lg"></i>
                                             </button>
                                             <button class="successBtn colorGreen">
-                                                <span class="glyphicon glyphicon-eye-open"></span>
+                                                <span class="fa fa-eye fa-lg"></span>
                                             </button>
                                         </td>
                                     </tr>

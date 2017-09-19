@@ -13,8 +13,7 @@ class questionnaires extends MY_Controller {
 
 	public function index()
 	{
-		$this->load->library('session');
-		$data['subjects'] = $this->AssignmentsModel->getSubjectsQuestionnaires();
+		$data['subjects'] = $this->AssignmentsModel->getSubjects();
         $data['fileNameView'] = 'questionnaires/overviewQuestionnaires';
 		crender('index', $data);
 	}
@@ -22,7 +21,7 @@ class questionnaires extends MY_Controller {
 	public function overviewQuiz($id = null)
 	{
 		$data['questions'] = $this->AssignmentsModel->getAssignments($id);
-		$data['subjects'] = $this->AssignmentsModel->getSubjectsQuestionnaires($id);
+		$data['subjects'] = $this->AssignmentsModel->getSubjects($id);
     	$data['fileNameView'] = 'Questionnaires/quiz';
 		crender('index', $data);
 	}
@@ -32,15 +31,19 @@ class questionnaires extends MY_Controller {
 		$answerArray = [];
         $answers = $this->input->post();
         foreach ($answers as $key => $answer) {
-
-        	$answersArray[] = [
-        		'subjectId' => $answers['subjectId'],
-        		'questionId' => str_replace('answer', '', $key),
-        		'answer' => $answer
-        	];
-        }
-		$lastKey = count($answersArray) - 1;
-        unset($answersArray[$lastKey]);
+        	if ($key !== 'answers_length') {
+	        	if ($answer === "ja" || $answer === "nee" || $answer === "misschien") {
+	        		redirect('questionnaires/index');
+	        	} else {
+	        		$answersArray[] = [
+	        			'subjectId' => $answers['subjectId'],
+	        			'questionId' => $key,
+	        			'answer' => $answer
+	        		];
+	        	}
+        	}
+		}
+		unset($answersArray[0]);
 		foreach($answersArray as $answer) {
 			$this->AssignmentsModel->insertQuizAnswers($answer);	
 		}
