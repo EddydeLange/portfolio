@@ -1,11 +1,10 @@
 <?php
-class LoginModel extends CI_Model
+class loginModel extends CI_Model
 {
-	public function getUserData(){
+	public function getUserData($userName){
 		$this->load->database();
-		$this->db->where('name');
-		$UserNameDB = $this->db->get('students')->result();
-        
+		$query = $this->db->where('name', $userName)->get('students');
+		$UserNameDB = $query->result();
         return $UserNameDB;
 	}
 }

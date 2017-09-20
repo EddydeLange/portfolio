@@ -1,6 +1,7 @@
 <?php
    defined('BASEPATH') OR exit('No direct script access allowed');
-   ?>
+   session_start(); 
+?>
 <!DOCTYPE html>
 <!--
    This is a starter template page. Use this page to start your new project from
@@ -53,14 +54,24 @@
                         <!-- The user image in the navbar-->
                         <img src="<?php echo base_url();?>public/adminLTE/img/user2-160x160.jpg" class="user-image" alt="User Image">
                         <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                        <span class="hidden-xs">Jan Willem Huisman</span>
+                        <span class="hidden-xs">
+                        <?php 
+                           if(isset($_SESSION['username'])) {
+                              echo $_SESSION['username'];   
+                           } 
+                        ?>
+                        </span>
                      </a>
                      <ul class="dropdown-menu">
                         <!-- The user image in the menu -->
                         <li class="user-header">
                            <img src="<?php echo base_url();?>public/adminLTE/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                            <p>
-                              Jan Willem Huisman - Web Developer
+                              <?php 
+                                 if(isset($_SESSION['username'])) {
+                                    echo $_SESSION['username'];   
+                                 } 
+                              ?> - Web Developer
                               <small>Member since July. 1908</small>
                            </p>
                         </li>
@@ -70,7 +81,7 @@
                               <a href="#" class="btn btn-default btn-flat">Profile</a>
                            </div>
                            <div class="pull-right">
-                              <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                              <a href="<?php echo site_url('Login/userLogout');?>" id="UserLogout" class="btn btn-default btn-flat">Sign out</a>
                            </div>
                         </li>
                      </ul>
@@ -93,7 +104,13 @@
                   <img src="<?php echo base_url();?>public/adminLTE/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                </div>
                <div class="pull-left info">
-                  <p>Jan Willem Huisman</p>
+                  <p>
+                  <?php 
+                     if(isset($_SESSION['username'])) {
+                        echo $_SESSION['username'];   
+                     } 
+                  ?>
+                  </p>
                   <!-- Status -->
                   <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                </div>
@@ -115,25 +132,18 @@
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu">
                <li class="header">Menu</li>
-               <!-- Optionally, you can add icons to the links -->
-               <li><a href="<?php echo site_url('Overview/index') ?>"><i class="fa fa-link"></i> <span>Overview</span></a></li>
-               <li><a href="<?php echo site_url('Upload/index') ?>"><i class="fa fa-link"></i> <span>Upload</span></a></li>
-               <li class="treeview">
-                  <a href="#">
-                  <i class="fa fa-share"></i>
-                  <span>Files</span>
-                  <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                  </span>
-                  </a>
-                  <ul class="treeview-menu">
-                     <li><a href="<?php echo site_url('Files/index') ?>"><i class="fa fa-circle-o"></i><span>Overview-Files</span></a></li>
-                     <li><a href="<?php echo site_url('Files/FileHistory') ?>"><i class="fa fa-circle-o"></i><span>FileHistory</span></a></li>
-                  </ul>
-               </li>
-               <li><a href="<?php echo site_url('Assignments/index') ?>"><i class="fa fa-link"></i> <span>Assignments</span></a></li>
-                <li><a href="<?php echo site_url('questionnaires/index') ?>"><i class="fa fa-link"></i> <span>Subjects questionnaires</span></a></li>
-                <li><a href="<?php echo site_url('Login/index') ?>"><i class="fa fa-link"></i> <span>Login Page</span></a></li>
+                  <li><a href="<?php echo site_url('Overview/index') ?>"><i class="fa fa-link"></i> <span>Overview</span></a></li>
+                  <li><a href="<?php echo site_url('Upload/index') ?>"><i class="fa fa-link"></i> <span>Upload</span></a></li> 
+                  <li class="treeview">
+                     <a href="#"><i class="fa fa-share"></i><span>Files</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                     <ul class="treeview-menu">
+                        <li><a href="<?php echo site_url('Files/index') ?>"><i class="fa fa-circle-o"></i><span>Overview-Files</span></a></li>
+                        <li><a href="<?php echo site_url('Files/FileHistory') ?>"><i class="fa fa-circle-o"></i><span>FileHistory</span></a></li>
+                     </ul>
+                  </li>
+                  <li><a href="<?php echo site_url('Assignments/index') ?>"><i class="fa fa-link"></i> <span>Assignments (docent)</span></a></li>
+                  <li><a href="<?php echo site_url('questionnaires/index') ?>"><i class="fa fa-link"></i> <span>Assignments Students</span></a></li>          
+                  <li><a href="<?php echo site_url('Login/index') ?>"><i class="fa fa-link"></i> <span>Login Page</span></a></li>
             </ul>
             <!-- /.sidebar-menu -->
          </section>

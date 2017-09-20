@@ -65,3 +65,22 @@ if( ! function_exists('crender'))
         $ci->load->view('templates/footer', $data);
     }
 }
+
+if( ! function_exists('loginRender'))
+{
+    function loginRender($f_template, $data = null)
+    {
+        $data['fileNameView'] = isset($data['fileNameView']) ? $data['fileNameView'] : getFileName();
+        $data['fileName'] = getFileName();
+        $data['JSFileNames'] = GetJSFiles($data);
+        $data['CSSFileNames'] = GetCSSFiles($data);
+        $ci =& get_instance();      
+        echo link_tag('public/adminLTE/css/bootstrap.min.css');
+        echo link_tag('public/adminLTE/css/AdminLTE.min.css');
+        echo link_tag('public/adminLTE/css/skins/skin-blue.min.css');
+        echo link_tag('public/adminLTE/css/datatables/dataTables.bootstrap.css');
+        echo link_tag('public/adminLTE/plugins/datepicker/datepicker3.css');
+        $ci->load->view($data['fileNameView']);
+        $ci->load->view('templates/footer', $data);
+    }
+}

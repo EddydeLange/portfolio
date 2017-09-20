@@ -1,7 +1,9 @@
-<div class="content-wrapper">
+  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>login</h1>
+        <head>
+          <link rel="stylesheet" type="text/css" href="public/custom/css/Login.css">
+        </head>
     </section>
 
 <!-- Main content -->
@@ -17,7 +19,7 @@
                       <body class="hold-transition login-page">
                       <div class="login-box">
                         <div class="login-logo">
-                          <a><b>Admin</b>LTE</a>
+                          <a><b>Porto</b>folio</a>
                         </div>
                         <!-- /.login-logo -->
                         <div class="login-box-body">
@@ -35,9 +37,9 @@
                             <div class="row">
                               <div class="col-xs-8">
                                 <div class="checkbox icheck">
-                                  <label>
+                                  <!-- <label>
                                     <input type="checkbox"> Remember Me
-                                  </label>
+                                  </label> -->
                                 </div>
                               </div>
                               <!-- /.col -->
@@ -48,8 +50,8 @@
                             </div>
                           </form>
 
-                          <a href="#">I forgot my password</a><br>
-                          <a href="#" class="text-center">Register a new membership</a>
+                          <!-- <a href="#">I forgot my password</a><br> -->
+                          <!-- <a href="#" class="text-center">Register a new membership</a> -->
 
                         </div>
                         <!-- /.login-box-body -->

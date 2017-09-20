@@ -20,6 +20,22 @@
                     <form id="formInput">
                         <input required name="title" class="headText" type="text" placeholder="Titel vragenlijst">
                         <input required name="subtopic" class="headText" type="text" placeholder="Onderwerp vragenlijst bijvoorbeeld: Economie">
+                            <div class="btn-group pull-right">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                  <span class="caret"></span>
+                                  <span class="sr-only">Toggle Dropdown</span>
+                              </button>
+                              <ul class="dropdown-menu" role="menu">
+                              <li>
+                                  <a href="#">Subtopic 1</a>
+                                  <a href="#">Subtopic 2</a>
+                                  <a href="#">Subtopic 3</a>
+                                  <a href="#">Subtopic 4</a>
+                                  <a href="#">Subtopic 5</a>
+                              </li>
+                            </div>
+
+                            </br>
                         <ul class="todo-list">
                             <li class="inputQuest">
                                 <!-- drag handle -->

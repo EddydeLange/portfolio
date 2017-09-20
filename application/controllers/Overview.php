@@ -13,7 +13,6 @@ class Overview extends MY_Controller {
 
 	public function index()
 	{
-		$this->load->library('session');
 	 	$data['students'] = $this->OverviewModel->getStudents();
 		crender('index', $data);
 	}
