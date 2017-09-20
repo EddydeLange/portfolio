@@ -24,7 +24,7 @@
          foreach ($CSSFileNames as $CSSFileName) {
               echo link_tag($CSSFileName);
          }
-         ?>
+      ?>
    </head>
    <body class="hold-transition skin-blue sidebar-mini">
       <div class="wrapper">

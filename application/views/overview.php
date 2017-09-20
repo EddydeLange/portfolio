@@ -27,7 +27,7 @@
                                 <tr class="studentRow" data-studentId="<?= $student->ov_number ?>">
                                     <td><?= $student->name ?></td>
                                     <td><?= $student->ov_number ?></td>
-                                    <td><?= $student->Klas ?></td>
+                                    <td><?= $student->klas ?></td>
 
                                 </tr>
                                 <?php } ?>
