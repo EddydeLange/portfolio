@@ -2,6 +2,14 @@
 class AssignmentsModel extends CI_model
 {
 
+    public function getStudentCohort()
+    {
+        $this->load->database();
+        $query = $this->db->get('students');
+        $students = $query->result();
+        return $students;
+    }
+    
     public function getSubjects()
     {
         $this->load->database();
@@ -106,20 +114,12 @@ class AssignmentsModel extends CI_model
         $this->db->update('subjects');
     }
 
-   
-
-
-
-
-
-
-
-
-    public function getStudentCohort(){
-        $this->load->database();
-        $query = $this->db->get('students');
-        $students = $query->result();
-        return $students;
+    public function getTopics()
+    {
+    $this->load->database();
+    $query=$this->db->get('Topics');
+    $Topics= $query->result();
+    return $Topics;
     }
 
 }

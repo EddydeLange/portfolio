@@ -67,9 +67,9 @@
                       <ul class="dropdown-menu" role="menu">
                      
                       <?php foreach ($students as $student) { ?>
-                      <tr data-row-id="<?= $student->cohort ?>" class="subjectRow">
+                      <tr data-row-id="<?= $student->cohort_id ?>" class="subjectRow">
                         <li>
-                          <input type="checkbox"><?= $student->cohort ?></input>
+                          <input type="checkbox"><?= $student->cohort_id ?></input>
                         </li>
                       </tr>
                       <?php } ?>
