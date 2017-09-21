@@ -8,13 +8,14 @@ class Overview extends MY_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		//check of ik als admin ingelogd ben?
-		if ($_SESSION["auth"] = ['admin']) {
-			$this->load->model('OverviewModel');
-		}elseif($_SESSION["auth"] = ['user']) {
-			 redirect('Files/index'); 
-		}else{
-			 redirect(''); 
+		$this->load->model('OverviewModel');
+		
+		session_start();
+		if ($_SESSION['auth'] == "user") {
+			redirect('Files/index'); 
+		} else {
+			redirect(''); 
+			echo($_SESSION["auth"]);
 		}
 	}
 

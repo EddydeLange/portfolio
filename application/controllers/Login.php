@@ -19,26 +19,28 @@ class Login extends MY_Controller
         // wat de gebruiker heeft ingevuld 
         $userName = $_POST['Username']; 
         $password = $_POST['Password'];
-        $admin = ('1');
+        $checkAdmin = ('1');
         $data = $this->loginModel->getUserData($userName); // data van de db
         
         if ($userName == $data[0]->name && $password == $data[0]->ov_number) {
             session_start();
             $_SESSION["username"] = $_POST['Username'];
-
-            if ($admin == $data[0]->admin) {
+            
+            if ($checkAdmin == $data[0]->admin) { //check if admin is logdin
                 // $_SESSION["admin"] = [$data[0]->admin];
-                redirect('Files/index');
-                $_SESSION["auth"] = ['admin'];
-            } elseif ($admin !== $data[0]->admin) {
+                
+                redirect('Overview/index'); 
+                $_SESSION["auth"] = "admin";
+            } elseif ($checkAdmin !== $data[0]->admin) { //check if normal user is logdin
                 // $_SESSION["user"] = [$data[0]->admin];
-                $_SESSION["auth"] = ['user'];
-                redirect('Overview/index');  
+                $_SESSION["auth"] = "user";
+                redirect('/index');
             }
-        } else {
-        // error = ....
 
-        // $this->view ..... login
+        } else {
+            // error = ....
+            
+            // $this->view ..... login
         }
              
     }

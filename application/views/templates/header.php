@@ -56,7 +56,7 @@
                         <!-- hidden-xs hides the username on small devices so only the image appears. -->
                         <span class="hidden-xs">
                         <?php 
-                           if(isset($_SESSION['username'])) {
+                           if (isset($_SESSION['username'])) {
                               echo $_SESSION['username'];   
                            } 
                         ?>
@@ -68,7 +68,7 @@
                            <img src="<?php echo base_url();?>public/adminLTE/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                            <p>
                               <?php 
-                                 if(isset($_SESSION['username'])) {
+                                 if (isset($_SESSION['username'])) {
                                     echo $_SESSION['username'];   
                                  } 
                               ?> - Web Developer
@@ -106,7 +106,7 @@
                <div class="pull-left info">
                   <p>
                   <?php 
-                     if(isset($_SESSION['username'])) {
+                     if (isset($_SESSION['username'])) {
                         echo $_SESSION['username'];   
                      } 
                   ?>
