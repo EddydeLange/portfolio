@@ -109,8 +109,26 @@ class AssignmentsModel extends CI_model
     public function getTopics()
     {
     $this->load->database();
-    $query=$this->db->get('Topics');
-    $Topics= $query->result();
+    $query = $this->db->get('topics');
+    $Topics = $query->result();
     return $Topics;
     }
+
+    // public function getTopics2()
+    //  {
+        
+    //     $query = $this->db->get('topics');
+
+    //     foreach ($query->result() as $row)
+    //     {
+    //         echo $row->Topic;
+    //     }
+
+    //     // $query = $this->db->query('SELECT Topic FROM topics');
+
+
+    //     return $query->result();
+
+    //     //echo 'Total Results: ' . $query->num_rows();
+    //  }
 }
