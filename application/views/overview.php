@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Overview Student</h1>
+        <h1>Overview Student - <?php echo $_SESSION["auth"];?></h1>
     </section>
 
     <!-- Main content -->

@@ -7,34 +7,48 @@ class Login extends MY_Controller
     {
         parent::__construct();
         $this->load->model('loginModel');
+        $this->load->library('session');
     }
 
     public function index()
     {
+        if ($this->session->auth == 'admin') {
+            redirect('Overview/index');
+        } elseif ($this->session->auth == 'user') {
+            redirect('questionnaires/index');
+        }
         loginRender('index');
     }
 
     public function Login()
     { 
         // wat de gebruiker heeft ingevuld 
-        $userName = $_POST['Username']; 
-        $password = $_POST['Password'];
-        $checkAdmin = ('1');
-        $data = $this->loginModel->getUserData($userName); // data van de db
+        $userdata = [
+            'username' => $_POST['Username'],
+            'password' => $_POST['Password'],
+            'auth' => null,
+            'logged_in' => false
+        ];
+        $checkAdmin = '1';
+        $data = $this->loginModel->getUserData($userdata['username']); // data van de db
         
-        if ($userName == $data[0]->name && $password == $data[0]->ov_number) {
-            session_start();
-            $_SESSION["username"] = $_POST['Username'];
-            
-            if ($checkAdmin == $data[0]->admin) { //check if admin is logdin
-                // $_SESSION["admin"] = [$data[0]->admin];
-                
+        if ($userdata['username'] == $data[0]->name && $userdata['password'] == $data[0]->ov_number) {
+           
+            $userdata['logged_in'] = true;
+            $this->session->set_userdata($userdata);
+
+            if ($checkAdmin == $data[0]->admin) { //check if admin is loggedin
+               
+                $userdata['auth'] = "admin";
+                $this->session->set_userdata($userdata);
                 redirect('Overview/index'); 
-                $_SESSION["auth"] = "admin";
-            } elseif ($checkAdmin !== $data[0]->admin) { //check if normal user is logdin
-                // $_SESSION["user"] = [$data[0]->admin];
-                $_SESSION["auth"] = "user";
-                redirect('/index');
+
+            } else { //check if normal user is loggedin
+                
+                $userdata['auth'] = 'user';
+                $this->session->set_userdata($userdata);
+                redirect('questionnaires/index');
+
             }
 
         } else {
@@ -45,14 +59,10 @@ class Login extends MY_Controller
              
     }
 
-    //<?php if ( $_SESSION["admin"] = ['1']) { ?
-    // <!--  <?php } ?
-    //<?php }  elseif ( $_SESSION["user"] = ['0']) {  ?
-
     public function userLogout()
     {
-        session_start();
-        session_destroy();
+        $userdata = ['username','password','auth','logged_in'];
+        $this->session->unset_userdata($userdata);
         redirect('');
         exit;
     }

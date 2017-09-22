@@ -8,6 +8,7 @@ class questionnaires extends MY_Controller {
     function __construct()
     {
         parent::__construct();
+        parent::loginCheck();
         $this->load->model('AssignmentsModel');
     }
 
