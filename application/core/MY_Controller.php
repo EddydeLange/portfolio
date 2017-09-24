@@ -27,5 +27,12 @@ class MY_Controller extends CI_Controller {
                 redirect('');
             }
         }
-    }  
+    }
+
+    public function checkForbiddenUser()
+    {
+        if ($this->session->auth == 'user'){
+            redirect('questionnaires/index');
+        } 
+    } 
 }

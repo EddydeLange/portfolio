@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Overview Students</h1>
+        <h1>Handed in Subjects</h1>
     </section>
 
     <!-- Main content -->
@@ -10,7 +10,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">List With all students.</h3>
+                        <h3 class="box-title">All handed in Assigments.</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -18,18 +18,15 @@
                             <thead>
                                 <tr>
                                     <th>Student</th>
-                                    <th>OV Number</th>
-                                    <th>Klas</th>
+                                    <th>Ov-number</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($students as $student) {  ?>
-                                <tr class="studentRow" data-studentId="<?= $student->ov_number ?>">
-                                    <td><?= $student->name ?></td>
-                                    <td><?= $student->ov_number ?></td>
-                                    <td><?= $student->klas ?></td>
-
-                                </tr>
+                                <?php foreach($doneSubjects as $doneSubject) { ?>
+                                    <tr data-file-id="<?= $doneSubject->id ?>">
+                                        <td><?= $doneSubject->student_id ?></td>
+                                        <td><?= $doneSubject->student_id ?></td>
+                                    </tr>
                                 <?php } ?>
                             </tbody>
                         </table>

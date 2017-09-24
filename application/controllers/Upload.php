@@ -7,6 +7,7 @@ class Upload extends MY_Controller {
     {
         parent::__construct();
         parent::loginCheck();
+        parent::checkForbiddenUser();
         $this->load->helper(array('form', 'url'));
         $this->load->model('UploadModel');
     }

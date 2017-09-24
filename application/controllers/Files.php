@@ -8,6 +8,7 @@ class Files extends MY_Controller
     {
         parent::__construct();
         parent::loginCheck();
+        parent::checkForbiddenUser();
         $this->load->model('fileModel');
     }
 

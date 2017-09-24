@@ -9,6 +9,7 @@ class Assignments extends MY_Controller {
 	{
 		parent::__construct();
 		parent::loginCheck();
+		parent::checkForbiddenUser();
 		$this->load->model('AssignmentsModel');
 	}
 
@@ -16,6 +17,13 @@ class Assignments extends MY_Controller {
 	{
 		$data['subjects'] = $this->AssignmentsModel->getSubjects();
         $data['fileNameView'] = 'assignments/overviewAssignments';
+		crender('index', $data);
+	}
+
+	public function handedInSubjects()
+	{
+		$data['doneSubjects'] = $this->AssignmentsModel->getFinishedSubjects();
+		$data['fileNameView'] = 'handedInSubjects';
 		crender('index', $data);
 	}
 

@@ -45,7 +45,7 @@ class Login extends MY_Controller
 
             } else { //check if normal user is loggedin
                 
-                $userdata['auth'] = 'user';
+                $userdata['auth'] = "user";
                 $this->session->set_userdata($userdata);
                 redirect('questionnaires/index');
 
