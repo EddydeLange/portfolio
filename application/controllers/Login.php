@@ -51,10 +51,14 @@ class Login extends MY_Controller
 
             }
 
-        } else {
-            // error = ....
-            
+        } elseif ($userdata['username'] != $data[0]->name) {
+            return "Verkeerde gebruikers gegevens";
+            exit;
+            // error = .... 
             // $this->view ..... login
+        } elseif ($userdata['password'] != $data[0]->ov_number){
+            echo "Verkeerde wachtwoord gegevens";
+            exit;
         }
              
     }

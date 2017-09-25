@@ -23,16 +23,13 @@
                                 <form id="answersForm" method="post">
                                     <?php foreach ($questions as $question) { ?>
                                         <tr data-row-id="<?= $question->id ?>">
-                                            <td>
-                                                <?= $question->question ?>
-                                            </td>
+                                            <td><?= $question->question ?></td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <input size="100", type="text" data-id='<?= $question->id ?>' name="answer<?= $question->id ?>" value="">
                                             </td>
                                         </tr>
-
                                     <?php } ?>
                                     <input type="hidden" name="subjectId" value="<?= $subjects[0]->id ?>">
                                 </form>    
