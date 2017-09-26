@@ -24,8 +24,8 @@
                             <tbody>
                                 <?php foreach($doneSubjects as $doneSubject) { ?>
                                     <tr data-file-id="<?= $doneSubject->id ?>">
-                                        <td><?= $doneSubject->student_id ?></td>
-                                        <td><?= $doneSubject->student_id ?></td>
+                                        <td><?= $doneSubject->ov_number ?></td>
+                                        <td><?= $doneSubject->ov_number ?></td>
                                     </tr>
                                 <?php } ?>
                             </tbody>
