@@ -24,7 +24,7 @@
          foreach ($CSSFileNames as $CSSFileName) {
               echo link_tag($CSSFileName);
          }
-         ?>
+      ?>
    </head>
    <body class="hold-transition skin-blue sidebar-mini">
       <div class="wrapper">
@@ -56,7 +56,7 @@
                         <!-- hidden-xs hides the username on small devices so only the image appears. -->
                         <span class="hidden-xs">
                         <?php 
-                           if(isset($_SESSION['username'])) {
+                           if (isset($_SESSION['username'])) {
                               echo $_SESSION['username'];   
                            } 
                         ?>
@@ -68,7 +68,7 @@
                            <img src="<?php echo base_url();?>public/adminLTE/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                            <p>
                               <?php 
-                                 if(isset($_SESSION['username'])) {
+                                 if (isset($_SESSION['username'])) {
                                     echo $_SESSION['username'];   
                                  } 
                               ?> - Web Developer
@@ -106,7 +106,7 @@
                <div class="pull-left info">
                   <p>
                   <?php 
-                     if(isset($_SESSION['username'])) {
+                     if (isset($_SESSION['username'])) {
                         echo $_SESSION['username'];   
                      } 
                   ?>
@@ -143,7 +143,7 @@
                   </li>
                   <li><a href="<?php echo site_url('Assignments/index') ?>"><i class="fa fa-link"></i> <span>Assignments (docent)</span></a></li>
                   <li><a href="<?php echo site_url('questionnaires/index') ?>"><i class="fa fa-link"></i> <span>Assignments Students</span></a></li>          
-                  <li><a href="<?php echo site_url('Login/index') ?>"><i class="fa fa-link"></i> <span>Login Page</span></a></li>
+                  <li><a href="<?php echo site_url('') ?>"><i class="fa fa-link"></i> <span>Login Page</span></a></li>
             </ul>
             <!-- /.sidebar-menu -->
          </section>

@@ -21,25 +21,8 @@
                             <input type="submit" class="btn btn-primary" name="submit">
                         </div>
                     </form>
-                </div>
-            </div>
-            <div class="col-xs-4">
-                <div class="box">
-                    <div class="box-header">
-                        <h3 class="box-title">Answers</h3>
-                    </div>
-                    <form role="form" method="POST" action="sendAnswers" enctype="multipart/form-data">
-                        <div class="box-body">
-                            <div class="form-group">
-                                <label for="answer">Answer:</label>
-                                <input id="answer" type="text" name="answer">
-                                <br>
-                            </div>
-                        </div>
-                        <div class="box-footer">
-                            <input type="submit" class="btn btn-primary" name="submit">
-                        </div>
-                    </form>
+                        <div class="col-xs-4">
+                    <div class="box">
                 </div>
             </div>
         </div>

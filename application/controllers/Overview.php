@@ -9,6 +9,14 @@ class Overview extends MY_Controller {
 	{
 		parent::__construct();
 		$this->load->model('OverviewModel');
+		
+		session_start();
+		if ($_SESSION['auth'] == "user") {
+			redirect('Files/index'); 
+		} else {
+			redirect(''); 
+			echo($_SESSION["auth"]);
+		}
 	}
 
 	public function index()

@@ -46,10 +46,27 @@
                   </div>
                   <!-- /.box-body -->
                   <div class="box-footer clearfix no-border">
-                      <button id="sendData" type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Send</button>
+                  
+                    <button id="sendData" type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Send</button>
+                  
                     <button id="addItem" type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
+                    
+                    <div class="btn-group pull-right">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                          <i class="fa fa-caret-down"></i>Cohorten
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                     
+                      <?php foreach ($students as $student) { ?>
+                      <tr data-row-id="<?= $student->cohort ?>" class="subjectRow">
+                        <li>
+                          <input type="checkbox"><?= $student->cohort ?></input>
+                        </li>
+                      </tr>
+                      <?php } ?>
+                    
+                    </div>
                   </div>
-                </div>
                 <!-- /.box -->
             </div>
         <!-- /.col -->
