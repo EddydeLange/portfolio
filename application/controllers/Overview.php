@@ -8,15 +8,9 @@ class Overview extends MY_Controller {
 	function __construct()
 	{
 		parent::__construct();
+		parent::loginCheck();
+		parent::checkForbiddenUser();
 		$this->load->model('OverviewModel');
-		
-		session_start();
-		if ($_SESSION['auth'] == "user") {
-			redirect('Files/index'); 
-		} else {
-			redirect(''); 
-			echo($_SESSION["auth"]);
-		}
 	}
 
 	public function index()

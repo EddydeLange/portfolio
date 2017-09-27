@@ -1,6 +1,5 @@
 <?php
    defined('BASEPATH') OR exit('No direct script access allowed');
-   session_start(); 
 ?>
 <!DOCTYPE html>
 <!--
@@ -55,11 +54,7 @@
                         <img src="<?php echo base_url();?>public/adminLTE/img/user2-160x160.jpg" class="user-image" alt="User Image">
                         <!-- hidden-xs hides the username on small devices so only the image appears. -->
                         <span class="hidden-xs">
-                        <?php 
-                           if (isset($_SESSION['username'])) {
-                              echo $_SESSION['username'];   
-                           } 
-                        ?>
+                        <?php echo $_SESSION['username']; ?>
                         </span>
                      </a>
                      <ul class="dropdown-menu">
@@ -67,11 +62,7 @@
                         <li class="user-header">
                            <img src="<?php echo base_url();?>public/adminLTE/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                            <p>
-                              <?php 
-                                 if (isset($_SESSION['username'])) {
-                                    echo $_SESSION['username'];   
-                                 } 
-                              ?> - Web Developer
+                              <?php echo $_SESSION['username']; ?> - Web Developer
                               <small>Member since July. 1908</small>
                            </p>
                         </li>
@@ -105,11 +96,7 @@
                </div>
                <div class="pull-left info">
                   <p>
-                  <?php 
-                     if (isset($_SESSION['username'])) {
-                        echo $_SESSION['username'];   
-                     } 
-                  ?>
+                  <?php echo $_SESSION['username']; ?>
                   </p>
                   <!-- Status -->
                   <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
@@ -132,6 +119,7 @@
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu">
                <li class="header">Menu</li>
+              <?php if ($this->session->auth == 'admin') { ?>  <!-- if a admin is loged in show : -->
                   <li><a href="<?php echo site_url('Overview/index') ?>"><i class="fa fa-link"></i> <span>Overview</span></a></li>
                   <li><a href="<?php echo site_url('Upload/index') ?>"><i class="fa fa-link"></i> <span>Upload</span></a></li> 
                   <li class="treeview">
@@ -142,8 +130,13 @@
                      </ul>
                   </li>
                   <li><a href="<?php echo site_url('Assignments/index') ?>"><i class="fa fa-link"></i> <span>Assignments (docent)</span></a></li>
-                  <li><a href="<?php echo site_url('questionnaires/index') ?>"><i class="fa fa-link"></i> <span>Assignments Students</span></a></li>          
-                  <li><a href="<?php echo site_url('') ?>"><i class="fa fa-link"></i> <span>Login Page</span></a></li>
+                  <li><a href="<?php echo site_url('questionnaires/index') ?>"><i class="fa fa-link"></i> <span>Assignments Students</span></a></li>
+
+                  <li><a href="<?php echo site_url('Assignments/handedInSubjects') ?>"><i class="fa fa-link"></i> <span>handedInSubjects</span></a></li>
+                  
+               <?php } else { ?> <!-- if a normal user is loged in show : -->
+                  <li><a href="<?php echo site_url('questionnaires/index') ?>"><i class="fa fa-link"></i> <span>Assignments Students</span></a></li>    
+               <?php } ?>       
             </ul>
             <!-- /.sidebar-menu -->
          </section>
