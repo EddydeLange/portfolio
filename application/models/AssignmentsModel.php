@@ -114,12 +114,20 @@ class AssignmentsModel extends CI_model
         $this->db->update('subjects');
     }
 
+<<<<<<< HEAD
     public function getTopics()
     {
     $this->load->database();
     $query=$this->db->get('Topics');
     $Topics= $query->result();
     return $Topics;
+=======
+    public function getStudentCohort(){
+        $this->load->database();
+        $query = $this->db->get('students');
+        $students = $query->result();
+        return $students;
+>>>>>>> fenno/question-list
     }
 
 }

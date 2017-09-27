@@ -8,6 +8,8 @@ class Overview extends MY_Controller {
 	function __construct()
 	{
 		parent::__construct();
+		parent::loginCheck();
+		parent::checkForbiddenUser();
 		$this->load->model('OverviewModel');
 	}
 

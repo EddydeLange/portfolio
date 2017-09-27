@@ -1,12 +1,17 @@
-  <div class="content-wrapper">
+<div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <head>
-          <link rel="stylesheet" type="text/css" href="public/custom/css/Login.css">
-        </head>
-    </section>
+  <section class="content-header">
+    <?php
+      echo link_tag('public/adminLTE/css/bootstrap.min.css');
+      echo link_tag('public/adminLTE/css/AdminLTE.min.css');
+      echo link_tag('public/adminLTE/css/skins/skin-blue.min.css');
+      echo link_tag('public/adminLTE/css/datatables/dataTables.bootstrap.css');
+      echo link_tag('public/adminLTE/plugins/datepicker/datepicker3.css');
+      echo link_tag('public/custom/css/Login.css');
+    ?>
+  </section>
 
-<!-- Main content -->
+  <!-- Main content -->
   <section class="content">
       <div class="row">
           <div class="col-xs-12">
@@ -19,13 +24,13 @@
                       <body class="hold-transition login-page">
                       <div class="login-box">
                         <div class="login-logo">
-                          <a><b>Porto</b>folio</a>
+                          <a><b>Port</b>folio</a>
                         </div>
                         <!-- /.login-logo -->
                         <div class="login-box-body">
                           <p class="login-box-msg">Sign in to start your session</p>
 
-                          <form id="LoginForm" method="post">
+                          <form id="LoginForm" method="post" action="<?php echo base_url();?>Login/Login">
                             <div class="form-group has-feedback">
                               <input type="text" name='Username' class="form-control" placeholder="Email">
                               <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
