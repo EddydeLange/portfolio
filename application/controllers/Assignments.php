@@ -27,6 +27,13 @@ class Assignments extends MY_Controller {
 		crender('index', $data);
 	}
 
+	public function studentAnswers()
+	{
+		$data['doneSubjects'] = $this->AssignmentsModel->getFinishedSubjects();
+		$data['fileNameView'] = 'studentAnswers';
+		crender('index', $data);
+	}
+
 	public function formPage($btnElement, $id = null)
 	{
 		if ($id !== null) {

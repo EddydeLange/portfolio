@@ -1,7 +1,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Handed in Subjects</h1>
+        <h1>Answers <?= $doneSubjects[ARRAY_FIRST_INDEX]->name ?></h1>
     </section>
 
     <!-- Main content -->
@@ -18,8 +18,6 @@
                             <thead>
                                 <tr>
                                     <th>Student</th>
-                                    <th>Ov-number</th>
-                                    <th>Finished?</th>
                                     <th class="one-icon no-sort">Answers</th>
                                 </tr>
                             </thead>
@@ -27,8 +25,6 @@
                                 <?php foreach($doneSubjects as $doneSubject) { ?>
                                     <tr data-file-id="<?= $doneSubject->id ?>">
                                         <td><?= $doneSubject->name ?></td>
-                                        <td><?= $doneSubject->ov_number ?></td>
-                                        <td><?= $doneSubject->done ?></td>
                                         <td class='smallWidth oneIcon'><button class='fa fa-share btn-primary'></button></td>
                                     </tr>
                                 <?php } ?>
