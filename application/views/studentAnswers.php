@@ -23,8 +23,8 @@
                             </thead>
                             <tbody>
                                 <?php foreach($doneSubjects as $doneSubject) { ?>
-                                    <tr data-file-id="<?= $doneSubject->id ?>">
-                                        <td><?= $doneSubject->name ?></td>
+                                    <tr data-row-id="<?= $doneSubject->id ?>">
+                                        <td><?= $getAnswers->answer ?></td>
                                         <td class='smallWidth oneIcon'><button class='fa fa-share btn-primary'></button></td>
                                     </tr>
                                 <?php } ?>

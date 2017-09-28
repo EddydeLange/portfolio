@@ -33,13 +33,26 @@ class AssignmentsModel extends CI_model
         return $subjects;
     }
 
+
+
     public function getFinishedSubjects()
     {
         $this->load->database();
         $subjects_done = $this->db->get('subject_done')->result();
         
         return $subjects_done;
+    }    
+
+    public function getAnswers($studentId)
+    {
+        $this->load->database();
+        $this->db->where('answers.subject_id', $studentId);
+        $getAnswers = $this->db->get('answers')->result();
+        
+        return $getAnswers;
     }
+
+
 
     public function insertData($dataSubjects, $dataFormInputs)
     {

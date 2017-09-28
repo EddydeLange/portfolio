@@ -20,16 +20,16 @@
                                     <th>Student</th>
                                     <th>Ov-number</th>
                                     <th>Finished?</th>
-                                    <th class="one-icon no-sort">Answers</th>
+                                    <th class="one-icon no-sort">Goto-Answers</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach($doneSubjects as $doneSubject) { ?>
-                                    <tr data-file-id="<?= $doneSubject->id ?>">
+                                    <tr data-row-id="<?= $doneSubject->id ?>" class="answerRow">
                                         <td><?= $doneSubject->name ?></td>
                                         <td><?= $doneSubject->ov_number ?></td>
                                         <td><?= $doneSubject->done ?></td>
-                                        <td class='smallWidth oneIcon'><button class='fa fa-share btn-primary'></button></td>
+                                        <td></td>
                                     </tr>
                                 <?php } ?>
                             </tbody>

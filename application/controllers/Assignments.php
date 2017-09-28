@@ -20,6 +20,8 @@ class Assignments extends MY_Controller {
 		crender('index', $data);
 	}
 
+
+
 	public function handedInSubjects()
 	{
 		$data['doneSubjects'] = $this->AssignmentsModel->getFinishedSubjects();
@@ -27,12 +29,15 @@ class Assignments extends MY_Controller {
 		crender('index', $data);
 	}
 
-	public function studentAnswers()
+	public function studentAnswers($studentId)
 	{
 		$data['doneSubjects'] = $this->AssignmentsModel->getFinishedSubjects();
+		$data['getAnswers'] = $this->AssignmentsModel->getAnswers($studentId);
 		$data['fileNameView'] = 'studentAnswers';
 		crender('index', $data);
 	}
+	
+
 
 	public function formPage($btnElement, $id = null)
 	{
