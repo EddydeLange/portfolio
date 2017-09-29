@@ -19,7 +19,7 @@
                     <form id="formInput">
                         <input required name="title" class="headText" type="text" placeholder="Titel vragenlijst">
                         <input required name="subtopic" class="headText" type="text" placeholder="Onderwerp vragenlijst bijvoorbeeld: Economie">
-                          <select class="form-control">
+                          <select required name="topic" class="form-control">
                             <?php 
                             foreach($topics as $row)
                             { 
@@ -27,6 +27,7 @@
                             }
                             ?>
                           </select>
+                        </br>
                         <ul class="todo-list">
                             <li class="inputQuest">
                                 <!-- drag handle -->

@@ -22,10 +22,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($subjects as $subject) { ?>
+                                <?php foreach ($topics as $topic) { ?>
                                     <tr data-row-id="<?= $subject->id ?>" class="subjectRow">
-                                        <td><?= $subject->subject ?></td>
-                                        <td><?= $subject->subtopic ?></td>
+                                        <td><?= $topic->topic ?></td>
+<!--                                         <td><?= $subject->subtopic ?></td> -->
     								</tr>   
                                 <?php } ?>
                             </tbody>
