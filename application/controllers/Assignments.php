@@ -36,7 +36,7 @@ class Assignments extends MY_Controller {
 		}
 		$data['fileNameView'] = 'assignments/formPage';
 		$data['JSFileNames'] = ['public/custom/js/formPage.js'];
-		$data['students'] = $this->AssignmentsModel->getStudentCohort();
+		$data['topics'] = $this->AssignmentsModel->getTopics();
 		crender('index', $data);
 	}
 
@@ -90,5 +90,6 @@ class Assignments extends MY_Controller {
 		$newDisplayedBtn = ($displayBtn == 'closeBtn' ? 1 : 0);
 		$this->AssignmentsModel->changeDisplaySubject($topicId, $newDisplayedBtn);
 	}
+
 
 }
