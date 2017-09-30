@@ -133,15 +133,3 @@ $('.answerRow').on('click', function() {
     var studentId = $(this).data("row-id");
     document.location.href = '/portfolio/Assignments/studentAnswers/' + studentId;
 });
-
-$('.postComment').on('click', function() {
-    $.ajax({
-        url: base_url+'assignments/postComment',
-        data:  studentId,
-        method: 'post',
-        success: function() {
-           
-        },
-        error: function() {}
-    });
-});

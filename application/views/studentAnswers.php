@@ -14,32 +14,33 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table class="table table-bordered table-striped overviews">
-                            <thead>
-                                <tr>
-                                    <th>Student</th>        
-                                    <th class="no-sort smallWidth"></th>         
-                                    <th class="no-sort smallWidth"></th>         
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php foreach($getAnswers as $getAnswer) { ?>
-                                    <tr data-row-id="<?= $getAnswer->id ?>">
-                                        <td><?= $getAnswer->answer ?></td>        
-                                        <td></td>    
-                                        <td></td>    
+                        <form method="post" action="<?php echo base_url();?>Assignments/uploadComment/">
+                            <table class="table table-bordered table-striped overviews">
+                                <thead>
+                                    <tr>
+                                        <th>Student</th>        
+                                        <th class="no-sort smallWidth"></th>         
+                                        <th class="no-sort smallWidth"></th>         
                                     </tr>
-                                <?php } ?>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td>Leave a Comment</td>
-                                    <td><input type="text"></td>
-                                    <td class=""><button class="postComment btn btn-primary">Submit</td>
-                                </tr> 
-                            </tfoot>
-                                           
-                        </table>
+                                </thead>
+                                <tbody>
+                                    <?php foreach($getAnswers as $getAnswer) { ?>
+                                        <tr data-row-id="<?= $getAnswer->id ?>">
+                                            <td><?= $getAnswer->answer ?></td>        
+                                            <td></td>    
+                                            <td></td>    
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td class="control-label">Leave a Comment</td>
+                                        <td><input type="text" name="comment" class="form-control" placeholder="Your comment"></td>
+                                        <td><button type="submit" class="postComment btn btn-primary">Submit</td>
+                                    </tr> 
+                                </tfoot>              
+                            </table>
+                        </form>
                     </div>
                 <!-- /.box-body -->
                 </div>

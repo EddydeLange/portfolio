@@ -52,6 +52,14 @@ class AssignmentsModel extends CI_model
         return $getAnswers;
     }
 
+    public function insertComment($Comment, $studentId)
+    {
+        $this->load->database();
+        $this->db->set('Comment', $Comment);
+        $this->db->where('id', $studentId);
+         $this->db->update('answers');
+    }
+
 
 
     public function insertData($dataSubjects, $dataFormInputs)

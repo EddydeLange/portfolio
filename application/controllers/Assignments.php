@@ -36,6 +36,15 @@ class Assignments extends MY_Controller {
 		$data['fileNameView'] = 'studentAnswers';
 		crender('index', $data);
 	}
+
+	public function uploadComment()
+	{
+		$Comment = $_POST['comment'];
+		$studentId =  '1';
+		echo $Comment;
+		echo $studentId;
+		$this->AssignmentsModel->insertComment($Comment, $studentId);
+	}
 	
 
 
