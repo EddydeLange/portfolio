@@ -33,8 +33,6 @@ class AssignmentsModel extends CI_model
         return $subjects;
     }
 
-
-
     public function getFinishedSubjects()
     {
         $this->load->database();
@@ -52,15 +50,13 @@ class AssignmentsModel extends CI_model
         return $getAnswers;
     }
 
-    public function insertComment($Comment, $studentId)
+    public function insertComment($Comment, $StudentId)
     {
         $this->load->database();
         $this->db->set('Comment', $Comment);
-        $this->db->where('id', $studentId);
+        $this->db->where('id', $StudentId);
          $this->db->update('answers');
     }
-
-
 
     public function insertData($dataSubjects, $dataFormInputs)
     {

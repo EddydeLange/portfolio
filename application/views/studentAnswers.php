@@ -36,10 +36,11 @@
                                     <tr>
                                         <td class="control-label">Leave a Comment</td>
                                         <td><input type="text" name="comment" class="form-control" placeholder="Your comment"></td>
-                                        <td><button type="submit" class="postComment btn btn-primary">Submit</td>
+                                        <td><button type="submit" class="btn btn-primary">Submit</td>
                                     </tr> 
                                 </tfoot>              
                             </table>
+                            <input type="hidden" name="studentId" value="<?= $getAnswers[0]->id ?>">
                         </form>
                     </div>
                 <!-- /.box-body -->

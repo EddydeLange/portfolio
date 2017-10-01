@@ -16,11 +16,9 @@ class Assignments extends MY_Controller {
 	public function index()
 	{
 		$data['subjects'] = $this->AssignmentsModel->getSubjects();
-        $data['fileNameView'] = 'assignments/overviewAssignments';
+    $data['fileNameView'] = 'assignments/overviewAssignments';
 		crender('index', $data);
 	}
-
-
 
 	public function handedInSubjects()
 	{
@@ -40,13 +38,10 @@ class Assignments extends MY_Controller {
 	public function uploadComment()
 	{
 		$Comment = $_POST['comment'];
-		$studentId =  '1';
-		echo $Comment;
-		echo $studentId;
-		$this->AssignmentsModel->insertComment($Comment, $studentId);
+		$StudentId = $_POST['studentId'];
+		$this->AssignmentsModel->insertComment($Comment, $StudentId);
+		redirect('Assignments/handedInSubjects');
 	}
-	
-
 
 	public function formPage($btnElement, $id = null)
 	{
