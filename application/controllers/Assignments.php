@@ -17,8 +17,9 @@ class Assignments extends MY_Controller {
 	{
 		$data['subjects'] = $this->AssignmentsModel->getSubjects();
 		$data['topics'] = $this->AssignmentsModel->getTopics();
+		$data['students'] = $this->AssignmentsModel->getStudents();
         $data['fileNameView'] = 'assignments/overviewAssignments';
-		crender('index', $data);
+		crender('formPage', $data);
 	}
 
 	public function handedInSubjects()
@@ -38,6 +39,7 @@ class Assignments extends MY_Controller {
 		$data['fileNameView'] = 'assignments/formPage';
 		$data['JSFileNames'] = ['public/custom/js/formPage.js'];
 		$data['topics'] = $this->AssignmentsModel->getTopics();
+		$data['students'] = $this->AssignmentsModel->getStudents();
 		crender('index', $data);
 	}
 
@@ -53,10 +55,10 @@ class Assignments extends MY_Controller {
 	{
 		$dataFormTitle = $_POST['title'];
 		$dataFormInput = $_POST['question'];
-		$dataFormTopic  = $_POST['topic'];
+		$dataFormCohort  = $_POST['cohort'];
 		$dataSubjects = [
 			'subject' => $dataFormTitle,
-			'subtopic' => $dataFormTopic
+			'cohort' => $dataFormCohort
 		];
 		$this->AssignmentsModel->insertData($dataSubjects, $_POST['question']);
 	}
