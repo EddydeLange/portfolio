@@ -20,7 +20,6 @@
                                     <th>Student</th>
                                     <th>Ov-number</th>
                                     <th>Finished?</th>
-                                    <th class="one-icon no-sort">Goto-Answers</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -29,7 +28,6 @@
                                         <td><?= $doneSubject->name ?></td>
                                         <td><?= $doneSubject->ov_number ?></td>
                                         <td><?= $doneSubject->done ?></td>
-                                        <td></td>
                                     </tr>
                                 <?php } ?>
                             </tbody>
