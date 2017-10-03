@@ -11,5 +11,12 @@ class StudentModel extends CI_Model {
 
         $this->db->insert('students', $this);
     }
+   public function getAllStudents()
+   {
+   	$this->load->database();
+    $query = $this->db->get('students');
+    $Students = $query->result();
+    return $Students;
+   }
 
 }
